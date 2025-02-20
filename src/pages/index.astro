@@ -8,6 +8,8 @@ import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
 import cars from "../assets/cars.jpg";
+import organization from "../assets/organization.jpg";
+import project from "../assets/project.jpg";
 
 import "../styles/globals.css";
 
@@ -19,10 +21,7 @@ import "../styles/globals.css";
 	<div
 		class="bg-[url('../assets/team.jpg')] bg-cover bg-center bg-no-repeat min-h-screen bg-fixed relative"
 	>
-		<div
-			class="absolute inset-0 bg-black/60 z-10 bg-fixed"
-		>
-		</div>
+		<div class="absolute inset-0 bg-black/60 z-10 bg-fixed"></div>
 		<div class="absolute z-20 inset-0 flex flex-col">
 			<Header />
 			<div class="grow flex flex-col justify-center items-center gap-8">
@@ -82,5 +81,46 @@ import "../styles/globals.css";
 			referrerpolicy="strict-origin-when-cross-origin"
 			class="relative w-full aspect-video z-20 max-w-5xl"
 			allowfullscreen></iframe>
+	</div>
+	<div class="p-16 flex flex-col items-center gap-8 bg-white">
+		<h2 class="font-primary font-semibold uppercase text-5xl">
+			Come lavoriamo
+		</h2>
+		<div class="w-96 h-[2px] bg-primary"></div>
+		<div class="flex gap-12 justify-center">
+			<div class="flex flex-col items-center gap-4 basis-1/2 max-w-xl">
+				<Image
+					src={project}
+					alt="Il progetto"
+					class="aspect-[3/2] w-full"
+				/>
+				<h3 class="font-primary font-semibold text-2xl uppercase">
+					Il progetto
+				</h3>
+				<p class="font-body text-base/7 text-center">
+					Il progetto della nostra prima vettura è ancora in fase di
+					sviluppo. Tutti i componenti sono sviluppati e studiati con
+					alta precisione tramite software CAD, CAM e CAE con
+					l'obiettivo di ottenere prestazioni di altissimo livello.
+				</p>
+			</div>
+			<div class="flex flex-col items-center gap-4 basis-1/2 max-w-xl">
+				<Image
+					src={organization}
+					alt="L'organizzazione"
+					class="aspect-[3/2] w-full max-w-xl"
+				/>
+				<h3 class="font-primary font-semibold text-2xl uppercase">
+					L'organizzazione
+				</h3>
+				<p class="font-body text-base/7 text-center">
+					Il team è composto dagli studenti più brillanti delle
+					facoltà di ingegneria, economia e design, con l'obiettivo
+					comune di applicare le conoscenze ottenute durante gli studi
+					per costruire un veicolo all'avanguardia e in grado di
+					vincere.
+				</p>
+			</div>
+		</div>
 	</div>
 </Layout>
