@@ -1,12 +1,86 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import "../styles/globals.css"
+import "@fontsource-variable/orbitron";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/600.css";
+
+import { Image } from "astro:assets";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+import cars from "../assets/cars.jpg";
+
+import "../styles/globals.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div
+		class="bg-[url('../assets/team.jpg')] bg-cover bg-center bg-no-repeat min-h-screen bg-fixed relative"
+	>
+		<div
+			class="absolute inset-0 bg-radial from-transparent to-black/50 z-10 bg-fixed"
+		>
+		</div>
+		<div class="absolute z-20 inset-0 flex flex-col">
+			<Header />
+			<div class="grow flex flex-col justify-center items-center gap-8">
+				<h1
+					class="text-white text-7xl font-semibold uppercase font-primary"
+				>
+					Apex Corse
+				</h1>
+				<div class="w-96 h-[2px] bg-white"></div>
+				<p class="text-white font-semibold font-secondary text-lg">
+					La scuderia di Formula SAE dell'Università degli Studi di
+					Palermo
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="p-16 flex flex-col items-center bg-white gap-8">
+		<h2 class="font-primary font-semibold text-5xl uppercase">
+			La competizione
+		</h2>
+		<div class="w-96 h-[2px] bg-primary"></div>
+		<p class="text-center font-body max-w-7xl">
+			La Formula SAE, fondata nel 1981 dalla Society of Automotive
+			Engineers, è una competizione internazionale che coinvolge le
+			università e i loro studenti nella creazione di squadre finalizzate
+			alla progettazione di piccole monoposto e la loro valutazione a 360
+			gradi tramite sfide in pista e non.
+		</p>
+		<Image src={cars} alt="Formula SAE" class="max-w-6xl" />
+	</div>
+	<div
+		class="bg-[url('../assets/logo-big.png')] bg-cover bg-left bg-no-repeat min-h-screen relative bg-fixed p-16 flex flex-col items-center gap-8"
+	>
+		<div class="absolute inset-0 bg-black/50 z-10"></div>
+		<div class="relative flex z-20 p-16">
+			<div class="basis-1/2"></div>
+			<div class="basis-1/2 flex flex-col gap-8 items-start">
+				<h2
+					class="text-white text-5xl font-semibold uppercase font-primary"
+				>
+					Chi siamo
+				</h2>
+				<div class="w-96 h-[2px] bg-primary"></div>
+				<p class="font-body text-white text-left max-w-6xl">
+					Apex Corse è la scuderia dell'Università di Palermo che
+					nasce nel 2023 con lo scopo di progettare e produrre auto da
+					corsa destinate a competere nel campionato internazionale
+					della Formula SAE (Society of Automotive Engineers) contro
+					le migliori università di tutto il mondo.
+				</p>
+			</div>
+		</div>
+		<iframe
+			src="https://www.youtube.com/embed/CIxJ0DwPr0U?si=G5XottuI6tE8R2SA"
+			title="YouTube video player"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			class="relative w-full aspect-video z-20 max-w-5xl"
+			allowfullscreen></iframe>
+	</div>
 </Layout>
