@@ -9,3 +9,46 @@
 }
 
 @layer base {}
+
+@font-face {
+	font-family: "Orbitron";
+	src: url("/fonts/orbitron/Orbitron-Regular.ttf");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Orbitron";
+	src: url("/fonts/orbitron/Orbitron-Medium.ttf");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Orbitron";
+	src: url("/fonts/orbitron/Orbitron-Semibold.ttf");
+	font-weight: 600;
+}
+
+
+@font-face {
+	font-family: "Orbitron";
+	src: url("/fonts/orbitron/Orbitron-Bold.ttf");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("/fonts/poppins/Poppins-Regular.ttf");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("/fonts/poppins/Poppins-Medium.ttf");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("/fonts/poppins/Poppins-SemiBold.ttf");
+	font-weight: 600;
+}
