@@ -1,13 +1,14 @@
 ---
-import "@fontsource-variable/orbitron";
-import "@fontsource/poppins/300.css";
-import "@fontsource/poppins/600.css";
-
-import TextDisplay from "../components/TextDisplay.astro";
+import Display from "../components/Display.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/globals.css";
+import Apex from "../assets/apex.svg";
 ---
 
 <Layout>
-	<TextDisplay text="Apex" />
+	<Display>
+		<div slot="text" class="w-screen">
+			<Apex class="w-full h-auto" />
+		</div>
+	</Display>
 </Layout>
