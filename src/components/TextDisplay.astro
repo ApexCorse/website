@@ -1,0 +1,18 @@
+---
+interface Props {
+	image?: string;
+	text: string;
+}
+const { text, image } = Astro.props as Props;
+import Display from "./Display.astro";
+---
+
+<Display image={image}>
+	<h1
+		slot="text"
+		class="text-white/50 text-[256px] uppercase font-bold font-primary"
+	>
+		{text}
+	</h1>
+	<slot name="background" slot="background" />
+</Display>
