@@ -1,0 +1,19 @@
+---
+//TODO: Find better name for this component
+interface Props {
+  image?: string;
+}
+
+const { image } = Astro.props as Props;
+---
+
+<div
+  class={`relative h-screen w-full ${image ? `bg-cover bg-center bg-no-repeat bg-fixed bg-[url(${image})]` : ""}`}
+>
+  <div class="absolute bottom-0 left-0">
+    <slot name="text" />
+  </div>
+  <div class="absolute inset-0">
+    <slot name="background" />
+  </div>
+</div>
