@@ -1,14 +1,21 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
 @theme {
 	--font-primary: "Orbitron", sans-serif;
 	--font-secondary: "Poppins", sans-serif;
 	--font-body: "Poppins", sans-serif;
 
+	--color-background: #1a1a1a;
 	--color-primary: #693fbc;
 }
 
-@layer base {}
+@layer base {
+	body {
+		@apply bg-background;
+	}
+}
 
 @font-face {
 	font-family: "Orbitron";
@@ -27,7 +34,6 @@
 	src: url("/fonts/orbitron/Orbitron-Semibold.ttf");
 	font-weight: 600;
 }
-
 
 @font-face {
 	font-family: "Orbitron";
