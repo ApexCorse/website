@@ -1,17 +1,19 @@
 ---
 import Logo from "../assets/small-white-logo.svg";
+import LogoColored from "../assets/small-colored-logo.svg";
 ---
 
 <div class="flex items-center justify-between px-16 py-8">
-	<a href="">
-		<Logo />
+	<a href="/" class="group">
+		<Logo class="group-hover:hidden" />
+		<LogoColored class="hidden group-hover:block" />
 	</a>
 	<div class="flex items-center gap-16 font-normal">
 		<div class="flex items-center gap-8 text-white font-primary">
-			<a href="#">Garage</a>
-			<a href="#">Team</a>
-			<a href="#">Sponsors</a>
-			<a href="#">Contacts</a>
+			<a href="/garage/">Garage</a>
+			<a href="/team/">Team</a>
+			<a href="/sponsors/">Sponsors</a>
+			<a href="/contacts/">Contacts</a>
 		</div>
 		<div class="flex items-center gap-4 text-white font-primary uppercase">
 			<a href="#">En</a>

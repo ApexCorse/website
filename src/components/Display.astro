@@ -12,11 +12,11 @@ const { image } = Astro.props as Props;
 <div
 	class={`relative h-screen w-full ${image ? `bg-cover bg-center bg-no-repeat bg-fixed bg-[url("${image}")]` : ""}`}
 >
-	<div class="absolute top-0 left-0 w-full z-20">
+	<div class="absolute top-0 left-0 w-full z-30">
 		<Header />
 	</div>
 	<div class="absolute inset-0 bg-black/50 z-10"></div>
-	<div class="absolute inset-x-0 bottom-0 z-20">
+	<div class="absolute inset-x-0 bottom-0 z-20 w-screen">
 		<slot name="text" />
 	</div>
 	<div class="absolute inset-0 z-20">
