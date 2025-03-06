@@ -1,14 +1,15 @@
 ---
-import Logo from "../assets/small-white-logo.svg";
 import LogoColored from "../assets/small-colored-logo.svg";
+import Logo from "../assets/small-white-logo.svg";
+import Drawer from "./react/Drawer";
 ---
 
-<div class="flex items-center justify-between px-16 py-8">
+<div class="flex items-center justify-between px-8 md:px-16 py-8">
 	<a href="/" class="group">
 		<Logo class="group-hover:hidden" />
 		<LogoColored class="hidden group-hover:block" />
 	</a>
-	<div class="flex items-center gap-16 font-normal">
+	<div class="items-center gap-16 font-normal hidden md:flex">
 		<div class="flex items-center gap-8 text-white font-primary">
 			<a href="/garage/">Garage</a>
 			<a href="/team/">Team</a>
@@ -20,4 +21,5 @@ import LogoColored from "../assets/small-colored-logo.svg";
 			<a href="#">It</a>
 		</div>
 	</div>
+	<Drawer client:load />
 </div>
