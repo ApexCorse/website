@@ -1,0 +1,58 @@
+---
+import Person from "../assets/person.svg";
+
+interface Props {
+	member: Member;
+}
+
+const styles: Record<
+	Department,
+	{
+		backgroundColor: string;
+		iconColor: string;
+	}
+> = {
+	board: {
+		backgroundColor: "bg-white-bg",
+		iconColor: "white",
+	},
+	chassis: {
+		backgroundColor: "bg-purple-bg",
+		iconColor: "purple",
+	},
+	aerodynamics: {
+		backgroundColor: "bg-cyan-bg",
+		iconColor: "cyan",
+	},
+	powertrain: {
+		backgroundColor: "bg-red-bg",
+		iconColor: "red",
+	},
+	electronics: {
+		backgroundColor: "bg-pink-bg",
+		iconColor: "pink",
+	},
+	it: {
+		backgroundColor: "bg-orange-bg",
+		iconColor: "orange",
+	},
+	graphics: {
+		backgroundColor: "bg-green-bg",
+		iconColor: "green",
+	},
+	business: {
+		backgroundColor: "bg-blue-bg",
+		iconColor: "blue",
+	},
+};
+
+const { member } = Astro.props as Props;
+---
+
+<div
+	class={`${styles[member.department]?.backgroundColor} rounded-lg ${member.leader ? `border-2 border-${styles[member.department]?.iconColor}` : ""} h-32 aspect-[3/4] p-3`}
+>
+	<Person
+		class={`w-full h-full text-${styles[member.department]?.iconColor}`}
+	/>
+</div>
