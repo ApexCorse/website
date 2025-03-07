@@ -9,6 +9,11 @@
 
 	--color-background: #1a1a1a;
 	--color-primary: #693fbc;
+
+	--color-red: #e32225;
+	--color-cyan: #03ced3;
+	--color-purple: #693fbc;
+	--color-orange: #f18e17;
 }
 
 @layer base {
