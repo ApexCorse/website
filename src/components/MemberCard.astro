@@ -10,49 +10,60 @@ const styles: Record<
 	{
 		backgroundColor: string;
 		iconColor: string;
+		borderColor: string;
 	}
 > = {
 	board: {
 		backgroundColor: "bg-white-bg",
 		iconColor: "white",
+		borderColor: "border-white",
 	},
 	chassis: {
 		backgroundColor: "bg-purple-bg",
 		iconColor: "purple",
+		borderColor: "border-purple",
 	},
 	aerodynamics: {
 		backgroundColor: "bg-cyan-bg",
 		iconColor: "cyan",
+		borderColor: "border-cyan",
 	},
 	powertrain: {
 		backgroundColor: "bg-red-bg",
 		iconColor: "red",
+		borderColor: "border-red",
 	},
 	electronics: {
 		backgroundColor: "bg-pink-bg",
 		iconColor: "pink",
+		borderColor: "border-pink",
 	},
 	it: {
 		backgroundColor: "bg-orange-bg",
 		iconColor: "orange",
+		borderColor: "border-orange",
 	},
 	graphics: {
 		backgroundColor: "bg-green-bg",
 		iconColor: "green",
+		borderColor: "border-green",
 	},
 	business: {
 		backgroundColor: "bg-blue-bg",
 		iconColor: "blue",
+		borderColor: "border-blue",
 	},
 };
 
 const { member } = Astro.props as Props;
+
+const color = styles[member.department]?.iconColor;
+const backgroundColor = styles[member.department]?.backgroundColor;
+const borderColor = styles[member.department]?.borderColor;
 ---
 
 <div
-	class={`${styles[member.department]?.backgroundColor} rounded-lg ${member.leader ? `border-2 border-${styles[member.department]?.iconColor}` : ""} h-32 aspect-[3/4] p-3`}
+	class={`${backgroundColor} rounded-lg ${member.leader ? `border-2 ${borderColor}` : ""} h-32 aspect-[3/4] p-3`}
 >
-	<Person
-		class={`w-full h-full text-${styles[member.department]?.iconColor}`}
-	/>
+	<Person class={`w-full h-full text-${color}`} />
 </div>
