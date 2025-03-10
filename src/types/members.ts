@@ -10,8 +10,9 @@ type Department =
 
 interface Member {
 	name: string;
-	description: string;
+	description?: string;
 	image?: string;
 	department: Department;
 	leader?: boolean;
+	linkedin?: string;
 }
