@@ -1,0 +1,31 @@
+---
+import car from "@/assets/car.png";
+import { Image } from "astro:assets";
+---
+
+<div class="relative h-full w-full overflow-hidden">
+	<Image
+		src={car}
+		alt="car"
+		class="left-[-100%] top-[25%] absolute z-20"
+		id="animated-left"
+	/>
+	<Image
+		src={car}
+		alt="car"
+		class="right-[-100%] top-[75%] absolute z-20"
+		id="animated-right"
+	/>
+</div>
+<script>
+	import { slideIn, slideInFromRight } from "@/scripts/animate";
+	const elemLeft = document.getElementById("animated-left");
+	const elemRight = document.getElementById("animated-right");
+
+	if (elemLeft) {
+		slideIn(elemLeft);
+	}
+	if (elemRight) {
+		slideInFromRight(elemRight);
+	}
+</script>

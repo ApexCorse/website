@@ -1,14 +1,8 @@
 ---
-import Apex from "../assets/apex.svg";
-import Display from "../components/Display.astro";
+import Display from "@/components/Display.astro";
+import MainAnimation from "@/components/home/MainAnimation.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/globals.css";
 ---
 
-<Layout>
-	<Display>
-		<div slot="text" class="w-screen">
-			<Apex class="w-full h-auto" />
-		</div>
-	</Display>
-</Layout>
+<Layout> <Display> <MainAnimation slot="other" /></Display></Layout>
