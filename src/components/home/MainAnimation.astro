@@ -10,60 +10,15 @@ import Header from "../Header.astro";
 	<div
 		class="flex flex-col items-center justify-center gap-4 h-full absolute inset-0 w-full"
 	>
-		<Image
-			src={car}
-			alt="car"
-			class="absolute opacity-0"
-			id="animated-left"
+		<img src={car.src} alt="car" class="absolute opacity-0" id="animated-left" />
+		<Apex
+			class="text-white max-w-lg animate-fade-in delay-1000 opacity-0"
+			id="animated-apex"
 		/>
-		<Apex class="text-white max-w-lg animate-fade-in" id="animated-apex" />
-		<Image
-			src={car}
-			alt="car"
-			class="absolute opacity-0"
-			id="animated-right"
-		/>
+		<img src={car.src} alt="car" class="absolute opacity-0" id="animated-right" />
 	</div>
 </div>
 <script>
-	// const elemLeft = document.getElementById("animated-left")!;
-	// const elemRight = document.getElementById("animated-right")!;
-	// const elemApex = document.getElementById("animated-apex")!;
-
-	// const leftProps = elemLeft.getBoundingClientRect();
-	// const rightProps = elemRight.getBoundingClientRect();
-	// const apexProps = elemApex.getBoundingClientRect();
-	// document.addEventListener("DOMContentLoaded", () => {
-	// 	elemLeft.style.top = `${apexProps.top - leftProps.height - 32}px`;
-	// 	elemRight.style.top = `${apexProps.bottom + 32}px`;
-	// 	elemLeft.style.left = `${-leftProps.width}px`;
-	// 	elemRight.style.left = `${window.innerWidth + rightProps.width}px`;
-	// });
-
-	// const deltaXLeft = window.innerWidth / 2 + leftProps.width / 2;
-	// const deltaXRight = -window.innerWidth / 2 - (rightProps.width * 3) / 2;
-	// elemLeft.style.transition = "transform 1s ease-in-out";
-	// elemLeft.style.transform = `translateX(${deltaXLeft}px)`;
-	// elemRight.style.transition = "transform 1s ease-in-out";
-	// elemRight.style.transform = `translateX(${deltaXRight}px)`;
-
-	// elemLeft.addEventListener("transitionend", () => {
-	// 	elemLeft.style.transition = "none";
-	// });
-	// elemRight.addEventListener("transitionend", () => {
-	// 	elemRight.style.transition = "none";
-	// });
-
-	// window.addEventListener("resize", () => {
-	// 	const newLeftProps = elemLeft.getBoundingClientRect();
-	// 	const newRightProps = elemRight.getBoundingClientRect();
-	// 	const newApexProps = elemApex.getBoundingClientRect();
-
-	// 	elemLeft.style.top = `${newApexProps.top - newLeftProps.height - 32}px`;
-	// 	elemRight.style.top = `${newApexProps.bottom + 32}px`;
-	// 	elemLeft.style.left = `${window.innerWidth / 2 - newLeftProps.width / 2}px`;
-	// 	elemRight.style.left = `${window.innerWidth / 2 - newRightProps.width / 2}px`;
-	// });
 	const elemLeft = document.getElementById("animated-left")!;
 	const elemRight = document.getElementById("animated-right")!;
 	const elemApex = document.getElementById("animated-apex")!;
@@ -75,19 +30,15 @@ import Header from "../Header.astro";
 		const rightProps = elemRight.getBoundingClientRect();
 		const apexProps = elemApex.getBoundingClientRect();
 
-		// Imposta le posizioni verticali
 		elemLeft.style.top = `${apexProps.top - leftProps.height - 32}px`;
 		elemRight.style.top = `${apexProps.bottom + 32}px`;
 
-		// Imposta le posizioni orizzontali iniziali
-		elemLeft.style.left = `${-leftProps.width}px`; // Inizia fuori dalla vista a sinistra
-		elemRight.style.left = `${window.innerWidth + rightProps.width}px`; // Inizia fuori dalla vista a destra
+		elemLeft.style.left = `${-leftProps.width}px`;
+		elemRight.style.left = `${window.innerWidth + rightProps.width}px`;
 
-		// Calcola i delta per la trasformazione
-		const deltaXLeft = window.innerWidth / 2 + leftProps.width / 2; // Sposta a destra
-		const deltaXRight = -window.innerWidth / 2 - (rightProps.width * 3) / 2; // Sposta a sinistra
+		const deltaXLeft = window.innerWidth / 2 + leftProps.width / 2;
+		const deltaXRight = -window.innerWidth / 2 - (rightProps.width * 3) / 2;
 
-		// Applica le trasformazioni
 		elemLeft.style.transition = reload
 			? "transform 0s ease-in-out"
 			: "transform 1s ease-in-out";
@@ -99,9 +50,8 @@ import Header from "../Header.astro";
 	};
 
 	document.addEventListener("DOMContentLoaded", () => {
-		updatePositions(); // Chiamata iniziale per impostare le posizioni
+		updatePositions();
 	});
 
-	// Aggiungi un listener per il ridimensionamento della finestra
 	window.addEventListener("resize", () => updatePositions(true));
 </script>
