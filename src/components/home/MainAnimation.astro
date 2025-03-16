@@ -1,52 +1,102 @@
 ---
-import car from "@/assets/car.png";
+import carLeft from "@/assets/car-left.png";
+import carRight from "@/assets/car-right.png";
 import Apex from "@/assets/apex.svg";
-import { Image } from "astro:assets";
 import Header from "../Header.astro";
+import draftLeft from "@/assets/draft-left.png";
+import draftRight from "@/assets/draft-right.png";
 ---
 
 <div class="h-screen overflow-hidden relative">
 	<Header />
 	<div
-		class="flex flex-col items-center justify-center gap-4 h-full absolute inset-0 w-full"
+		class="flex flex-col items-center justify-center h-full absolute inset-0 w-full"
 	>
-		<img src={car.src} alt="car" class="absolute opacity-0" id="animated-left" />
+		<img
+			src={carLeft.src}
+			alt="car"
+			class="absolute opacity-0 h-12 sm:h-auto"
+			id="animated-car-left"
+		/>
+		<img
+			src={draftLeft.src}
+			alt="draft"
+			class="absolute opacity-0 h-6 sm:h-12"
+			id="animated-draft-left"
+		/>
 		<Apex
-			class="text-white max-w-lg animate-fade-in delay-1000 opacity-0"
+			class="text-white max-w-lg h-auto px-8 w-full animate-fade-in delay-1000 opacity-0 py-24"
 			id="animated-apex"
 		/>
-		<img src={car.src} alt="car" class="absolute opacity-0" id="animated-right" />
+		<img
+			src={carRight.src}
+			alt="car"
+			class="absolute opacity-0 h-12 sm:h-auto"
+			id="animated-car-right"
+		/>
+		<img
+			src={draftRight.src}
+			alt="draft"
+			class="absolute opacity-0 h-6 sm:h-12"
+			id="animated-draft-right"
+		/>
 	</div>
 </div>
 <script>
-	const elemLeft = document.getElementById("animated-left")!;
-	const elemRight = document.getElementById("animated-right")!;
-	const elemApex = document.getElementById("animated-apex")!;
-	elemLeft.style.opacity = "1";
-	elemRight.style.opacity = "1";
+	const carLeft = document.getElementById("animated-car-left")!;
+	const carRight = document.getElementById("animated-car-right")!;
+	const draftLeft = document.getElementById("animated-draft-left")!;
+	const draftRight = document.getElementById("animated-draft-right")!;
+	const apex = document.getElementById("animated-apex")!;
+	carLeft.style.opacity = "1";
+	carRight.style.opacity = "1";
+	draftLeft.style.opacity = "1";
+	draftRight.style.opacity = "1";
 
 	const updatePositions = (reload: boolean = false) => {
-		const leftProps = elemLeft.getBoundingClientRect();
-		const rightProps = elemRight.getBoundingClientRect();
-		const apexProps = elemApex.getBoundingClientRect();
+		const carLeftProps = carLeft.getBoundingClientRect();
+		const carRightProps = carRight.getBoundingClientRect();
+		const draftLeftProps = draftLeft.getBoundingClientRect();
+		const draftRightProps = draftRight.getBoundingClientRect();
+		const apexProps = apex.getBoundingClientRect();
 
-		elemLeft.style.top = `${apexProps.top - leftProps.height - 32}px`;
-		elemRight.style.top = `${apexProps.bottom + 32}px`;
+		const carLeftTop = apexProps.top - carLeftProps.height;
+		const carLeftVerticalCenter = carLeftTop + carLeftProps.height / 2;
+		const carRightTop = apexProps.bottom;
+		const carRightVerticalCenter = carRightTop + carRightProps.height / 2;
 
-		elemLeft.style.left = `${-leftProps.width}px`;
-		elemRight.style.left = `${window.innerWidth + rightProps.width}px`;
+		const draftLeftTop = carLeftVerticalCenter - draftLeftProps.height / 2;
+		const draftRightTop = carRightVerticalCenter - draftRightProps.height / 2;
 
-		const deltaXLeft = window.innerWidth / 2 + leftProps.width / 2;
-		const deltaXRight = -window.innerWidth / 2 - (rightProps.width * 3) / 2;
+		carLeft.style.top = `${carLeftTop}px`;
+		carRight.style.top = `${carRightTop}px`;
+		draftLeft.style.top = `${draftLeftTop}px`;
+		draftRight.style.top = `${draftRightTop}px`;
 
-		elemLeft.style.transition = reload
+		carLeft.style.left = `${-carLeftProps.width}px`;
+		carRight.style.left = `${window.innerWidth + carRightProps.width}px`;
+		draftLeft.style.left = `${-draftLeftProps.width - carLeftProps.width}px`;
+		draftRight.style.left = `${window.innerWidth + 2 * carRightProps.width}px`;
+
+		const deltaXLeft = window.innerWidth / 2 + carLeftProps.width / 2;
+		const deltaXRight = -window.innerWidth / 2 - (carRightProps.width * 3) / 2;
+
+		carLeft.style.transition = reload
 			? "transform 0s ease-in-out"
 			: "transform 1s ease-in-out";
-		elemLeft.style.transform = `translateX(${deltaXLeft}px)`;
-		elemRight.style.transition = reload
+		carLeft.style.transform = `translateX(${deltaXLeft}px)`;
+		carRight.style.transition = reload
 			? "transform 0s ease-in-out"
 			: "transform 1s ease-in-out";
-		elemRight.style.transform = `translateX(${deltaXRight}px)`;
+		carRight.style.transform = `translateX(${deltaXRight}px)`;
+		draftLeft.style.transition = reload
+			? "transform 0s ease-in-out"
+			: "transform 1s ease-in-out";
+		draftLeft.style.transform = `translateX(${deltaXLeft}px)`;
+		draftRight.style.transition = reload
+			? "transform 0s ease-in-out"
+			: "transform 1s ease-in-out";
+		draftRight.style.transform = `translateX(${deltaXRight}px)`;
 	};
 
 	document.addEventListener("DOMContentLoaded", () => {
