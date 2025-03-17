@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 export default function Drawer() {
 	return (
 		<Sheet>
-			<SheetTrigger asChild className="md:hidden">
+			<SheetTrigger asChild className="md:hidden cursor-pointer">
 				<MenuIcon color="white" />
 			</SheetTrigger>
 			<SheetContent>
