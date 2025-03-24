@@ -53,6 +53,11 @@ const styles: Record<
 		iconColor: "blue",
 		borderColor: "border-blue",
 	},
+	cost: {
+		backgroundColor: "bg-blue-bg",
+		iconColor: "blue",
+		borderColor: "border-blue",
+	},
 };
 
 const { member } = Astro.props as Props;
@@ -63,7 +68,7 @@ const borderColor = styles[member.department]?.borderColor;
 ---
 
 <div
-	class={`${backgroundColor} rounded-lg ${member.leader ? `border-2 ${borderColor}` : ""} h-32 aspect-[3/4] p-3`}
+	class={`${backgroundColor} rounded-lg ${member.leader ? `border-2 ${borderColor}` : ""} h-20 sm:h-32 aspect-square sm:aspect-[3/4] p-3`}
 >
 	<Person class={`w-full h-full text-${color}`} />
 </div>

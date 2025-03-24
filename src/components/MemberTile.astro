@@ -1,0 +1,14 @@
+---
+import Person from "../assets/person.svg";
+import MemberCard from "./MemberCard.astro";
+
+interface Props {
+  member: Member;
+}
+
+const {member} = Astro.props as Props;
+---
+
+<div>
+  <MemberCard member={member} />
+</div>

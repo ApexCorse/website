@@ -1,5 +1,7 @@
 ---
 import MemberCard from "./MemberCard.astro";
+import MemberTile from "./MemberTile.astro";
+type Department = "board" | "chassis" | "aerodynamics" | "powertrain" | "electronics" | "it" | "graphics" | "business" | "cost";
 
 interface Props {
   department: Department;
@@ -9,24 +11,24 @@ interface Props {
 
 const { title, department, members } = Astro.props as Props;
 
-const colors: Record<string, string> = {
-  board: "white",
-  chassis: "purple",
-  aerodynamics: "cyan",
-  powertrain: "red",
-  electronics: "pink",
-  it: "orange",
-  graphics: "green",
-  business: "blue",
+const departmentStyles: Record<Department, { text: string; bg: string }> = {
+  board: { text: "text-white", bg: "bg-white" },
+  chassis: { text: "text-purple", bg: "bg-purple" },
+  aerodynamics: { text: "text-cyan", bg: "bg-cyan" },
+  powertrain: { text: "text-red", bg: "bg-red" },
+  electronics: { text: "text-pink", bg: "bg-pink" },
+  it: { text: "text-orange", bg: "bg-orange" },
+  graphics: { text: "text-green", bg: "bg-green" },
+  business: { text: "text-blue", bg: "bg-blue" },
+  cost: { text: "text-blue", bg: "bg-blue" },
 };
-const color = colors[department];
-const textColor = `text-${color}`;
-const lineColor = `bg-${color}`;
+
+const styles = departmentStyles[department];
 ---
 
-<div class="px-8 min-h-screen py-8">
+<div class="px-8 sm:min-h-screen py-8">
   <div class="flex items-center gap-4 mb-8">
-    <h2 class={`uppercase ${textColor} font-primary text-5xl`}>{title}</h2>
+    <h2 class={`uppercase ${styles.text} font-primary text-3xl sm:text-5xl`}>{title}</h2>
     {
       department === "board" ? (
         <div class="grow">
@@ -35,14 +37,27 @@ const lineColor = `bg-${color}`;
           <div class="h-2 bg-red" />
         </div>
       ) : (
-        <div class={`grow h-6 ${lineColor}`} />
+        <div class={`grow h-6 ${styles.bg}`} />
       )
     }
   </div>
-  <div class="grow flex gap-8">
+  <div class="grow gap-8 hidden sm:flex">
     <div class="grow"></div>
-    <div class="grid grid-cols-4 gap-4 grid-right">
+    <div class="grid grid-cols-3 md:grid-cols-4 gap-4 grid-right">
       {members.map((member) => <MemberCard member={member} />)}
     </div>
+  </div>
+  <div class="sm:hidden flex flex-col gap-4">
+    {members.map((member) => {
+      return (
+        <div class="flex gap-8 items-center">
+          <MemberTile member={member} />
+          <div>
+            <h3 class="text-lg font-semibold text-white">{member.name}</h3>
+            <div class="flex justify-around"></div>
+          </div>
+        </div>
+      );
+    })}
   </div>
 </div>
