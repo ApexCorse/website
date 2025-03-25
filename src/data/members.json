@@ -1,7 +1,8 @@
 [
   {
     "name": "Marco Albergoni",
-    "department": "board"
+    "department": "board",
+    "leader": true
   },
   {
     "name": "Gabriele La Milia",
@@ -133,7 +134,8 @@
   {
     "name": "Antonio Lentini",
     "department": "it",
-    "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/"
+    "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
+    "email": "antonio.lentini2004@gmail.com"
   },
   {
     "name": "Gianluca Guarneri",
