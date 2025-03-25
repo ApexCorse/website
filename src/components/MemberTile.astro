@@ -1,46 +1,43 @@
 ---
-import Person from "@/assets/person.svg";
-import LinkedIn from "@/assets/linkedin.svg";
+import Linkedin from "../assets/linkedin.svg";
+import Mail from "../assets/mail.svg";
+import MemberCard from "./MemberCard.astro";
 interface Props {
-  member: Member;
+	member: Member;
 }
 
 const { member } = Astro.props as Props;
-
-const styles: Record<
-  string,
-  {
-    iconColor: string;
-    backgroundColor: string;
-    borderColor: string;
-  }
-> = {
-  it: {
-    iconColor: "text-orange",
-    backgroundColor: "bg-orange-bg",
-    borderColor: "border-orange",
-  },
-};
-
-const iconColor = styles[member.department]?.iconColor;
-const backgroundColor = styles[member.department]?.backgroundColor;
-const borderColor = styles[member.department]?.borderColor;
 ---
 
-<div class="flex gap-4 items-center">
-  <div
-    class={`${backgroundColor} rounded-lg ${member.leader ? `border ${borderColor}` : ""} h-16 w-16 p-3`}
-  >
-    <Person class={`w-full h-full ${iconColor}`} />
-  </div>
-  <div class="flex flex-col gap-2">
-    <p class="text-white font-secondary">{member.name}</p>
-    {
-      member.linkedin && (
-        <a href={member.linkedin} target="_blank">
-          <LinkedIn class="w-4 h-4 text-white" />
-        </a>
-      )
-    }
-  </div>
+<div>
+	<div class="flex gap-8 items-center">
+		<MemberCard member={member} />
+		<div class="flex flex-col gap-2">
+			<h3 class="text-lg font-semibold text-white">{member.name}</h3>
+			<div class="flex gap-4">
+				{
+					member.linkedin && (
+						<a
+							href={member.linkedin}
+							class="text-gray-500 h-6"
+							target="_blank"
+						>
+							<Linkedin />
+						</a>
+					)
+				}
+				{
+					member.email && (
+						<a
+							href={`mailto:${member.email}`}
+							class="text-gray-500 h-6"
+							target="_blank"
+						>
+							<Mail />
+						</a>
+					)
+				}
+			</div>
+		</div>
+	</div>
 </div>

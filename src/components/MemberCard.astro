@@ -1,4 +1,6 @@
 ---
+import Linkedin from "../assets/linkedin.svg";
+import Mail from "../assets/mail.svg";
 import Person from "../assets/person.svg";
 
 interface Props {
@@ -53,6 +55,11 @@ const styles: Record<
 		iconColor: "blue",
 		borderColor: "border-blue",
 	},
+	cost: {
+		backgroundColor: "bg-blue-bg",
+		iconColor: "blue",
+		borderColor: "border-blue",
+	},
 };
 
 const { member } = Astro.props as Props;
@@ -63,7 +70,34 @@ const borderColor = styles[member.department]?.borderColor;
 ---
 
 <div
-	class={`${backgroundColor} rounded-lg ${member.leader ? `border-2 ${borderColor}` : ""} h-32 aspect-[3/4] p-3`}
+	class={`${backgroundColor} rounded-lg ${member.leader ? `border-3 ${borderColor}` : ""} h-22 sm:h-32 md:h-40 aspect-square sm:aspect-[3/4] group relative`}
 >
-	<Person class={`w-full h-full text-${color}`} />
+	{
+		!member.image && (
+			<div class="p-3 w-full h-full">
+				<Person class={`w-full h-full text-${color}`} />
+			</div>
+		)
+	}
+	<div
+		class="h-full w-full opacity-0 group-hover:opacity-100 flex absolute inset-0 flex-col items-end p-3 bg-black/90 rounded-lg gap-4 transition-all duration-300"
+	>
+		<p class="text-white text-base md:text-lg font-semibold">{member.name}</p>
+		<div class="flex gap-4 w-full justify-start">
+			{
+				member.linkedin && (
+					<a href={member.linkedin} class="text-white h-5" target="_blank">
+						<Linkedin />
+					</a>
+				)
+			}
+			{
+				member.email && (
+					<a href={`mailto:${member.email}`} class="text-white h-5" target="_blank">
+						<Mail />
+					</a>
+				)
+			}
+		</div>
+	</div>
 </div>

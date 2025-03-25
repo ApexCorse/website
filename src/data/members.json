@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Marco Albergoni",
+    "department": "board",
+    "leader": true
+  },
+  {
+    "name": "Gabriele La Milia",
+    "department": "board"
+  },
+  {
+    "name": "Alessia Cambria",
+    "department": "board"
+  },
+  {
+    "name": "Salvatore Alessi",
+    "department": "chassis",
+    "leader": true
+  },
+  {
+    "name": "Alessia Salamone",
+    "department": "chassis"
+  },
+  {
+    "name": "Andrea Maiorana",
+    "department": "chassis"
+  },
+  {
+    "name": "Matilde Arista",
+    "department": "chassis"
+  },
+  {
+    "name": "Lorenzo Corsetti",
+    "department": "chassis"
+  },
+  {
+    "name": "Gabriele Montalto",
+    "department": "chassis"
+  },
+  {
+    "name": "Angelo D'Angelo",
+    "department": "chassis"
+  },
+  {
+    "name": "Giorgio Indorante",
+    "department": "chassis"
+  },
+  {
+    "name": "Giovanni Saverino",
+    "department": "chassis"
+  },
+  {
+    "name": "Giovanni Rizzo",
+    "department": "chassis"
+  },
+  {
+    "name": "Giuseppe Pavone",
+    "department": "chassis"
+  },
+  {
+    "name": "Matilde La Spisa",
+    "department": "chassis"
+  },
+  {
+    "name": "Paolo Sidoti",
+    "department": "chassis"
+  },
+  {
+    "name": "Salvatore Genova",
+    "department": "chassis"
+  },
+  {
+    "name": "Vincenzo Galluzzo",
+    "department": "chassis"
+  },
+  {
+    "name": "Silvia Spartà",
+    "department": "aerodynamics",
+    "leader": true
+  },
+  {
+    "name": "Gabriele Lo Re",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Giuseppe Scavone",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Dario Vallelunga",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Gabriele Giannone",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Ludovica Spanò",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Nicola Giammanco",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Andrea Ricciardi",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Luca Piranio",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Claudia Genovese",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Salvo Maria Musumeci",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Salvatore Toia",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Alberto Pepoli",
+    "department": "aerodynamics"
+  },
+  {
+    "name": "Gabriele Amorello",
+    "department": "it",
+    "leader": true
+  },
+  {
+    "name": "Antonio Lentini",
+    "department": "it",
+    "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
+    "email": "antonio.lentini2004@gmail.com"
+  },
+  {
+    "name": "Gianluca Guarneri",
+    "department": "it"
+  },
+  {
+    "name": "Gabriele Lo Cascio",
+    "department": "it"
+  },
+  {
+    "name": "Dario Giuseppe Maria Rizzo",
+    "department": "it"
+  },
+  {
+    "name": "Francesco Abitabile",
+    "department": "it"
+  },
+  {
+    "name": "Simone La Milia",
+    "department": "it"
+  },
+  {
+    "name": "Giuseppe Abitabile",
+    "department": "it"
+  },
+  {
+    "name": "Giorgio Scarpaci",
+    "department": "powertrain",
+    "leader": true
+  },
+  {
+    "name": "Alberto Di Mariano",
+    "department": "powertrain"
+  },
+  {
+    "name": "Leonardo Paterna",
+    "department": "powertrain"
+  },
+  {
+    "name": "Salvatore di Maggio",
+    "department": "powertrain"
+  },
+  {
+    "name": "Alessandro Vaccarino",
+    "department": "powertrain"
+  },
+  {
+    "name": "Salvatore Papa",
+    "department": "powertrain"
+  },
+  {
+    "name": "Ilenia Cricchio",
+    "department": "powertrain"
+  },
+  {
+    "name": "Davide Cirrincione",
+    "department": "powertrain"
+  },
+  {
+    "name": "Salvatore Cutaia",
+    "department": "powertrain"
+  },
+  {
+    "name": "Stefano Campisi",
+    "department": "graphics",
+    "leader": true
+  },
+  {
+    "name": "Maria Sorci",
+    "department": "graphics"
+  },
+  {
+    "name": "Matteo Glorioso",
+    "department": "graphics"
+  },
+  {
+    "name": "Vincenzo Bongiorno",
+    "department": "graphics"
+  },
+  {
+    "name": "Caterina Arnò",
+    "department": "graphics"
+  },
+  {
+    "name": "Ileana Li Causi",
+    "department": "graphics"
+  },
+  {
+    "name": "Letizia Ganci",
+    "department": "graphics"
+  },
+  {
+    "name": "Francesco Cane",
+    "department": "graphics"
+  },
+  {
+    "name": "Giuseppe Blunda",
+    "department": "electronics",
+    "leader": true
+  },
+  {
+    "name": "Francesco Incaviglia",
+    "department": "electronics"
+  },
+  {
+    "name": "Giulio Pinello",
+    "department": "electronics"
+  },
+  {
+    "name": "Geremia Bossa",
+    "department": "electronics"
+  },
+  {
+    "name": "Marcello Pardo",
+    "department": "electronics"
+  },
+  {
+    "name": "Francesco Scianna",
+    "department": "business",
+    "leader": true
+  },
+  {
+    "name": "Ylenia Dibilio",
+    "department": "business"
+  },
+  {
+    "name": "Domenico Rizzuto",
+    "department": "business"
+  },
+  {
+    "name": "Giulia Celesia",
+    "department": "business"
+  },
+  {
+    "name": "Dario Tulumello",
+    "department": "business"
+  },
+  {
+    "name": "Giuseppe Castiglia",
+    "department": "business"
+  },
+  {
+    "name": "Claudio Fricano",
+    "department": "business"
+  },
+  {
+    "name": "Francesca Cafarelli",
+    "department": "business"
+  },
+  {
+    "name": "Nicola Fricano",
+    "department": "cost"
+  },
+  {
+    "name": "Alex Nadio Miccichè",
+    "department": "cost"
+  }
+]
