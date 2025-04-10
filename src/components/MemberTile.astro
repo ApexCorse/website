@@ -27,18 +27,18 @@ const backgroundColor = styles[member.department]?.backgroundColor;
 const borderColor = styles[member.department]?.borderColor;
 ---
 
-<div class="flex gap-4 items-center">
+<div class="flex items-center gap-4">
   <div
     class={`${backgroundColor} rounded-lg ${member.leader ? `border ${borderColor}` : ""} h-16 w-16 p-3`}
   >
     <Person class={`w-full h-full ${iconColor}`} />
   </div>
   <div class="flex flex-col gap-2">
-    <p class="text-white font-secondary">{member.name}</p>
+    <p class="font-secondary text-white">{member.name}</p>
     {
       member.linkedin && (
         <a href={member.linkedin} target="_blank">
-          <LinkedIn class="w-4 h-4 text-white" />
+          <LinkedIn class="h-4 w-4 text-white" />
         </a>
       )
     }

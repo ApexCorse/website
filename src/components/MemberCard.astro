@@ -2,57 +2,57 @@
 import Person from "../assets/person.svg";
 
 interface Props {
-	member: Member;
+  member: Member;
 }
 
 const styles: Record<
-	Department,
-	{
-		backgroundColor: string;
-		iconColor: string;
-		borderColor: string;
-	}
+  Department,
+  {
+    backgroundColor: string;
+    iconColor: string;
+    borderColor: string;
+  }
 > = {
-	board: {
-		backgroundColor: "bg-white-bg",
-		iconColor: "white",
-		borderColor: "border-white",
-	},
-	chassis: {
-		backgroundColor: "bg-purple-bg",
-		iconColor: "purple",
-		borderColor: "border-purple",
-	},
-	aerodynamics: {
-		backgroundColor: "bg-cyan-bg",
-		iconColor: "cyan",
-		borderColor: "border-cyan",
-	},
-	powertrain: {
-		backgroundColor: "bg-red-bg",
-		iconColor: "red",
-		borderColor: "border-red",
-	},
-	electronics: {
-		backgroundColor: "bg-pink-bg",
-		iconColor: "pink",
-		borderColor: "border-pink",
-	},
-	it: {
-		backgroundColor: "bg-orange-bg",
-		iconColor: "orange",
-		borderColor: "border-orange",
-	},
-	graphics: {
-		backgroundColor: "bg-green-bg",
-		iconColor: "green",
-		borderColor: "border-green",
-	},
-	business: {
-		backgroundColor: "bg-blue-bg",
-		iconColor: "blue",
-		borderColor: "border-blue",
-	},
+  board: {
+    backgroundColor: "bg-white-bg",
+    iconColor: "white",
+    borderColor: "border-white",
+  },
+  chassis: {
+    backgroundColor: "bg-purple-bg",
+    iconColor: "purple",
+    borderColor: "border-purple",
+  },
+  aerodynamics: {
+    backgroundColor: "bg-cyan-bg",
+    iconColor: "cyan",
+    borderColor: "border-cyan",
+  },
+  powertrain: {
+    backgroundColor: "bg-red-bg",
+    iconColor: "red",
+    borderColor: "border-red",
+  },
+  electronics: {
+    backgroundColor: "bg-pink-bg",
+    iconColor: "pink",
+    borderColor: "border-pink",
+  },
+  it: {
+    backgroundColor: "bg-orange-bg",
+    iconColor: "orange",
+    borderColor: "border-orange",
+  },
+  graphics: {
+    backgroundColor: "bg-green-bg",
+    iconColor: "green",
+    borderColor: "border-green",
+  },
+  business: {
+    backgroundColor: "bg-blue-bg",
+    iconColor: "blue",
+    borderColor: "border-blue",
+  },
 };
 
 const { member } = Astro.props as Props;
@@ -63,7 +63,7 @@ const borderColor = styles[member.department]?.borderColor;
 ---
 
 <div
-	class={`${backgroundColor} rounded-lg ${member.leader ? `border-2 ${borderColor}` : ""} h-32 aspect-[3/4] p-3`}
+  class={`${backgroundColor} rounded-lg ${member.leader ? `border-2 ${borderColor}` : ""} h-32 aspect-[3/4] p-3`}
 >
-	<Person class={`w-full h-full text-${color}`} />
+  <Person class={`w-full h-full text-${color}`} />
 </div>

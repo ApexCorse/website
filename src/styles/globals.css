@@ -3,92 +3,92 @@
 @plugin "tailwindcss-animate";
 
 @theme {
-	--font-primary: "Orbitron", sans-serif;
-	--font-secondary: "Poppins", sans-serif;
-	--font-body: "Poppins", sans-serif;
+  --font-primary: "Orbitron", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
 
-	--color-background: #1a1a1a;
-	--color-primary: #693fbc;
+  --color-background: #1a1a1a;
+  --color-primary: #693fbc;
 
-	--color-white: #ffffff;
-	--color-white-bg: #656565;
-	--color-red: #e32225;
-	--color-red-bg: #330301;
-	--color-cyan: #03ced3;
-	--color-cyan-bg: #002c2f;
-	--color-purple: #693fbc;
-	--color-purple-bg: #130222;
-	--color-orange: #f18e17;
-	--color-orange-bg: #3a2200;
-	--color-green: #009541;
-	--color-green-bg: #012604;
-	--color-blue: #0e70b7;
-	--color-blue-bg: #01132b;
-	--color-pink: #9d1561;
-	--color-pink-bg: #2f0012;
+  --color-white: #ffffff;
+  --color-white-bg: #656565;
+  --color-red: #e32225;
+  --color-red-bg: #330301;
+  --color-cyan: #03ced3;
+  --color-cyan-bg: #002c2f;
+  --color-purple: #693fbc;
+  --color-purple-bg: #130222;
+  --color-orange: #f18e17;
+  --color-orange-bg: #3a2200;
+  --color-green: #009541;
+  --color-green-bg: #012604;
+  --color-blue: #0e70b7;
+  --color-blue-bg: #01132b;
+  --color-pink: #9d1561;
+  --color-pink-bg: #2f0012;
 
-	--animate-fade-in: fade-in 1s ease-in-out forwards;
+  --animate-fade-in: fade-in 1s ease-in-out forwards;
 
-	@keyframes fade-in {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 @layer base {
-	body {
-		@apply bg-background;
-	}
+  body {
+    @apply bg-background;
+  }
 }
 
 @layer utilities {
-	.grid-right {
-		direction: rtl;
-	}
+  .grid-right {
+    direction: rtl;
+  }
 }
 
 @font-face {
-	font-family: "Orbitron";
-	src: url("/fonts/orbitron/Orbitron-Regular.ttf");
-	font-weight: 400;
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Regular.ttf");
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: "Orbitron";
-	src: url("/fonts/orbitron/Orbitron-Medium.ttf");
-	font-weight: 500;
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Medium.ttf");
+  font-weight: 500;
 }
 
 @font-face {
-	font-family: "Orbitron";
-	src: url("/fonts/orbitron/Orbitron-Semibold.ttf");
-	font-weight: 600;
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Semibold.ttf");
+  font-weight: 600;
 }
 
 @font-face {
-	font-family: "Orbitron";
-	src: url("/fonts/orbitron/Orbitron-Bold.ttf");
-	font-weight: 700;
+  font-family: "Orbitron";
+  src: url("/fonts/orbitron/Orbitron-Bold.ttf");
+  font-weight: 700;
 }
 
 @font-face {
-	font-family: "Poppins";
-	src: url("/fonts/poppins/Poppins-Regular.ttf");
-	font-weight: 400;
+  font-family: "Poppins";
+  src: url("/fonts/poppins/Poppins-Regular.ttf");
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: "Poppins";
-	src: url("/fonts/poppins/Poppins-Medium.ttf");
-	font-weight: 500;
+  font-family: "Poppins";
+  src: url("/fonts/poppins/Poppins-Medium.ttf");
+  font-weight: 500;
 }
 
 @font-face {
-	font-family: "Poppins";
-	src: url("/fonts/poppins/Poppins-SemiBold.ttf");
-	font-weight: 600;
+  font-family: "Poppins";
+  src: url("/fonts/poppins/Poppins-SemiBold.ttf");
+  font-weight: 600;
 }

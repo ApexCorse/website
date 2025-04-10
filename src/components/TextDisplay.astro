@@ -1,18 +1,18 @@
 ---
 interface Props {
-	image?: string;
-	text: string;
+  image?: string;
+  text: string;
 }
 const { text, image } = Astro.props as Props;
 import Display from "./Display.astro";
 ---
 
 <Display image={image}>
-	<h1
-		slot="text"
-		class="text-white/50 text-2xl sm:text-6xl md:text-8xl lg:text-[196px] leading-tight uppercase font-bold font-primary overflow-clip"
-	>
-		{text}
-	</h1>
-	<slot name="background" slot="background" />
+  <h1
+    slot="text"
+    class="font-primary overflow-clip text-2xl leading-tight font-bold text-white/50 uppercase sm:text-6xl md:text-8xl lg:text-[196px]"
+  >
+    {text}
+  </h1>
+  <slot name="background" slot="background" />
 </Display>
