@@ -8,16 +8,14 @@ import Drawer from "./react/Drawer";
   class="flex items-center justify-between px-8 py-8 transition-normal duration-75 md:px-16"
 >
   <a href="/" class="group">
-    <Logo class="h-auto w-8 group-hover:hidden md:w-fit" />
-    <LogoColored class="hidden h-auto w-8 group-hover:block md:w-fit" />
+    <Logo class="h-auto w-8 group-hover:hidden md:w-14" />
+    <LogoColored class="hidden h-auto w-8 group-hover:block md:w-14" />
   </a>
   <div class="hidden items-center gap-16 font-normal md:flex">
     <div class="flex items-center gap-8">
       {
         [
-          { label: "Garage", href: "/garage/" },
           { label: "Team", href: "/team/" },
-          { label: "Sponsors", href: "/sponsors/" },
           { label: "Contacts", href: "/contacts/" },
         ].map((item) => (
           <a
