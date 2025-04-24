@@ -10,11 +10,11 @@ type Department =
   | "cost";
 
 interface Member {
-	name: string;
-	description?: string;
-	image?: string;
-	department: Department;
-	leader?: boolean;
-	linkedin?: string;
-	email?: string;
+  name: string;
+  description?: string;
+  image?: string;
+  department: Department;
+  leader?: boolean;
+  linkedin?: string;
+  email?: string;
 }

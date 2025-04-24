@@ -8,25 +8,61 @@ import { getMembers } from "@/lib/utils/members";
 const members = await getMembers();
 
 const boardMembers = members.filter((member) => member.department === "board");
-const chassisMembers = members.filter((member) => member.department === "chassis");
-const aerodynamicsMembers = members.filter((member) => member.department === "aerodynamics");
+const chassisMembers = members.filter(
+  (member) => member.department === "chassis",
+);
+const aerodynamicsMembers = members.filter(
+  (member) => member.department === "aerodynamics",
+);
 const itMembers = members.filter((member) => member.department === "it");
-const powertrainMembers = members.filter((member) => member.department === "powertrain");
-const graphicsMembers = members.filter((member) => member.department === "graphics");
-const electronicsMembers = members.filter((member) => member.department === "electronics");
-const businessMembers = members.filter((member) => member.department === "business");
+const powertrainMembers = members.filter(
+  (member) => member.department === "powertrain",
+);
+const graphicsMembers = members.filter(
+  (member) => member.department === "graphics",
+);
+const electronicsMembers = members.filter(
+  (member) => member.department === "electronics",
+);
+const businessMembers = members.filter(
+  (member) => member.department === "business",
+);
 const costMembers = members.filter((member) => member.department === "cost");
 ---
 
 <Layout>
   <TextDisplay text="The Team" />
   <DepartmentSection department="board" title="Board" members={boardMembers} />
-  <DepartmentSection department="chassis" title="Chassis" members={chassisMembers} />
-  <DepartmentSection department="aerodynamics" title="Aerodynamics" members={aerodynamicsMembers} />
+  <DepartmentSection
+    department="chassis"
+    title="Chassis"
+    members={chassisMembers}
+  />
+  <DepartmentSection
+    department="aerodynamics"
+    title="Aerodynamics"
+    members={aerodynamicsMembers}
+  />
   <DepartmentSection department="it" title="IT" members={itMembers} />
-  <DepartmentSection department="powertrain" title="Powertrain" members={powertrainMembers} />
-  <DepartmentSection department="electronics" title="Electronics" members={electronicsMembers} />
-  <DepartmentSection department="graphics" title="Graphics" members={graphicsMembers} />
-  <DepartmentSection department="business" title="Business" members={businessMembers} />
+  <DepartmentSection
+    department="powertrain"
+    title="Powertrain"
+    members={powertrainMembers}
+  />
+  <DepartmentSection
+    department="electronics"
+    title="Electronics"
+    members={electronicsMembers}
+  />
+  <DepartmentSection
+    department="graphics"
+    title="Graphics"
+    members={graphicsMembers}
+  />
+  <DepartmentSection
+    department="business"
+    title="Business"
+    members={businessMembers}
+  />
   <DepartmentSection department="cost" title="Cost" members={costMembers} />
 </Layout>
