@@ -7,9 +7,15 @@ import team from "@/assets/rettore.png";
 import cars from "@/assets/cars.png";
 import { Image } from "astro:assets";
 import SplashScreen from "@/components/home/SplashScreen.astro";
+
+const metadata = {
+  title: "Apex Corse",
+  description:
+    "Apex Corse is the Formula Student team of the University of Palermo",
+};
 ---
 
-<Layout>
+<Layout title={metadata.title} description={metadata.description}>
   <SplashScreen />
   <div id="main-content" class="hidden">
     <MainAnimation />

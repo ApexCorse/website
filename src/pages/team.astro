@@ -28,9 +28,14 @@ const businessMembers = members.filter(
   (member) => member.department === "business",
 );
 const costMembers = members.filter((member) => member.department === "cost");
+
+const metadata = {
+  title: "Team • Apex Corse",
+  description: "Meet the team behind Apex Corse",
+};
 ---
 
-<Layout>
+<Layout title={metadata.title} description={metadata.description}>
   <TextDisplay text="The Team" />
   <DepartmentSection department="board" title="Board" members={boardMembers} />
   <DepartmentSection
