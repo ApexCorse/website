@@ -2,28 +2,48 @@
 import LogoColored from "../assets/small-colored-logo.svg";
 import Logo from "../assets/small-white-logo.svg";
 import Drawer from "./react/Drawer";
-
-const { pathname } = Astro.url;
 ---
 
 <div
-	class="flex items-center justify-between px-8 md:px-16 py-8 transition-normal duration-75"
+  class="flex items-center justify-between px-8 py-8 transition-normal duration-75 md:px-16"
 >
-	<a href="/" class="group">
-		<Logo class="group-hover:hidden w-8 h-auto md:w-fit" />
-		<LogoColored class="hidden group-hover:block w-8 h-auto md:w-fit" />
-	</a>
-	<div class="items-center gap-16 font-normal hidden md:flex">
-		<div class="flex items-center gap-8 text-white font-primary">
-			<a href="/garage/" class={`${pathname === "/garage/" ? "text-red" : ""}`}>Garage</a>
-			<a href="/team/" class={`${pathname === "/team/" ? "text-cyan" : ""}`}>Team</a>
-			<a href="/sponsors/" class={`${pathname === "/sponsors/" ? "text-purple" : ""}`}>Sponsors</a>
-			<a href="/contacts/" class={`${pathname === "/contacts/" ? "text-orange" : ""}`}>Contacts</a>
-		</div>
-		<div class="flex items-center gap-4 text-white font-primary uppercase">
-			<a href="#">En</a>
-			<a href="#">It</a>
-		</div>
-	</div>
-	<Drawer client:load />
+  <a href="/" class="group">
+    <Logo class="h-auto w-8 group-hover:hidden md:w-fit" />
+    <LogoColored class="hidden h-auto w-8 group-hover:block md:w-fit" />
+  </a>
+  <div class="hidden items-center gap-16 font-normal md:flex">
+    <div class="flex items-center gap-8">
+      {
+        [
+          { label: "Garage", href: "/garage/" },
+          { label: "Team", href: "/team/" },
+          { label: "Sponsors", href: "/sponsors/" },
+          { label: "Contacts", href: "/contacts/" },
+        ].map((item) => (
+          <a
+            href={item.href}
+            class="font-primary decoration-purple text-white decoration-2 underline-offset-8 hover:underline"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex items-center gap-4">
+      {
+        [
+          { label: "En", href: "#" },
+          { label: "It", href: "#" },
+        ].map((item) => (
+          <a
+            href={item.href}
+            class="font-primary decoration-purple text-white uppercase decoration-2 underline-offset-8 hover:underline"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <Drawer client:load />
 </div>
