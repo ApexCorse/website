@@ -4,26 +4,30 @@
 		"department": "board",
 		"leader": true,
 		"linkedin": "https://www.linkedin.com/in/marco-albergoni-881a7a2b8/",
-		"email": "marco.albergoni@community.unipa.it"
+		"email": "marco.albergoni@community.unipa.it",
+		"image": "marco-albergoni"
 	},
 	{
 		"name": "Gabriele La Milia",
 		"department": "board",
 		"linkedin": "https://www.linkedin.com/in/gabrielelm/",
-		"email": "gabriele.lamilia01@community.unipa.it"
+		"email": "gabriele.lamilia01@community.unipa.it",
+		"image": "gabriele-la-milia"
 	},
 	{
 		"name": "Alessia Cambria",
 		"department": "board",
 		"linkedin": "https://www.linkedin.com/in/alessia-cambria-701574325/",
-		"email": "alessia.cambria@community.unipa.it"
+		"email": "alessia.cambria@community.unipa.it",
+		"image": "alessia-cambria"
 	},
 	{
 		"name": "Salvatore Alessi",
 		"department": "chassis",
 		"leader": true,
 		"linkedin": "http://www.linkedin.com/in/-salvatore-alessi",
-		"email": "salvatore.alessi07@community.unipa.it"
+		"email": "salvatore.alessi07@community.unipa.it",
+		"image": "salvatore-alessi"
 	},
 	{
 		"name": "Alessia Salamone",
@@ -103,7 +107,8 @@
 		"department": "aerodynamics",
 		"leader": true,
 		"linkedin": "https://www.linkedin.com/in/silvia-spart%C3%A0-34844798",
-		"email": "silvia.sparta@community.unipa.it"
+		"email": "silvia.sparta@community.unipa.it",
+		"image": "silvia-sparta"
 	},
 	{
 		"name": "Gabriele Lo Re",
@@ -114,7 +119,8 @@
 		"name": "Giuseppe Scavone",
 		"department": "aerodynamics",
 		"linkedin": "https://www.linkedin.com/in/scavons/",
-		"email": "giuseppe.scavone02@community.unipa.it"
+		"email": "giuseppe.scavone02@community.unipa.it",
+		"image": "giuseppe-scavone"
 	},
 	{
 		"name": "Dario Vallelunga",
@@ -143,7 +149,8 @@
 		"name": "Andrea Ricciardi",
 		"department": "aerodynamics",
 		"linkedin": "https://www.linkedin.com/in/andrea-ricciardi-881866221/",
-		"email": "andrea.ricciardi01@community.unipa.it"
+		"email": "andrea.ricciardi01@community.unipa.it",
+		"image": "andrea-ricciardi"
 	},
 	{
 		"name": "Luca Piranio",
@@ -182,13 +189,15 @@
 		"department": "it",
 		"leader": true,
 		"linkedin": "https://www.linkedin.com/in/gabriele-salvatore-amorello-808954180/",
-		"email": "gabrielesalvatore.amorello@community.unipa.it"
+		"email": "gabrielesalvatore.amorello@community.unipa.it",
+		"image": "gabriele-amorello"
 	},
 	{
 		"name": "Antonio Lentini",
 		"department": "it",
 		"linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
-		"email": "antonio.lentini06@community.unipa.it"
+		"email": "antonio.lentini06@community.unipa.it",
+		"image": "antonio-lentini"
 	},
 	{
 		"name": "Gianluca Guarneri",
@@ -198,7 +207,8 @@
 		"name": "Gabriele Lo Cascio",
 		"department": "it",
 		"linkedin": "https://www.linkedin.com/in/gabriele-locascio/",
-		"email": "gabriele.locascio03@community.unipa.it"
+		"email": "gabriele.locascio03@community.unipa.it",
+		"image": "gabriele-lo-cascio"
 	},
 	{
 		"name": "Dario Rizzo",
@@ -226,7 +236,8 @@
 		"department": "powertrain",
 		"leader": true,
 		"linkedin": "https://www.linkedin.com/in/giorgio-scarpaci-1aa899277/",
-		"email": "giorgio.scarpaci@community.unipa.it"
+		"email": "giorgio.scarpaci@community.unipa.it",
+		"image": "giorgio-scarpaci"
 	},
 	{
 		"name": "Alberto Di Mariano",
@@ -251,7 +262,8 @@
 	{
 		"name": "Salvatore Papa",
 		"department": "powertrain",
-		"linkedin": "https://www.linkedin.com/in/salvatore-papa-53a7551b1/"
+		"linkedin": "https://www.linkedin.com/in/salvatore-papa-53a7551b1/",
+		"image": "salvatore-papa"
 	},
 	{
 		"name": "Ilenia Cricchio",
@@ -273,7 +285,8 @@
 		"department": "graphics",
 		"leader": true,
 		"linkedin": "https://www.linkedin.com/in/stefano-campisi-892086256/",
-		"email": "stefano.campisi@community.unipa.it"
+		"email": "stefano.campisi@community.unipa.it",
+		"image": "stefano-campisi"
 	},
 	{
 		"name": "Maria Sorci",

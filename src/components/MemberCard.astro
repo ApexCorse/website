@@ -3,6 +3,8 @@ import Linkedin from "../assets/linkedin.svg";
 import Mail from "../assets/mail.svg";
 import Person from "../assets/person.svg";
 
+import { Image } from "astro:assets";
+
 interface Props {
 	member: Member;
 }
@@ -67,13 +69,23 @@ const { member } = Astro.props as Props;
 const color = styles[member.department]?.iconColor;
 const backgroundColor = styles[member.department]?.backgroundColor;
 const borderColor = styles[member.department]?.borderColor;
+
+let image: Promise<{ default: ImageMetadata }> | undefined;
+
+if (member.image) {
+	image = import(`../assets/members/${member.image}.png`) as Promise<{ default: ImageMetadata }>;
+}
 ---
 
 <div
-	class={`${backgroundColor} rounded-lg ${member.leader ? `border-3 ${borderColor}` : ""} h-22 sm:h-32 md:h-40 aspect-square sm:aspect-[3/4] group relative`}
+	class={`${backgroundColor} rounded-lg ${member.leader ? `border-4 ${borderColor}` : ""} h-22 sm:h-32 md:h-40 aspect-square sm:aspect-[3/4] group relative`}
 >
 	{
-		!member.image && (
+		member.image ? (
+			<div class="w-full h-full">
+				<Image alt={member.name} src={image!} class="w-full h-full sm:object-cover object-contain"/>
+			</div>
+		) : (
 			<div class="p-3 w-full h-full">
 				<Person class={`w-full h-full text-${color}`} />
 			</div>
