@@ -1,0 +1,43 @@
+---
+import { cn } from "@/lib/utils/cn";
+import Logo from "../../assets/small-white-logo.svg";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props as Props;
+---
+
+<div
+  id="splash-screen"
+  class={cn(
+    "fixed inset-0 z-50 flex h-screen items-center justify-center bg-black transition-opacity duration-500",
+    className,
+  )}
+>
+  <Logo class="animate-fade-in-and-out w-36 sm:w-48 md:w-64" />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const splashScreen = document.getElementById("splash-screen");
+    const mainContent = document.getElementById("main-content");
+
+    if (splashScreen && mainContent) {
+      mainContent.style.display = "none";
+
+      setTimeout(() => {
+        splashScreen.style.opacity = "0";
+        mainContent.style.display = "block";
+
+        // Dispatch custom event when splash screen is done
+        window.dispatchEvent(new CustomEvent("splashScreenComplete"));
+
+        setTimeout(() => {
+          splashScreen.style.display = "none";
+        }, 500);
+      }, 3000);
+    }
+  });
+</script>

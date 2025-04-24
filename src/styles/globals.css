@@ -28,6 +28,7 @@
   --color-pink-bg: #2f0012;
 
   --animate-fade-in: fade-in 1s ease-in-out forwards;
+  --animate-fade-in-and-out: fade-in-and-out 3s ease-in-out forwards;
 
   @keyframes fade-in {
     from {
@@ -35,6 +36,24 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-and-out {
+    0% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
     }
   }
 }

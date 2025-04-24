@@ -50,10 +50,6 @@ import draftRight from "@/assets/draft-right.png";
   const draftLeft = document.getElementById("animated-draft-left")!;
   const draftRight = document.getElementById("animated-draft-right")!;
   const apex = document.getElementById("animated-apex")!;
-  carLeft.style.opacity = "1";
-  carRight.style.opacity = "1";
-  draftLeft.style.opacity = "1";
-  draftRight.style.opacity = "1";
 
   const updatePositions = (reload: boolean = false) => {
     const carLeftProps = carLeft.getBoundingClientRect();
@@ -62,19 +58,28 @@ import draftRight from "@/assets/draft-right.png";
     const draftRightProps = draftRight.getBoundingClientRect();
     const apexProps = apex.getBoundingClientRect();
 
-    const carLeftTop = apexProps.top - carLeftProps.height;
-    const carLeftVerticalCenter = carLeftTop + carLeftProps.height / 2;
-    const carRightTop = apexProps.bottom;
-    const carRightVerticalCenter = carRightTop + carRightProps.height / 2;
+    // Function to adjust vertical positions for scroll
+    const adjustForScroll = (y: number) => {
+      return y + window.scrollY;
+    }
 
-    const draftLeftTop = carLeftVerticalCenter - draftLeftProps.height / 2;
-    const draftRightTop = carRightVerticalCenter - draftRightProps.height / 2;
+    console.log(adjustForScroll(apexProps.top));
 
+    // Calculate vertical positions relative to the Apex logo
+    const carLeftTop = adjustForScroll(apexProps.top) - carLeftProps.height;
+    const carRightTop = adjustForScroll(apexProps.bottom);
+    const draftLeftTop =
+      carLeftTop + (carLeftProps.height - draftLeftProps.height) / 2;
+    const draftRightTop =
+      carRightTop + (carRightProps.height - draftRightProps.height) / 2;
+
+    // Set vertical positions
     carLeft.style.top = `${carLeftTop}px`;
     carRight.style.top = `${carRightTop}px`;
     draftLeft.style.top = `${draftLeftTop}px`;
     draftRight.style.top = `${draftRightTop}px`;
 
+    // Set horizontal positions
     carLeft.style.left = `${-carLeftProps.width}px`;
     carRight.style.left = `${window.innerWidth + carRightProps.width}px`;
     draftLeft.style.left = `${-draftLeftProps.width - carLeftProps.width}px`;
@@ -101,9 +106,17 @@ import draftRight from "@/assets/draft-right.png";
     draftRight.style.transform = `translateX(${deltaXRight}px)`;
   };
 
-  document.addEventListener("DOMContentLoaded", () => {
+  const startAnimation = () => {
+    carLeft.style.opacity = "1";
+    carRight.style.opacity = "1";
+    draftLeft.style.opacity = "1";
+    draftRight.style.opacity = "1";
     updatePositions();
-  });
+  };
 
+  // Listen for the splash screen completion event
+  window.addEventListener("splashScreenComplete", startAnimation);
+
+  // Also handle resize events
   window.addEventListener("resize", () => updatePositions(true));
 </script>

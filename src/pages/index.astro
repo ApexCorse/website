@@ -6,62 +6,66 @@ import "../styles/globals.css";
 import team from "@/assets/rettore.png";
 import cars from "@/assets/cars.png";
 import { Image } from "astro:assets";
+import SplashScreen from "@/components/home/SplashScreen.astro";
 ---
 
 <Layout>
-  <MainAnimation />
-  <div class="flex flex-col gap-8">
-    <div
-      class="flex flex-col-reverse gap-4 px-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
-    >
-      <div class="flex basis-1/2 items-center justify-center">
-        <Image
-          src={team}
-          alt="Team with the Rector of University of Palermo"
-          class="h-auto"
-        />
+  <SplashScreen />
+  <div id="main-content" class="hidden">
+    <MainAnimation />
+    <div class="flex flex-col gap-8">
+      <div
+        class="flex flex-col-reverse gap-4 px-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
+      >
+        <div class="flex basis-1/2 items-center justify-center">
+          <Image
+            src={team}
+            alt="Team with the Rector of University of Palermo"
+            class="h-auto"
+          />
+        </div>
+        <div
+          class="flex flex-col items-center gap-4 py-4 text-center sm:basis-1/2 sm:items-start sm:justify-center sm:text-left"
+        >
+          <h2 class="font-primary text-center text-xl uppercase lg:text-3xl">
+            Our Story
+          </h2>
+          <p class="text-sm sm:text-base">
+            Apex Corse is the Formula Student team of the University of Palermo,
+            founded in 2023 thanks to the initiative of a group of students and
+            the support of faculty members from the Department of Engineering.
+            Our goal is to become a key player in the Sicilian university
+            motorsport scene. Today, the team consists of more than 70 students
+            from programs in Engineering, Economics, Design, and Communication,
+            all united by a shared passion for motorsports.
+          </p>
+        </div>
       </div>
       <div
-        class="flex flex-col items-center gap-4 py-4 text-center sm:basis-1/2 sm:items-start sm:justify-center sm:text-left"
+        class="flex flex-col gap-4 px-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
       >
-        <h2 class="font-primary text-center text-xl uppercase lg:text-3xl">
-          Our Story
-        </h2>
-        <p class="text-sm sm:text-base">
-          Apex Corse is the Formula Student team of the University of Palermo,
-          founded in 2023 thanks to the initiative of a group of students and
-          the support of faculty members from the Department of Engineering. Our
-          goal is to become a key player in the Sicilian university motorsport
-          scene. Today, the team consists of more than 70 students from programs
-          in Engineering, Economics, Design, and Communication, all united by a
-          shared passion for motorsports.
-        </p>
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-4 px-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
-    >
-      <div
-        class="flex flex-col items-center gap-4 py-4 text-center sm:basis-1/2 sm:items-start sm:justify-center sm:text-left"
-      >
-        <h2 class="font-primary text-center text-xl uppercase lg:text-3xl">
-          Our University
-        </h2>
-        <p class="text-sm sm:text-base">
-          Founded in 1806, the University of Palermo is one of the leading
-          academic institutions in Sicily and ranks fourth among large Italian
-          public universities in the 2024/2025 Censis ranking. The university is
-          home to the Historical Museum of Engines and Mechanisms, the first in
-          Italy to receive the <em
-            >Mechanical Engineering Heritage Collection</em
-          >
-          award from the American Society of Mechanical Engineers. Each year, the
-          Museum also hosts several prestigious automotive events, including the
-          Targa Florio Classic and the Ferrari Tribute.
-        </p>
-      </div>
-      <div class="flex basis-1/2 items-center justify-center">
-        <Image src={cars} alt="Formula-SAE cars" class="h-auto" />
+        <div
+          class="flex flex-col items-center gap-4 py-4 text-center sm:basis-1/2 sm:items-start sm:justify-center sm:text-left"
+        >
+          <h2 class="font-primary text-center text-xl uppercase lg:text-3xl">
+            Our University
+          </h2>
+          <p class="text-sm sm:text-base">
+            Founded in 1806, the University of Palermo is one of the leading
+            academic institutions in Sicily and ranks fourth among large Italian
+            public universities in the 2024/2025 Censis ranking. The university
+            is home to the Historical Museum of Engines and Mechanisms, the
+            first in Italy to receive the <em
+              >Mechanical Engineering Heritage Collection</em
+            >
+            award from the American Society of Mechanical Engineers. Each year, the
+            Museum also hosts several prestigious automotive events, including the
+            Targa Florio Classic and the Ferrari Tribute.
+          </p>
+        </div>
+        <div class="flex basis-1/2 items-center justify-center">
+          <Image src={cars} alt="Formula-SAE cars" class="h-auto" />
+        </div>
       </div>
     </div>
   </div>
