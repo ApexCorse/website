@@ -5,6 +5,7 @@ import "../styles/globals.css";
 
 import team from "@/assets/rettore.png";
 import cars from "@/assets/cars.png";
+import unipa from "@/assets/unipa.png";
 import { Image } from "astro:assets";
 import SplashScreen from "@/components/home/SplashScreen.astro";
 
@@ -19,9 +20,9 @@ const metadata = {
   <SplashScreen />
   <div id="main-content" class="hidden">
     <MainAnimation />
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 px-4 sm:gap-12">
       <div
-        class="flex flex-col-reverse gap-4 px-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
+        class="flex flex-col-reverse gap-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
       >
         <div class="flex basis-1/2 items-center justify-center">
           <Image
@@ -47,9 +48,41 @@ const metadata = {
           </p>
         </div>
       </div>
+      <div class="h-[1px] w-full bg-gray-700"></div>
       <div
-        class="flex flex-col gap-4 px-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
+        class="flex flex-col gap-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
       >
+        <div
+          class="flex flex-col items-center gap-4 py-4 text-center sm:basis-1/2 sm:items-start sm:justify-center sm:text-left"
+        >
+          <h2 class="font-primary text-center text-xl uppercase lg:text-3xl">
+            What's Formula Student?
+          </h2>
+          <p class="text-sm sm:text-base">
+            Formula Student is an international university competition that
+            gives students a concrete opportunity to apply their knowledge and
+            gain real-world experience in the motorsport field. Participants
+            take on the challenge of designing, building, validating, and
+            promoting a single-seater prototype, while also developing a
+            comprehensive business plan and a detailed cost analysis just like
+            in a real Formula 1 team.
+          </p>
+        </div>
+        <div class="flex basis-1/2 items-center justify-center">
+          <Image src={cars} alt="Formula-SAE cars" class="h-auto" />
+        </div>
+      </div>
+      <div class="h-[1px] w-full bg-gray-700"></div>
+      <div
+        class="flex flex-col-reverse gap-4 py-4 text-white sm:flex-row sm:gap-8 sm:px-8"
+      >
+        <div class="flex basis-1/2 items-center justify-center">
+          <Image
+            src={unipa}
+            alt="Team with the Rector of University of Palermo"
+            class="h-auto"
+          />
+        </div>
         <div
           class="flex flex-col items-center gap-4 py-4 text-center sm:basis-1/2 sm:items-start sm:justify-center sm:text-left"
         >
@@ -68,9 +101,6 @@ const metadata = {
             Museum also hosts several prestigious automotive events, including the
             Targa Florio Classic and the Ferrari Tribute.
           </p>
-        </div>
-        <div class="flex basis-1/2 items-center justify-center">
-          <Image src={cars} alt="Formula-SAE cars" class="h-auto" />
         </div>
       </div>
     </div>
