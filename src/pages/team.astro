@@ -24,10 +24,9 @@ const graphicsMembers = members.filter(
 const electronicsMembers = members.filter(
   (member) => member.department === "electronics",
 );
-const businessMembers = members.filter(
-  (member) => member.department === "business",
+const businessAndCostMembers = members.filter(
+  (member) => member.department === "business" || member.department === "cost",
 );
-const costMembers = members.filter((member) => member.department === "cost");
 
 const metadata = {
   title: "Team • Apex Corse",
@@ -66,8 +65,7 @@ const metadata = {
   />
   <DepartmentSection
     department="business"
-    title="Business"
-    members={businessMembers}
+    title="Business & Cost"
+    members={businessAndCostMembers}
   />
-  <DepartmentSection department="cost" title="Cost" members={costMembers} />
 </Layout>
