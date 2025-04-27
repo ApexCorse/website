@@ -5,6 +5,8 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/globals.css";
 import { getMembers } from "@/lib/utils/members";
 
+import team from "../assets/team.png"
+
 const members = await getMembers();
 
 const boardMembers = members.filter((member) => member.department === "board");
@@ -35,7 +37,7 @@ const metadata = {
 ---
 
 <Layout title={metadata.title} description={metadata.description}>
-  <TextDisplay text="The Team" />
+  <TextDisplay text="The Team" image={team.src} />
   <DepartmentSection department="board" title="Board" members={boardMembers} />
   <DepartmentSection
     department="chassis"
