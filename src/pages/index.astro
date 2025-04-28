@@ -8,6 +8,7 @@ import cars from "@/assets/cars.png";
 import unipa from "@/assets/unipa.png";
 import { Image } from "astro:assets";
 import SplashScreen from "@/components/home/SplashScreen.astro";
+import Sponsors from "@/components/Sponsors.astro";
 
 const metadata = {
   title: "Apex Corse",
@@ -103,6 +104,8 @@ const metadata = {
           </p>
         </div>
       </div>
+      <div class="mt-8 h-[1px] w-full bg-gray-700"></div>
+      <Sponsors class="my-8" />
     </div>
   </div>
 </Layout>

@@ -9,10 +9,20 @@ import Omhero from "../assets/sponsors/omhero.svg";
 import Hypertec from "../assets/sponsors/hypertec.svg";
 import Fenice from "../assets/sponsors/fenice.svg";
 import Crg from "../assets/sponsors/crg.svg";
+import { cn } from "@/lib/utils/cn";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
 ---
 
 <div
-  class="flex flex-col items-center justify-center gap-4 px-4 py-8 sm:gap-8 sm:px-8 md:px-16"
+  class={cn(
+    "flex flex-col items-center justify-center gap-4 sm:gap-8",
+    className,
+  )}
 >
   <div
     class="flex w-full max-w-4xl items-center justify-center gap-4 sm:gap-8 md:gap-12"
@@ -23,9 +33,7 @@ import Crg from "../assets/sponsors/crg.svg";
       ))
     }
   </div>
-  <div
-    class="flex w-full max-w-4xl items-center justify-center gap-4 md:gap-8"
-  >
+  <div class="flex w-full max-w-4xl items-center justify-center gap-4 md:gap-8">
     {
       [Hexagon, Loctite, Nigrelli, Qnap, Hypertec, Fenice, Crg].map(
         (Sponsor) => <Sponsor class="w-full max-w-20 hover:opacity-80" />,
