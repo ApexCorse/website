@@ -1,0 +1,35 @@
+---
+import Tesla from "../assets/sponsors/tesla.svg";
+import Ansys from "../assets/sponsors/ansys.svg";
+import Hexagon from "../assets/sponsors/hexagon.svg";
+import Loctite from "../assets/sponsors/loctite.svg";
+import Nigrelli from "../assets/sponsors/nigrelli.svg";
+import Qnap from "../assets/sponsors/qnap.svg";
+import Omhero from "../assets/sponsors/omhero.svg";
+import Hypertec from "../assets/sponsors/hypertec.svg";
+import Fenice from "../assets/sponsors/fenice.svg";
+import Crg from "../assets/sponsors/crg.svg";
+---
+
+<div
+  class="flex flex-col items-center justify-center gap-4 px-4 py-8 sm:gap-8 sm:px-8 md:px-16"
+>
+  <div
+    class="flex w-full max-w-4xl items-center justify-center gap-4 sm:gap-8 md:gap-12"
+  >
+    {
+      [Tesla, Ansys, Omhero].map((Sponsor) => (
+        <Sponsor class="w-full max-w-40 hover:opacity-80" />
+      ))
+    }
+  </div>
+  <div
+    class="flex w-full max-w-4xl items-center justify-center gap-4 md:gap-8"
+  >
+    {
+      [Hexagon, Loctite, Nigrelli, Qnap, Hypertec, Fenice, Crg].map(
+        (Sponsor) => <Sponsor class="w-full max-w-20 hover:opacity-80" />,
+      )
+    }
+  </div>
+</div>
