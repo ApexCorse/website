@@ -1,0 +1,32 @@
+---
+import Sponsors from "./Sponsors.astro";
+---
+
+<footer class="flex flex-col gap-12 px-4 py-8 sm:px-8">
+  <Sponsors />
+  <div class="h-[1px] w-full bg-white"></div>
+  <div class="flex flex-col items-center gap-12 text-white">
+    <div
+      class="font-primary flex flex-col items-center justify-center gap-8 text-sm uppercase sm:text-base md:flex-row"
+    >
+      {
+        [
+          { text: "Back To Home", href: "/" },
+          { text: "Our Car", href: "/#our-car" },
+          { text: "Team", href: "/team" },
+          { text: "Updates", href: "/updates" },
+          { text: "Join Us", href: "/team#join-us" },
+          { text: "Unipa", href: "/#unipa" },
+          { text: "Contacts", href: "/contacts" },
+        ].map((item) => (
+          <a class="text-center hover:underline" href={item.href}>
+            {item.text}
+          </a>
+        ))
+      }
+    </div>
+    <p class="font-primary text-center text-sm uppercase sm:text-base">
+      Apex Corse
+    </p>
+  </div>
+</footer>
