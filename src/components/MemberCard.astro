@@ -7,63 +7,63 @@ import Person from "../assets/person.svg";
 import { Image } from "astro:assets";
 
 interface Props {
-	member: Member;
-	big?: boolean;
+  member: Member;
+  big?: boolean;
 }
 
 const styles: Record<
-	Department,
-	{
-		backgroundColor: string;
-		iconColor: string;
-		borderColor: string;
-	}
+  Department,
+  {
+    backgroundColor: string;
+    iconColor: string;
+    borderColor: string;
+  }
 > = {
-	board: {
-		backgroundColor: "bg-white-bg",
-		iconColor: "white",
-		borderColor: "border-white",
-	},
-	chassis: {
-		backgroundColor: "bg-purple-bg",
-		iconColor: "purple",
-		borderColor: "border-purple",
-	},
-	aerodynamics: {
-		backgroundColor: "bg-cyan-bg",
-		iconColor: "cyan",
-		borderColor: "border-cyan",
-	},
-	powertrain: {
-		backgroundColor: "bg-red-bg",
-		iconColor: "red",
-		borderColor: "border-red",
-	},
-	electronics: {
-		backgroundColor: "bg-pink-bg",
-		iconColor: "pink",
-		borderColor: "border-pink",
-	},
-	it: {
-		backgroundColor: "bg-orange-bg",
-		iconColor: "orange",
-		borderColor: "border-orange",
-	},
-	graphics: {
-		backgroundColor: "bg-green-bg",
-		iconColor: "green",
-		borderColor: "border-green",
-	},
-	business: {
-		backgroundColor: "bg-blue-bg",
-		iconColor: "blue",
-		borderColor: "border-blue",
-	},
-	cost: {
-		backgroundColor: "bg-blue-bg",
-		iconColor: "blue",
-		borderColor: "border-blue",
-	},
+  board: {
+    backgroundColor: "bg-white-bg",
+    iconColor: "white",
+    borderColor: "border-white",
+  },
+  chassis: {
+    backgroundColor: "bg-purple-bg",
+    iconColor: "purple",
+    borderColor: "border-purple",
+  },
+  aerodynamics: {
+    backgroundColor: "bg-cyan-bg",
+    iconColor: "cyan",
+    borderColor: "border-cyan",
+  },
+  powertrain: {
+    backgroundColor: "bg-red-bg",
+    iconColor: "red",
+    borderColor: "border-red",
+  },
+  electronics: {
+    backgroundColor: "bg-pink-bg",
+    iconColor: "pink",
+    borderColor: "border-pink",
+  },
+  it: {
+    backgroundColor: "bg-orange-bg",
+    iconColor: "orange",
+    borderColor: "border-orange",
+  },
+  graphics: {
+    backgroundColor: "bg-green-bg",
+    iconColor: "green",
+    borderColor: "border-green",
+  },
+  business: {
+    backgroundColor: "bg-blue-bg",
+    iconColor: "blue",
+    borderColor: "border-blue",
+  },
+  cost: {
+    backgroundColor: "bg-blue-bg",
+    iconColor: "blue",
+    borderColor: "border-blue",
+  },
 };
 
 const { member, big } = Astro.props as Props;
@@ -75,9 +75,9 @@ const borderColor = styles[member.department]?.borderColor;
 let image: Promise<{ default: ImageMetadata }> | undefined;
 
 if (member.image) {
-	image = import(`../assets/members/${member.image}.png`) as Promise<{
-		default: ImageMetadata;
-	}>;
+  image = import(`../assets/members/${member.image}.png`) as Promise<{
+    default: ImageMetadata;
+  }>;
 }
 ---
 
@@ -85,58 +85,54 @@ if (member.image) {
 	class={`${backgroundColor} rounded-lg ${member.leader ? `border-4 ${borderColor}` : ""} h-22 sm:h-32 md:h-40 aspect-square sm:aspect-[3/4] group relative`}
 > -->
 <div
-	class={cn(
-		backgroundColor,
-		"rounded-lg",
-		member.leader ? `border-4 ${borderColor}` : "",
-		"h-22 sm:h-32 md:h-40 aspect-square sm:aspect-[3/4] group relative",
-		big && "h-36 sm:h-48 md:h-56"
-	)}
+  class={cn(
+    backgroundColor,
+    "rounded-lg",
+    member.leader ? `border-4 ${borderColor}` : "",
+    "h-22 sm:h-32 md:h-40 aspect-square sm:aspect-[3/4] group relative",
+    big && "h-36 sm:h-48 md:h-56",
+  )}
 >
-	{
-		member.image ? (
-			<div class="h-full w-full">
-				<Image
-					alt={member.name}
-					src={image!}
-					class="h-full w-full object-contain sm:object-cover"
-				/>
-			</div>
-		) : (
-			<div class="h-full w-full p-3">
-				<Person class={`h-full w-full text-${color}`} />
-			</div>
-		)
-	}
-	<div
-		class="absolute inset-0 flex h-full w-full flex-col items-end gap-4 rounded-lg bg-black/90 p-3 opacity-0 transition-all duration-300 sm:group-hover:opacity-100"
-	>
-		<p class="text-base font-semibold text-white md:text-lg">
-			{member.name}
-		</p>
-		<div class="flex w-full justify-start gap-4">
-			{
-				member.linkedin && (
-					<a
-						href={member.linkedin}
-						class="h-5 text-white"
-						target="_blank"
-					>
-						<Linkedin />
-					</a>
-				)
-			}
-			{
-				member.email && (
-					<a
-						href={`mailto:${member.email}`}
-						class="h-5 text-white"
-						target="_blank"
-					>
-						<Mail />
-					</a>
-				)
-			}
-		</div>
-	</div>
+  {
+    member.image ? (
+      <div class="h-full w-full">
+        <Image
+          alt={member.name}
+          src={image!}
+          class="h-full w-full object-contain sm:object-cover"
+        />
+      </div>
+    ) : (
+      <div class="h-full w-full p-3">
+        <Person class={`h-full w-full text-${color}`} />
+      </div>
+    )
+  }
+  <div
+    class="absolute inset-0 flex h-full w-full flex-col items-end gap-4 rounded-lg bg-black/90 p-3 opacity-0 transition-all duration-300 sm:group-hover:opacity-100"
+  >
+    <p class="text-base font-semibold text-white md:text-lg">
+      {member.name}
+    </p>
+    <div class="flex w-full justify-start gap-4">
+      {
+        member.linkedin && (
+          <a href={member.linkedin} class="h-5 text-white" target="_blank">
+            <Linkedin />
+          </a>
+        )
+      }
+      {
+        member.email && (
+          <a
+            href={`mailto:${member.email}`}
+            class="h-5 text-white"
+            target="_blank"
+          >
+            <Mail />
+          </a>
+        )
+      }
+    </div>
+  </div>
 </div>
