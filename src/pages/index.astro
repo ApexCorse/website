@@ -3,12 +3,12 @@ import MainAnimation from "@/components/home/MainAnimation.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/globals.css";
 
-import team from "@/assets/rettore.png";
 import cars from "@/assets/cars.png";
+import team from "@/assets/rettore.png";
 import unipa from "@/assets/unipa.png";
-import { Image } from "astro:assets";
 import SplashScreen from "@/components/home/SplashScreen.astro";
 import Sponsors from "@/components/Sponsors.astro";
+import { Image } from "astro:assets";
 
 const metadata = {
   title: "Apex Corse",
@@ -105,7 +105,7 @@ const metadata = {
         </div>
       </div>
       <div class="mt-8 h-[1px] w-full bg-gray-700"></div>
-      <Sponsors class="my-8" />
+      <Sponsors class="py-8" />
     </div>
   </div>
 </Layout>

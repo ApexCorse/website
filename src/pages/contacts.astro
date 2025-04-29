@@ -2,8 +2,35 @@
 import TextDisplay from "../components/TextDisplay.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/globals.css";
+
+import Sponsors from "@/components/Sponsors.astro";
+import flag from "../assets/flag.png";
 ---
 
 <Layout>
-  <TextDisplay text="Contacts" />
+  <TextDisplay text="Contacts" image={flag.src} />
+  <div class="px-4">
+    <div
+      class="flex flex-col items-center justify-center gap-8 py-16 text-center text-white sm:gap-12"
+    >
+      {
+        [
+          { title: "Mail", content: "business@apexcorse.it" },
+          {
+            title: "Address",
+            content: "Viale delle Scienze, Edificio 8, Palermo PA",
+          },
+        ].map((item) => (
+          <div class="flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <h2 class="font-primary text-4xl font-semibold uppercase md:text-5xl">
+              {item.title}
+            </h2>
+            <p class="text-sm sm:text-base md:text-xl">{item.content}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-8 h-[1px] w-full bg-gray-700"></div>
+    <Sponsors class="py-8" />
+  </div>
 </Layout>

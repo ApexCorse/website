@@ -1,15 +1,15 @@
 ---
-import Tesla from "../assets/sponsors/tesla.svg";
+import { cn } from "@/lib/utils/cn";
 import Ansys from "../assets/sponsors/ansys.svg";
+import Crg from "../assets/sponsors/crg.svg";
+import Fenice from "../assets/sponsors/fenice.svg";
 import Hexagon from "../assets/sponsors/hexagon.svg";
+import Hypertec from "../assets/sponsors/hypertec.svg";
 import Loctite from "../assets/sponsors/loctite.svg";
 import Nigrelli from "../assets/sponsors/nigrelli.svg";
-import Qnap from "../assets/sponsors/qnap.svg";
 import Omhero from "../assets/sponsors/omhero.svg";
-import Hypertec from "../assets/sponsors/hypertec.svg";
-import Fenice from "../assets/sponsors/fenice.svg";
-import Crg from "../assets/sponsors/crg.svg";
-import { cn } from "@/lib/utils/cn";
+import Qnap from "../assets/sponsors/qnap.svg";
+import Tesla from "../assets/sponsors/tesla.svg";
 
 interface Props {
   class?: string;
@@ -20,24 +20,35 @@ const { class: className } = Astro.props;
 
 <div
   class={cn(
-    "flex flex-col items-center justify-center gap-4 sm:gap-8",
+    "flex flex-col items-center justify-center gap-8 font-primary",
     className,
   )}
 >
-  <div
-    class="flex w-full max-w-4xl items-center justify-center gap-4 sm:gap-8 md:gap-12"
+  <p
+    class="text-center text-base font-semibold text-gray-300 uppercase sm:text-xl"
   >
-    {
-      [Tesla, Ansys, Omhero].map((Sponsor) => (
-        <Sponsor class="w-full max-w-40 hover:opacity-80" />
-      ))
-    }
-  </div>
-  <div class="flex w-full max-w-4xl items-center justify-center gap-4 md:gap-8">
-    {
-      [Hexagon, Loctite, Nigrelli, Qnap, Hypertec, Fenice, Crg].map(
-        (Sponsor) => <Sponsor class="w-full max-w-20 hover:opacity-80" />,
-      )
-    }
+    Our Partners
+  </p>
+  <div class="flex flex-col items-center justify-center gap-4 sm:gap-8">
+    <div
+      class="flex w-full max-w-4xl items-center justify-center gap-4 sm:gap-8 md:gap-12"
+    >
+      {
+        [Tesla, Ansys, Omhero].map((Sponsor) => (
+          <Sponsor class="w-full max-w-40 text-gray-300 hover:opacity-80" />
+        ))
+      }
+    </div>
+    <div
+      class="flex w-full max-w-4xl items-center justify-center gap-4 md:gap-8"
+    >
+      {
+        [Hexagon, Loctite, Nigrelli, Qnap, Hypertec, Fenice, Crg].map(
+          (Sponsor) => (
+            <Sponsor class="w-full max-w-20 text-gray-500 hover:opacity-80" />
+          ),
+        )
+      }
+    </div>
   </div>
 </div>
