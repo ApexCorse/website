@@ -2,78 +2,90 @@
 import MemberCard from "./MemberCard.astro";
 import MemberTile from "./MemberTile.astro";
 type Department =
-  | "board"
-  | "chassis"
-  | "aerodynamics"
-  | "powertrain"
-  | "electronics"
-  | "it"
-  | "graphics"
-  | "business"
-  | "cost";
+	| "board"
+	| "chassis"
+	| "aerodynamics"
+	| "powertrain"
+	| "electronics"
+	| "it"
+	| "graphics"
+	| "business"
+	| "cost";
 
 interface Props {
-  department: Department;
-  title: string;
-  members: Member[];
+	department: Department;
+	title: string;
+	members: Member[];
+	description?: string;
 }
 
-const { title, department, members } = Astro.props as Props;
+const { title, department, members, description } = Astro.props as Props;
 
 const departmentStyles: Record<Department, { text: string; bg: string }> = {
-  board: { text: "text-white", bg: "bg-white" },
-  chassis: { text: "text-purple", bg: "bg-purple" },
-  aerodynamics: { text: "text-cyan", bg: "bg-cyan" },
-  powertrain: { text: "text-red", bg: "bg-red" },
-  electronics: { text: "text-pink", bg: "bg-pink" },
-  it: { text: "text-orange", bg: "bg-orange" },
-  graphics: { text: "text-green", bg: "bg-green" },
-  business: { text: "text-blue", bg: "bg-blue" },
-  cost: { text: "text-blue", bg: "bg-blue" },
+	board: { text: "text-white", bg: "bg-white" },
+	chassis: { text: "text-purple", bg: "bg-purple" },
+	aerodynamics: { text: "text-cyan", bg: "bg-cyan" },
+	powertrain: { text: "text-red", bg: "bg-red" },
+	electronics: { text: "text-pink", bg: "bg-pink" },
+	it: { text: "text-orange", bg: "bg-orange" },
+	graphics: { text: "text-green", bg: "bg-green" },
+	business: { text: "text-blue", bg: "bg-blue" },
+	cost: { text: "text-blue", bg: "bg-blue" },
 };
 
 const styles = departmentStyles[department];
 
 const leader: Member | undefined =
-  department === "board" ? undefined : members[0];
+	department === "board" ? undefined : members[0];
 const restOfMembers = department === "board" ? members : members.slice(1);
 ---
 
 <div class="px-8 py-8 sm:min-h-screen">
-  <div class="mb-8 flex items-center gap-4">
-    <h2 class={`uppercase ${styles.text} font-primary text-3xl sm:text-5xl`}>
-      {title}
-    </h2>
-    {
-      department === "board" ? (
-        <div class="grow">
-          <div class="bg-purple h-2" />
-          <div class="bg-cyan h-2" />
-          <div class="bg-red h-2" />
-        </div>
-      ) : (
-        <div class={`h-6 grow ${styles.bg}`} />
-      )
-    }
-  </div>
-  <div class="hidden grow gap-8 sm:flex">
-    <div class="basis-1/4 md:basis-1/2"></div>
-    <div class="flex basis-3/4 items-start justify-end gap-2 md:basis-1/2">
-      {leader && <MemberCard member={leader} big />}
-      <div class="grid-right flex w-fit min-w-0 flex-wrap gap-4 md:gap-8">
-        {
-          restOfMembers.map((member) => (
-            <MemberCard member={member} big={member.department === "board"} />
-          ))
-        }
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col gap-4 sm:hidden">
-    {
-      members.map((member) => {
-        return <MemberTile member={member} />;
-      })
-    }
-  </div>
+	<div class="mb-8 flex items-center gap-4">
+		<h2
+			class={`uppercase ${styles.text} font-primary text-3xl sm:text-5xl`}
+		>
+			{title}
+		</h2>
+		{
+			department === "board" ? (
+				<div class="grow">
+					<div class="bg-purple h-2" />
+					<div class="bg-cyan h-2" />
+					<div class="bg-red h-2" />
+				</div>
+			) : (
+				<div class={`h-6 grow ${styles.bg}`} />
+			)
+		}
+	</div>
+	<div class="hidden grow gap-16 md:flex">
+		<div class="basis-1/3">
+			{
+				description && (
+					<p class="text-base text-white sm:text-xl">{description}</p>
+				)
+			}
+		</div>
+		<div class="flex basis-2/3 items-start justify-end gap-4">
+			{leader && <MemberCard member={leader} big />}
+			<div class="grid-right flex w-fit flex-wrap gap-4 md:gap-8">
+				{
+					restOfMembers.map((member) => (
+						<MemberCard
+							member={member}
+							big={member.department === "board"}
+						/>
+					))
+				}
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-col gap-4 md:hidden">
+		{
+			members.map((member) => {
+				return <MemberTile member={member} />;
+			})
+		}
+	</div>
 </div>
