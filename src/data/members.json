@@ -25,13 +25,15 @@
   {
     "name": "Alessia Salamone",
     "department": "chassis",
-    "email": "alessia.salamone04@community.unipa.it"
+    "email": "alessia.salamone04@community.unipa.it",
+    "image": "alessia-salamone"
   },
   {
     "name": "Andrea Maiorana",
     "department": "chassis",
     "linkedin": "https://www.linkedin.com/in/andrea-maiorana-a704b1307/",
-    "email": "andrea.maiorana@community.unipa.it"
+    "email": "andrea.maiorana@community.unipa.it",
+    "image": "andrea-maiorana"
   },
   {
     "name": "Matilde Arista",
@@ -42,7 +44,8 @@
   {
     "name": "Lorenzo Corsetti",
     "department": "chassis",
-    "email": "lorenzo.corsetti@community.unipa.it"
+    "email": "lorenzo.corsetti@community.unipa.it",
+    "image": "lorenzo-corsetti"
   },
   {
     "name": "Gabriele Montalto",
@@ -52,7 +55,8 @@
   {
     "name": "Angelo D'Angelo",
     "department": "chassis",
-    "email": "angelo.dangelo02@community.unipa.it"
+    "email": "angelo.dangelo02@community.unipa.it",
+    "image": "angelo-d-angelo"
   },
   {
     "name": "Giorgio Indorante",
@@ -68,7 +72,8 @@
   {
     "name": "Giovanni Rizzo",
     "department": "chassis",
-    "email": "giovanni.rizzo10@community.unipa.it"
+    "email": "giovanni.rizzo10@community.unipa.it",
+    "image": "giovanni-rizzo"
   },
   {
     "name": "Giuseppe Pavone",
@@ -78,22 +83,26 @@
   {
     "name": "Matilde La Spisa",
     "department": "chassis",
-    "email": "matilde.laspisa@community.unipa.it"
+    "email": "matilde.laspisa@community.unipa.it",
+    "image": "matilde-la-spisa"
   },
   {
     "name": "Paolo Sidoti",
     "department": "chassis",
-    "email": "paolo.sidoti@community.unipa.it"
+    "email": "paolo.sidoti@community.unipa.it",
+    "image": "paolo-sidoti"
   },
   {
     "name": "Salvatore Genova",
     "department": "chassis",
-    "email": "salvatorepio.genova@community.unipa.it"
+    "email": "salvatorepio.genova@community.unipa.it",
+    "image": "salvatore-genova"
   },
   {
     "name": "Vincenzo Galluzzo",
     "department": "chassis",
-    "email": "vincenzo.galluzzo02@community.unipa.it"
+    "email": "vincenzo.galluzzo02@community.unipa.it",
+    "image": "vincenzo-galluzzo"
   },
   {
     "name": "Silvia Spartà",
@@ -106,7 +115,8 @@
   {
     "name": "Gabriele Lo Re",
     "department": "aerodynamics",
-    "email": "gabriele.lore@community.unipa.it"
+    "email": "gabriele.lore@community.unipa.it",
+    "image": "gabriele-lo-re"
   },
   {
     "name": "Giuseppe Scavone",
@@ -119,18 +129,21 @@
     "name": "Dario Vallelunga",
     "department": "aerodynamics",
     "linkedin": "https://www.linkedin.com/in/dario-vallelunga-525b84308/",
-    "email": "dario.vallelunga@community.unipa.it"
+    "email": "dario.vallelunga@community.unipa.it",
+    "image": "dario-vallelunga"
   },
   {
     "name": "Gabriele Giannone",
     "department": "aerodynamics",
     "linkedin": "https://www.linkedin.com/in/giannonegabriele66/",
-    "email": "gabriele.giannone@community.unipa.it"
+    "email": "gabriele.giannone@community.unipa.it",
+    "image": "gabriele-giannone"
   },
   {
     "name": "Ludovica Spanò",
     "department": "aerodynamics",
-    "email": "ludovica.spano@community.unipa.it"
+    "email": "ludovica.spano@community.unipa.it",
+    "image": "ludovica-spano"
   },
   {
     "name": "Nicola Giammanco",
@@ -154,7 +167,8 @@
   {
     "name": "Claudia Genovese",
     "department": "aerodynamics",
-    "email": "claudia.genovese02@community.unipa.it"
+    "email": "claudia.genovese02@community.unipa.it",
+    "image": "claudia-genovese"
   },
   {
     "name": "Salvo Maria Musumeci",
@@ -164,18 +178,21 @@
   {
     "name": "Salvatore Toia",
     "department": "aerodynamics",
-    "email": "salvatore.toia@community.unipa.it"
+    "email": "salvatore.toia@community.unipa.it",
+    "image": "salvatore-toia"
   },
   {
     "name": "Alberto Pepoli",
     "department": "aerodynamics",
-    "email": "alberto.pepoli@community.unipa.it"
+    "email": "alberto.pepoli@community.unipa.it",
+    "image": "alberto-pepoli"
   },
   {
     "name": "Alessandro Palumbo",
     "department": "aerodynamics",
     "linkedin": "https://www.linkedin.com/in/alessandro-palumbo-719577226",
-    "email": "alessandro.palumbo01@community.unipa.it"
+    "email": "alessandro.palumbo01@community.unipa.it",
+    "image": "alessandro-palumbo"
   },
   {
     "name": "Gabriele Amorello",
@@ -261,17 +278,20 @@
   {
     "name": "Ilenia Cricchio",
     "department": "powertrain",
-    "email": "ilenia.cricchio@community.unipa.it"
+    "email": "ilenia.cricchio@community.unipa.it",
+    "image": "ilenia-cricchio"
   },
   {
     "name": "Davide Cirrincione",
     "department": "powertrain",
-    "email": "davide.cirrincione@community.unipa.it"
+    "email": "davide.cirrincione@community.unipa.it",
+    "image": "davide-cirrincione"
   },
   {
     "name": "Salvatore Cutaia",
     "department": "powertrain",
-    "email": "salvatore.cutaia01@community.unipa.it"
+    "email": "salvatore.cutaia01@community.unipa.it",
+    "image": "salvatore-cutaia"
   },
   {
     "name": "Stefano Campisi",
@@ -289,7 +309,8 @@
   {
     "name": "Matteo Glorioso",
     "department": "graphics",
-    "email": "matteo.glorioso@community.unipa.it"
+    "email": "matteo.glorioso@community.unipa.it",
+    "image": "matteo-glorioso"
   },
   {
     "name": "Vincenzo Bongiorno",
@@ -309,7 +330,9 @@
   {
     "name": "Letizia Ganci",
     "department": "graphics",
-    "email": "letizia.ganci@community.unipa.it"
+    "email": "letizia.ganci@community.unipa.it",
+    "image": "letizia-ganci",
+    "linkedin": "https://www.linkedin.com/in/letizia-ganci/"
   },
   {
     "name": "Francesco Cane",
@@ -319,7 +342,8 @@
   {
     "name": "Giuseppe Milazzo",
     "department": "graphics",
-    "email": "giuseppe.milazzo14@community.unipa.it"
+    "email": "giuseppe.milazzo14@community.unipa.it",
+    "image": "giuseppe-milazzo"
   },
   {
     "name": "Giuseppe Blunda",
@@ -369,7 +393,8 @@
   {
     "name": "Giulia Celesia",
     "department": "business",
-    "email": "giuliamaria.celesia@community.unipa.it"
+    "email": "giuliamaria.celesia@community.unipa.it",
+    "image": "giulia-celesia"
   },
   {
     "name": "Dario Tulumello",
@@ -396,6 +421,7 @@
   },
   {
     "name": "Alex Nadio Miccichè",
-    "department": "cost"
+    "department": "cost",
+    "image": "alex-micciche"
   }
 ]
