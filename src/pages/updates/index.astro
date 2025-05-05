@@ -1,11 +1,28 @@
 ---
+import updates from "@/assets/updates.png";
+import Footer from "@/components/Footer.astro";
 import TextDisplay from "@/components/TextDisplay.astro";
 import Layout from "@/layouts/Layout.astro";
-import updates from "@/assets/updates.png";
 
+import PostCard from "@/components/updates/PostCard.astro";
+import { getCollection } from "astro:content";
 import "../../styles/globals.css";
+
+const posts = await getCollection("posts");
 ---
 
 <Layout title="Updates • Apex Corse" description="Updates from Apex Corse">
-  <TextDisplay text="Updates" image={updates.src} />
+	<TextDisplay text="Updates" image={updates.src} />
+	{
+		posts.length > 0 && (
+			<div class="min-h-screen">
+				<div class="my-8 flex grid-cols-2 flex-col items-center gap-8 px-4 sm:grid sm:px-8 md:grid-cols-3 md:px-16 lg:grid-cols-4 xl:grid-cols-5">
+					{posts.map((post) => (
+						<PostCard post={post.data} id={post.id} />
+					))}
+				</div>
+			</div>
+		)
+	}
+	<Footer />
 </Layout>

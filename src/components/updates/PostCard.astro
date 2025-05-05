@@ -1,0 +1,58 @@
+---
+import ApexLogo from "@/assets/small-colored-logo.svg";
+import type { Post } from "@/types/post";
+import { Image } from "astro:assets";
+
+interface Props {
+	post: Post;
+	id: string;
+}
+
+const { post, id }: Props = Astro.props;
+
+let image: Promise<{ default: ImageMetadata }> | undefined;
+
+if (post.image) {
+	image = import(`../../assets/${post.image}`) as Promise<{
+		default: ImageMetadata;
+	}>;
+}
+---
+
+<div class="flex max-w-72 flex-col gap-2 text-white">
+	{
+		image ? (
+			<a href={`/updates/${id}`}>
+				<Image
+					src={image}
+					alt={post.title}
+					class="aspect-square rounded-2xl object-cover"
+				/>
+			</a>
+		) : (
+			<a
+				href={`/updates/${id}`}
+				class="flex aspect-square items-center justify-center rounded-2xl bg-black"
+			>
+				<ApexLogo class="h-auto w-12" />
+			</a>
+		)
+	}
+	<a href={`/updates/${id}`}>
+		<h2 class="font-primary line-clamp-2 text-xl font-bold uppercase">
+			{post.title}
+		</h2>
+	</a>
+	<p class="line-clamp-3 text-sm text-gray-400">{post.description}</p>
+	<div>
+		<p>{post.author}</p>
+		<p class="text-sm text-gray-400">
+			{
+				new Date(post.date).toLocaleDateString("en-US", {
+					month: "long",
+					day: "numeric",
+				})
+			}
+		</p>
+	</div>
+</div>
