@@ -1,18 +1,18 @@
 [
   {
+    "name": "Gabriele La Milia",
+    "department": "board",
+    "linkedin": "https://www.linkedin.com/in/gabrielelm/",
+    "email": "gabriele.lamilia01@community.unipa.it",
+    "image": "gabriele-la-milia"
+  },
+  {
     "name": "Marco Albergoni",
     "department": "board",
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/marco-albergoni-881a7a2b8/",
     "email": "marco.albergoni@community.unipa.it",
     "image": "marco-albergoni"
-  },
-  {
-    "name": "Gabriele La Milia",
-    "department": "board",
-    "linkedin": "https://www.linkedin.com/in/gabrielelm/",
-    "email": "gabriele.lamilia01@community.unipa.it",
-    "image": "gabriele-la-milia"
   },
   {
     "name": "Salvatore Alessi",
@@ -50,7 +50,8 @@
   {
     "name": "Gabriele Montalto",
     "department": "chassis",
-    "email": "gabriele.montalto01@community.unipa.it"
+    "email": "gabriele.montalto01@community.unipa.it",
+    "image": "gabriele-montalto"
   },
   {
     "name": "Angelo D'Angelo",
@@ -203,24 +204,6 @@
     "image": "gabriele-amorello"
   },
   {
-    "name": "Antonio Lentini",
-    "department": "it",
-    "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
-    "email": "antonio.lentini06@community.unipa.it",
-    "image": "antonio-lentini"
-  },
-  {
-    "name": "Gianluca Guarneri",
-    "department": "it"
-  },
-  {
-    "name": "Gabriele Lo Cascio",
-    "department": "it",
-    "linkedin": "https://www.linkedin.com/in/gabriele-locascio/",
-    "email": "gabriele.locascio03@community.unipa.it",
-    "image": "gabriele-lo-cascio"
-  },
-  {
     "name": "Dario Rizzo",
     "department": "it",
     "email": "dariogiuseppemaria.rizzo@community.unipa.it"
@@ -232,9 +215,22 @@
     "image": "francesco-abitabile"
   },
   {
-    "name": "Simone La Milia",
+    "name": "Antonio Lentini",
     "department": "it",
-    "email": "simonesalvatore.lamilia@community.unipa.it"
+    "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
+    "email": "antonio.lentini06@community.unipa.it",
+    "image": "antonio-lentini"
+  },
+  {
+    "name": "Gabriele Lo Cascio",
+    "department": "it",
+    "linkedin": "https://www.linkedin.com/in/gabriele-locascio/",
+    "email": "gabriele.locascio03@community.unipa.it",
+    "image": "gabriele-lo-cascio"
+  },
+  {
+    "name": "Gianluca Guarneri",
+    "department": "it"
   },
   {
     "name": "Giuseppe Alosi",
