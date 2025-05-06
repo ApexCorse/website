@@ -12,6 +12,7 @@ export default function Drawer() {
       <SheetContent>
         <div className="flex h-full flex-col justify-between px-4 py-16">
           <div className="font-primary flex flex-col items-end gap-8 text-end text-white">
+            <a href="/">Home</a>
             <a href="/team/">Team</a>
             <a href="/contacts/">Contacts</a>
           </div>
