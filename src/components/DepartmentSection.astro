@@ -57,8 +57,8 @@ const restOfMembers = department === "board" ? members : members.slice(1);
       )
     }
   </div>
-  <div class="hidden grow gap-16 md:flex">
-    <div class="flex-1">
+  <div class="relative hidden grow gap-16 md:flex h-full">
+    <div class="sticky top-8 flex-1 self-start">
       {
         description && (
           <p class="text-base text-white sm:text-xl">{description}</p>
