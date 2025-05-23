@@ -7,7 +7,7 @@ export default function Drawer() {
   return (
     <Sheet>
       <SheetTrigger asChild className="cursor-pointer md:hidden">
-        <MenuIcon color="white" />
+        <MenuIcon />
       </SheetTrigger>
       <SheetContent>
         <div className="flex h-full flex-col justify-between px-4 py-16">

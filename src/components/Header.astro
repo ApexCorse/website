@@ -5,10 +5,11 @@ import Drawer from "./react/Drawer";
 ---
 
 <div
-  class="flex items-center justify-between px-8 py-8 transition-normal duration-75 md:px-16"
+  class="fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-8 py-4 text-white transition-colors transition-normal duration-300 md:px-16"
+  id="header"
 >
   <a href="/" class="group">
-    <Logo class="h-auto w-8 group-hover:hidden md:w-14" />
+    <Logo class="colored h-auto w-8 group-hover:hidden md:w-14" />
     <LogoColored class="hidden h-auto w-8 group-hover:block md:w-14" />
   </a>
   <div class="hidden items-center gap-16 font-normal md:flex">
@@ -21,7 +22,7 @@ import Drawer from "./react/Drawer";
         ].map((item) => (
           <a
             href={item.href}
-            class="font-primary text-white decoration-2 underline-offset-8 hover:underline"
+            class="font-primary colored decoration-2 underline-offset-8 hover:underline"
           >
             {item.label}
           </a>
@@ -36,7 +37,7 @@ import Drawer from "./react/Drawer";
         ].map((item) => (
           <a
             href={item.href}
-            class="font-primary text-white uppercase decoration-2 underline-offset-8 hover:underline"
+            class="font-primary colored uppercase decoration-2 underline-offset-8 hover:underline"
           >
             {item.label}
           </a>
@@ -46,3 +47,21 @@ import Drawer from "./react/Drawer";
   </div>
   <Drawer client:load />
 </div>
+<script>
+  const header = document.getElementById("header")!;
+  const colored = document.querySelectorAll(".colored");
+
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY > 100;
+
+    if (scrolled) {
+      header.classList.add("bg-white/90");
+      header.classList.add("text-black");
+      header.classList.remove("text-white");
+    } else {
+      header.classList.remove("bg-white/90");
+      header.classList.remove("text-black");
+      header.classList.add("text-white");
+    }
+  });
+</script>
