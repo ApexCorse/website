@@ -49,10 +49,17 @@ import Drawer from "./react/Drawer";
 </div>
 <script>
   const header = document.getElementById("header")!;
-  const colored = document.querySelectorAll(".colored");
+  let lastScrollY: number;
+
+  window.addEventListener("load", () => {
+    lastScrollY = window.scrollY;
+  });
 
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY > 100;
+    const scrollDelta = window.scrollY - lastScrollY;
+    console.log(scrollDelta);
+    lastScrollY = window.scrollY;
 
     if (scrolled) {
       header.classList.add("bg-white/90");
@@ -62,6 +69,14 @@ import Drawer from "./react/Drawer";
       header.classList.remove("bg-white/90");
       header.classList.remove("text-black");
       header.classList.add("text-white");
+    }
+
+    if (scrollDelta > 0) {
+      header.style.transform = `translateY(-100%)`;
+      header.style.transition = "transform 0.2s ease-in-out";
+    } else {
+      header.style.transform = "translateY(0%)";
+      header.style.transition = "transform 0.2s ease-in-out";
     }
   });
 </script>
