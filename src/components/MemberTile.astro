@@ -1,4 +1,5 @@
 ---
+import { cn } from "@/lib/utils/cn";
 import Linkedin from "../assets/linkedin.svg";
 import Mail from "../assets/mail.svg";
 import MemberCard from "./MemberCard.astro";
@@ -7,17 +8,41 @@ interface Props {
 }
 
 const { member } = Astro.props as Props;
+
+const roleStyles: Record<Department, string> = {
+  board: "text-white",
+  chassis: "text-purple",
+  aerodynamics: "text-cyan",
+  powertrain: "text-red",
+  electronics: "text-pink",
+  it: "text-orange",
+  graphics: "text-green",
+  business: "text-blue",
+  cost: "text-blue",
+};
+
+const roleStyle = roleStyles[member.department];
 ---
 
 <div>
   <div class="flex items-center gap-8">
     <MemberCard member={member} />
-    <div class="flex flex-col gap-2">
-      <h3 class="text-lg font-semibold text-white">{member.name}</h3>
+    <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-1">
+        {member.role && <p class={cn("text-sm font-primary", roleStyle)}>{member.role}</p>}
+        <h3 class="text-lg leading-tight font-semibold text-white">
+          {member.name}
+        </h3>
+        {member.course && <p class="text-sm text-gray-500">{member.course}</p>}
+      </div>
       <div class="flex gap-4">
         {
           member.linkedin && (
-            <a href={member.linkedin} class="h-6 w-6 text-gray-500" target="_blank">
+            <a
+              href={member.linkedin}
+              class="h-6 w-6 text-gray-500"
+              target="_blank"
+            >
               <Linkedin />
             </a>
           )

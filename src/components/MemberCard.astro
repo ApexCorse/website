@@ -89,10 +89,9 @@ if (member.image) {
     backgroundColor,
     "rounded-lg",
     member.leader ? `border-4 ${borderColor}` : "",
-    "h-22 sm:h-32 md:h-40 aspect-square sm:aspect-[3/4] group relative",
+    "h-22 sm:h-28 aspect-square group relative",
     big && "h-36 sm:h-48 md:h-56",
   )}
-  style="direction: ltr;"
 >
   {
     member.image ? (
@@ -100,7 +99,7 @@ if (member.image) {
         <Image
           alt={member.name}
           src={image!}
-          class="h-full w-full object-contain sm:object-cover"
+          class="h-full w-full object-contain"
         />
       </div>
     ) : (
@@ -109,31 +108,4 @@ if (member.image) {
       </div>
     )
   }
-  <div
-    class="absolute inset-0 flex h-full w-full flex-col items-end gap-4 rounded-lg bg-black/90 p-3 opacity-0 transition-all duration-300 sm:group-hover:opacity-100"
-  >
-    <p class="text-right text-base font-semibold text-white md:text-lg">
-      {member.name}
-    </p>
-    <div class={cn("flex w-full justify-end gap-4")}>
-      {
-        member.linkedin && (
-          <a href={member.linkedin} class="h-5 w-5 text-white" target="_blank">
-            <Linkedin />
-          </a>
-        )
-      }
-      {
-        member.email && (
-          <a
-            href={`mailto:${member.email}`}
-            class="h-5 w-5 text-white"
-            target="_blank"
-          >
-            <Mail />
-          </a>
-        )
-      }
-    </div>
-  </div>
 </div>

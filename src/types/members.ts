@@ -17,4 +17,6 @@ interface Member {
   leader?: boolean;
   linkedin?: string;
   email?: string;
+  course?: string;
+  role?: string;
 }

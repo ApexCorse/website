@@ -57,30 +57,16 @@ const restOfMembers = department === "board" ? members : members.slice(1);
       )
     }
   </div>
-  <div class="relative hidden grow gap-16 md:flex h-full">
-    <div class="sticky top-8 flex-1 self-start">
+  <div class="relative flex grow flex-col gap-16 lg:flex-row">
+    <div class="lg:sticky top-8 flex-1 self-start">
       {
         description && (
           <p class="text-base text-white sm:text-xl">{description}</p>
         )
       }
     </div>
-    <div class="flex flex-2 items-start justify-end gap-4">
-      {leader && <MemberCard member={leader} big />}
-      <div class="grid-right flex flex-wrap gap-4 md:gap-8">
-        {
-          restOfMembers.map((member) => (
-            <MemberCard member={member} big={member.department === "board"} />
-          ))
-        }
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 flex-2 items-start justify-end gap-4">
+      {members.map((member) => <MemberTile member={member} />)}
     </div>
-  </div>
-  <div class="flex flex-col gap-4 md:hidden">
-    {
-      members.map((member) => {
-        return <MemberTile member={member} />;
-      })
-    }
   </div>
 </div>
