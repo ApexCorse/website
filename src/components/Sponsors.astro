@@ -30,8 +30,11 @@ const { class: className } = Astro.props;
     Our Partners
   </p>
   <div class="flex flex-col items-center justify-center gap-4 sm:gap-8">
+    <a href="https://www.omhero.tech" target="_blank">
+      <Omhero class="text-gray-300 hover:opacity-80" />
+    </a>
     <div
-      class="flex w-full max-w-4xl items-end justify-center gap-4 sm:gap-8 md:gap-12"
+      class="flex w-full max-w-4xl items-center justify-center gap-4 sm:gap-8 md:gap-12"
     >
       {
         [
@@ -40,12 +43,16 @@ const { class: className } = Astro.props;
             href: "https://www.tesla.com",
           },
           {
-            Component: Omhero,
-            href: "https://www.omhero.tech",
-          },
-          {
             Component: Ansys,
             href: "https://www.ansys.com",
+          },
+          {
+            Component: Hexagon,
+            href: "https://www.hexagon.com",
+          },
+          {
+            Component: Nigrelli,
+            href: "https://grupponigrelli.it",
           },
         ].map(({ Component, href }, index) => (
           <a
@@ -53,7 +60,7 @@ const { class: className } = Astro.props;
             target="_blank"
             class={cn(
               "flex-1 text-gray-300 hover:opacity-80",
-              index === 1 && "flex-2",
+              index == 3 && "mb-4 md:mb-8",
             )}
           >
             <Component class="h-full w-full" />
@@ -67,16 +74,8 @@ const { class: className } = Astro.props;
       {
         [
           {
-            Component: Hexagon,
-            href: "https://www.hexagon.com",
-          },
-          {
             Component: Loctite,
             href: "https://www.loctite.com",
-          },
-          {
-            Component: Nigrelli,
-            href: "https://grupponigrelli.it",
           },
           {
             Component: Qnap,
