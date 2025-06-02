@@ -5,6 +5,7 @@ import Apex from "@/assets/apex.svg";
 import Header from "../Header.astro";
 import draftLeft from "@/assets/draft-left.png";
 import draftRight from "@/assets/draft-right.png";
+import { ChevronDown } from "lucide-react";
 ---
 
 <div class="relative h-screen overflow-hidden">
@@ -42,6 +43,9 @@ import draftRight from "@/assets/draft-right.png";
       class="absolute h-6 opacity-0 sm:h-12"
       id="animated-draft-right"
     />
+    <ChevronDown
+      className="absolute bottom-4 h-24 w-auto animate-pulse text-white"
+    />
   </div>
 </div>
 <script>
@@ -61,7 +65,7 @@ import draftRight from "@/assets/draft-right.png";
     // Function to adjust vertical positions for scroll
     const adjustForScroll = (y: number) => {
       return y + window.scrollY;
-    }
+    };
 
     console.log(adjustForScroll(apexProps.top));
 
@@ -115,7 +119,7 @@ import draftRight from "@/assets/draft-right.png";
   };
 
   // Listen for the splash screen completion event
-  window.addEventListener("splashScreenComplete", startAnimation);
+  window.addEventListener("load", startAnimation);
 
   // Also handle resize events
   window.addEventListener("resize", () => updatePositions(true));
