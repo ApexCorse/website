@@ -119,7 +119,7 @@ import { ChevronDown } from "lucide-react";
   };
 
   // Listen for the splash screen completion event
-  window.addEventListener("splashScreenComplete", startAnimation);
+  window.addEventListener("load", startAnimation);
 
   // Also handle resize events
   window.addEventListener("resize", () => updatePositions(true));
