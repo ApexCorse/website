@@ -10,7 +10,7 @@ interface Props {
 const { member } = Astro.props as Props;
 
 const roleStyles: Record<Department, string> = {
-  board: "text-white",
+  board: "text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50",
   chassis: "text-purple",
   aerodynamics: "text-cyan",
   powertrain: "text-red",
@@ -29,7 +29,7 @@ const roleStyle = roleStyles[member.department];
     <MemberCard member={member} />
     <div class="flex flex-col gap-3">
       <div class="flex flex-col gap-1">
-        {member.role && <p class={cn("text-sm font-primary", roleStyle)}>{member.role}</p>}
+        {member.role && <p class={cn("text-sm font-primary uppercase", roleStyle)}>{member.role}</p>}
         <h3 class="text-lg leading-tight font-semibold text-white">
           {member.name}
         </h3>
