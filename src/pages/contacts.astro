@@ -5,42 +5,69 @@ import "../styles/globals.css";
 
 import Footer from "@/components/Footer.astro";
 import flag from "../assets/flag.png";
+
+import Instagram from "../assets/social/instagram.svg";
+import Linkedin from "../assets/social/linkedin.svg";
+import TikTok from "../assets/social/tiktok.svg";
 ---
 
 <Layout title="Contacts • Apex Corse">
-  <TextDisplay text="Contacts" image={flag.src} />
-  <div class="px-4">
-    <div
-      class="flex flex-col items-center justify-center gap-8 py-16 text-center text-white sm:gap-12"
-    >
-      {
-        [
-          {
-            title: "Mail",
-            content: "business@apexcorse.it",
-            link: "mailto:business@apexcorse.it",
-          },
-          {
-            title: "Address",
-            content: "Viale delle Scienze, Edificio 8, Palermo PA",
-            link: "https://maps.app.goo.gl/riTCm6XeYkZBPcC38",
-          },
-        ].map((item) => (
-          <div class="flex flex-col items-center justify-center gap-2 sm:gap-4">
-            <h2 class="font-primary text-4xl uppercase md:text-5xl">
-              {item.title}
-            </h2>
-            <a
-              class="text-sm hover:underline sm:text-base md:text-xl"
-              href={item.link}
-              target="_blank"
-            >
-              {item.content}
-            </a>
-          </div>
-        ))
-      }
-    </div>
-    <Footer />
-  </div>
+	<TextDisplay text="Contacts" image={flag.src} />
+	<div class="px-4">
+		<div
+			class="flex flex-col items-center justify-center gap-8 py-16 text-center text-white sm:gap-12"
+		>
+			{
+				[
+					{
+						title: "Mail",
+						content: "business@apexcorse.it",
+						link: "mailto:business@apexcorse.it",
+					},
+					{
+						title: "Address",
+						content: "Viale delle Scienze, Edificio 8, Palermo PA",
+						link: "https://maps.app.goo.gl/riTCm6XeYkZBPcC38",
+					},
+				].map((item) => (
+					<div class="flex flex-col items-center justify-center gap-2 sm:gap-4">
+						<h2 class="font-primary text-4xl uppercase md:text-5xl">
+							{item.title}
+						</h2>
+						<a
+							class="text-sm hover:underline sm:text-base md:text-xl"
+							href={item.link}
+							target="_blank"
+						>
+							{item.content}
+						</a>
+					</div>
+				))
+			}
+
+			<div class="flex justify-center gap-16 my-8">
+				{
+					[
+						{
+							Component: Linkedin,
+							href: "https://it.linkedin.com/company/apex-corse",
+						},
+						{
+							Component: Instagram,
+							href: "https://www.instagram.com/apex_corse",
+						},
+						{
+							Component: TikTok,
+							href: "https://www.tiktok.com/@apexcorse",
+						},
+					].map(({ Component, href }) => (
+						<a href={href} target="_blank">
+							<Component class="h-12 w-12" />
+						</a>
+					))
+				}
+			</div>
+		</div>
+		<Footer />
+	</div>
 </Layout>
