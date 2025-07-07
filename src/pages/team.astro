@@ -30,6 +30,9 @@ const electronicsMembers = members.filter(
 const businessAndCostMembers = members.filter(
   (member) => member.department === "business" || member.department === "cost",
 );
+const advisorsMembers = members.filter(
+  (member) => member.department === "advisors",
+);
 
 const metadata = {
   title: "Team • Apex Corse",

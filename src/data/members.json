@@ -1,5 +1,13 @@
 [
   {
+    "name": "Marco Albergoni",
+    "department": "board",
+    "leader": true,
+    "linkedin": "https://www.linkedin.com/in/marco-albergoni-881a7a2b8/",
+    "email": "marco.albergoni@community.unipa.it",
+    "image": "marco-albergoni"
+  },
+  {
     "name": "Gabriele La Milia",
     "department": "board",
     "linkedin": "https://www.linkedin.com/in/gabrielelm/",
@@ -7,12 +15,22 @@
     "image": "gabriele-la-milia"
   },
   {
-    "name": "Marco Albergoni",
+    "name": "Prof. Tommaso Ingrassia",
     "department": "board",
-    "leader": true,
-    "linkedin": "https://www.linkedin.com/in/marco-albergoni-881a7a2b8/",
-    "email": "marco.albergoni@community.unipa.it",
-    "image": "marco-albergoni"
+    "advisor": "true",
+    "role": "Mechanical Engineering Coordinator"
+  },
+  {
+    "name": "Prof. Antonino Cirello",
+    "department": "board",
+    "advisor": "true",
+    "role": "Faculty Advisor"
+  },
+  {
+    "name": "Prof. Nicola Montinaro",
+    "department": "chassis",
+    "advisor": "true",
+    "role": "Chassis Advisor"
   },
   {
     "name": "Salvatore Alessi",
@@ -239,6 +257,12 @@
     "email": "giuseppe.alosi@community.unipa.it"
   },
   {
+    "name": "Prof. Nicola Campagna",
+    "department": "powertrain",
+    "advisor": "true",
+    "role": "Powertrain Advisor"
+  },
+  {
     "name": "Giorgio Scarpaci",
     "department": "powertrain",
     "leader": true,
@@ -342,6 +366,12 @@
     "department": "graphics",
     "email": "giuseppe.milazzo14@community.unipa.it",
     "image": "giuseppe-milazzo"
+  },
+  {
+    "name": "Prof. Giovanni Artale",
+    "department": "electronics",
+    "advisor": "true",
+    "role": "Electronics Advisor"
   },
   {
     "name": "Giuseppe Blunda",

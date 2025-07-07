@@ -1,16 +1,6 @@
 ---
-import MemberCard from "./MemberCard.astro";
+import type { Department, Member } from "@/types/members";
 import MemberTile from "./MemberTile.astro";
-type Department =
-  | "board"
-  | "chassis"
-  | "aerodynamics"
-  | "powertrain"
-  | "electronics"
-  | "it"
-  | "graphics"
-  | "business"
-  | "cost";
 
 interface Props {
   department: Department;
@@ -35,9 +25,12 @@ const departmentStyles: Record<Department, { text: string; bg: string }> = {
 
 const styles = departmentStyles[department];
 
-const leader: Member | undefined =
-  department === "board" ? undefined : members[0];
-const restOfMembers = department === "board" ? members : members.slice(1);
+const advisor = members.find((member) => member.advisor);
+const adjustedMembers = members.toSorted((a, b) => {
+  if (a.advisor) return 1;
+  if (b.advisor) return -1;
+  return 0;
+});
 ---
 
 <div class="px-8 py-8 sm:min-h-screen">
@@ -58,15 +51,24 @@ const restOfMembers = department === "board" ? members : members.slice(1);
     }
   </div>
   <div class="relative flex grow flex-col gap-16 lg:flex-row">
-    <div class="lg:sticky top-8 flex-1 self-start">
+    <div class="top-8 flex-1 self-start lg:sticky">
       {
         description && (
           <p class="text-base text-white sm:text-xl">{description}</p>
         )
       }
+      {
+        department !== "board" && advisor && (
+          <div class="mt-8 hidden items-center gap-4 lg:flex">
+            <MemberTile member={advisor} />
+          </div>
+        )
+      }
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 flex-2 items-start justify-end gap-12">
-      {members.map((member) => <MemberTile member={member} />)}
+    <div
+      class="grid flex-2 grid-cols-1 items-start justify-end gap-12 md:grid-cols-2"
+    >
+      {adjustedMembers.map((member) => <MemberTile member={member} />)}
     </div>
   </div>
 </div>

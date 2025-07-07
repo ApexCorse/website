@@ -1,4 +1,4 @@
-type Department =
+export type Department =
   | "board"
   | "chassis"
   | "aerodynamics"
@@ -9,7 +9,7 @@ type Department =
   | "business"
   | "cost";
 
-interface Member {
+export interface Member {
   name: string;
   description?: string;
   image?: string;
@@ -19,4 +19,5 @@ interface Member {
   email?: string;
   course?: string;
   role?: string;
+  advisor?: boolean;
 }
