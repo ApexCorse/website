@@ -5,47 +5,36 @@
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/marco-albergoni-881a7a2b8/",
     "email": "marco.albergoni@community.unipa.it",
-    "image": "marco-albergoni"
+    "image": "marco-albergoni",
+    "course": "MSc Electric Engineering",
+    "role": "Team Leader"
   },
   {
     "name": "Gabriele La Milia",
     "department": "board",
     "linkedin": "https://www.linkedin.com/in/gabrielelm/",
     "email": "gabriele.lamilia01@community.unipa.it",
-    "image": "gabriele-la-milia"
-  },
-  {
-    "name": "Prof. Tommaso Ingrassia",
-    "department": "advisors",
-    "role": "Mechanical Engineering Coordinator",
-    "image": "prof-tommaso-ingrassia"
-  },
-  {
-    "name": "Prof. Antonino Cirello",
-    "department": "advisors",
-    "role": "Faculty Advisor",
-    "image": "prof-antonino-cirello"
-  },
-  {
-    "name": "Prof. Nicola Montinaro",
-    "department": "chassis",
-    "advisor": "true",
-    "role": "Chassis Advisor",
-    "image": "prof-nicola-montinaro"
+    "image": "gabriele-la-milia",
+    "course": "MSc Data Science & Statistics",
+    "role": "Director of Operations"
   },
   {
     "name": "Salvatore Alessi",
-    "department": "chassis",
-    "leader": true,
+    "department": "board",
     "linkedin": "http://www.linkedin.com/in/-salvatore-alessi",
     "email": "salvatore.alessi07@community.unipa.it",
-    "image": "salvatore-alessi"
+    "image": "salvatore-alessi",
+    "course": "MSc Mechanical Engineering",
+    "role": "Technical Director"
   },
   {
     "name": "Alessia Salamone",
     "department": "chassis",
+    "leader": true,
     "email": "alessia.salamone04@community.unipa.it",
-    "image": "alessia-salamone"
+    "image": "alessia-salamone",
+    "course": "BSc Mechanical Engineering",
+    "role": "Division Manager"
   },
   {
     "name": "Andrea Maiorana",
@@ -130,7 +119,9 @@
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/silvia-spart%C3%A0-34844798",
     "email": "silvia.sparta@community.unipa.it",
-    "image": "silvia-sparta"
+    "image": "silvia-sparta",
+    "role": "Division Manager",
+    "course": "MSc Aerospace Engineering"
   },
   {
     "name": "Gabriele Lo Re",
@@ -188,7 +179,8 @@
     "name": "Claudia Genovese",
     "department": "aerodynamics",
     "email": "claudia.genovese02@community.unipa.it",
-    "image": "claudia-genovese"
+    "image": "claudia-genovese",
+    "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Salvo Maria Musumeci",
@@ -220,49 +212,40 @@
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/gabriele-salvatore-amorello-808954180/",
     "email": "gabrielesalvatore.amorello@community.unipa.it",
-    "image": "gabriele-amorello"
-  },
-  {
-    "name": "Dario Rizzo",
-    "department": "it",
-    "email": "dariogiuseppemaria.rizzo@community.unipa.it"
-  },
-  {
-    "name": "Francesco Abitabile",
-    "department": "it",
-    "email": "francesco.abitabile@community.unipa.it",
-    "image": "francesco-abitabile"
-  },
-  {
-    "name": "Antonio Lentini",
-    "department": "it",
-    "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
-    "email": "antonio.lentini06@community.unipa.it",
-    "image": "antonio-lentini"
+    "image": "gabriele-amorello",
+    "course": "BSc Computer Engineering",
+    "role": "Division Manager"
   },
   {
     "name": "Gabriele Lo Cascio",
     "department": "it",
     "linkedin": "https://www.linkedin.com/in/gabriele-locascio/",
     "email": "gabriele.locascio03@community.unipa.it",
-    "image": "gabriele-lo-cascio"
+    "image": "gabriele-lo-cascio",
+    "course": "MSc Computer Engineering",
+    "role": "Network & Embedded Engineer"
   },
   {
-    "name": "Gianluca Guarneri",
-    "department": "it"
-  },
-  {
-    "name": "Giuseppe Alosi",
+    "name": "Antonio Lentini",
     "department": "it",
-    "linkedin": "https://www.linkedin.com/in/giuseppe-alosi-47a898202/",
-    "email": "giuseppe.alosi@community.unipa.it"
+    "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
+    "email": "antonio.lentini06@community.unipa.it",
+    "image": "antonio-lentini",
+    "course": "BSc Computer Engineering",
+    "role": "Software & Embedded Engineer"
   },
   {
-    "name": "Prof. Nicola Campagna",
-    "department": "powertrain",
-    "advisor": "true",
-    "role": "Powertrain Advisor",
-    "image": "prof-nicola-campagna"
+    "name": "Francesco Abitabile",
+    "department": "it",
+    "email": "francesco.abitabile@community.unipa.it",
+    "image": "francesco-abitabile",
+    "course": "BSc Computer Engineering"
+  },
+  {
+    "name": "Dario Rizzo",
+    "department": "it",
+    "email": "dariogiuseppemaria.rizzo@community.unipa.it",
+    "course": "MSc Data & Algorithms"
   },
   {
     "name": "Giorgio Scarpaci",
@@ -270,7 +253,9 @@
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/giorgio-scarpaci-1aa899277/",
     "email": "giorgio.scarpaci@community.unipa.it",
-    "image": "giorgio-scarpaci"
+    "image": "giorgio-scarpaci",
+    "role": "Division Manager",
+    "course": "MSc Electric Engineering"
   },
   {
     "name": "Alberto Di Mariano",
@@ -291,7 +276,9 @@
   {
     "name": "Alessandro Vaccarino",
     "department": "powertrain",
-    "image": "alessandro-vaccarino"
+    "image": "alessandro-vaccarino",
+    "linkedin": "https://www.linkedin.com/in/alessandrovaccarino/",
+    "course": "MSc Mechanical Engineering"
   },
   {
     "name": "Salvatore Papa",
@@ -317,71 +304,58 @@
     "email": "salvatore.cutaia01@community.unipa.it",
     "image": "salvatore-cutaia"
   },
+
   {
     "name": "Stefano Campisi",
     "department": "graphics",
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/stefano-campisi-892086256/",
     "email": "stefano.campisi@community.unipa.it",
-    "image": "stefano-campisi"
-  },
-  {
-    "name": "Maria Sorci",
-    "department": "graphics",
-    "email": "mariaalba.sorci@community.unipa.it"
-  },
-  {
-    "name": "Matteo Glorioso",
-    "department": "graphics",
-    "email": "matteo.glorioso@community.unipa.it",
-    "image": "matteo-glorioso"
-  },
-  {
-    "name": "Vincenzo Bongiorno",
-    "department": "graphics",
-    "email": "vincenzocarlo.bongiorno@community.unipa.it"
-  },
-  {
-    "name": "Caterina Arnò",
-    "department": "graphics",
-    "linkedin": "https://www.linkedin.com/in/caterina-arn%C3%B2-3675b4257/"
-  },
-  {
-    "name": "Ileana Li Causi",
-    "department": "graphics",
-    "email": "ileana.licausi@community.unipa.it "
+    "image": "stefano-campisi",
+    "course": "BA Industrial Design",
+    "role": "Division Manager"
   },
   {
     "name": "Letizia Ganci",
     "department": "graphics",
+    "leader": true,
     "email": "letizia.ganci@community.unipa.it",
     "image": "letizia-ganci",
-    "linkedin": "https://www.linkedin.com/in/letizia-ganci/"
-  },
-  {
-    "name": "Francesco Cane",
-    "department": "graphics",
-    "email": "francesco.cane@community.unipa.it"
+    "linkedin": "https://www.linkedin.com/in/letizia-ganci/",
+    "role": "Social Media Manager",
+    "course": "MA Marketing & Corporate Communication"
   },
   {
     "name": "Giuseppe Milazzo",
     "department": "graphics",
     "email": "giuseppe.milazzo14@community.unipa.it",
-    "image": "giuseppe-milazzo"
+    "image": "giuseppe-milazzo",
+    "course": "MSc Management Engineering",
+    "role": "Photographer & Video Maker"
   },
   {
-    "name": "Prof. Giovanni Artale",
-    "department": "electronics",
-    "advisor": "true",
-    "role": "Electronics Advisor",
-    "image": "prof-giovanni-artale"
+    "name": "Matteo Glorioso",
+    "department": "graphics",
+    "email": "matteo.glorioso@community.unipa.it",
+    "image": "matteo-glorioso",
+    "course": "BA Industrial Design",
+    "role": "Copywriter"
+  },
+  {
+    "name": "Vincenzo Bongiorno",
+    "department": "graphics",
+    "email": "vincenzocarlo.bongiorno@community.unipa.it",
+    "course": "BSc Mechanical Engineering",
+    "role": "Photographer"
   },
   {
     "name": "Giuseppe Blunda",
     "department": "electronics",
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/giuseppe-blunda-2911062bb/",
-    "email": "giuseppe.blunda02@community.unipa.it"
+    "email": "giuseppe.blunda02@community.unipa.it",
+    "course": "MSc Electronic Engineering",
+    "role": "Division Manager"
   },
   {
     "name": "Francesco Incaviglia",
@@ -403,18 +377,13 @@
     "name": "Marcello Pardo",
     "department": "electronics"
   },
+
   {
-    "name": "Francesco Scianna",
+    "name": "Dario Tulumello",
     "department": "business",
     "leader": true,
-    "linkedin": "https://www.linkedin.com/in/francescoscianna/",
-    "email": "francesco.scianna@community.unipa.it"
-  },
-  {
-    "name": "Ylenia Dibilio",
-    "department": "business",
-    "linkedin": "https://www.linkedin.com/in/ylenia-dibilio-90a959273/",
-    "email": "ylenia.dibilio@community.unipa.it"
+    "email": "dario.tulumello@community.unipa.it",
+    "role": "Division Manager"
   },
   {
     "name": "Domenico Rizzuto",
@@ -427,11 +396,6 @@
     "email": "giuliamaria.celesia@community.unipa.it",
     "linkedin": "https://www.linkedin.com/in/giulia-celesia-700896240/",
     "image": "giulia-celesia"
-  },
-  {
-    "name": "Dario Tulumello",
-    "department": "business",
-    "email": "dario.tulumello@community.unipa.it"
   },
   {
     "name": "Giuseppe Castiglia",
@@ -455,5 +419,36 @@
     "name": "Alex Nadio Miccichè",
     "department": "cost",
     "image": "alex-micciche"
+  },
+  {
+    "name": "Prof. Tommaso Ingrassia",
+    "department": "advisors",
+    "role": "Mechanical Engineering Coordinator",
+    "image": "prof-tommaso-ingrassia"
+  },
+  {
+    "name": "Prof. Antonino Cirello",
+    "department": "advisors",
+    "role": "Faculty Advisor",
+    "image": "prof-antonino-cirello"
+  },
+  {
+    "name": "Prof. Nicola Montinaro",
+    "department": "advisors",
+    "role": "Chassis Advisor",
+    "image": "prof-nicola-montinaro"
+  },
+  {
+    "name": "Prof. Nicola Campagna",
+    "department": "advisors",
+    "role": "Powertrain Advisor",
+    "image": "prof-nicola-campagna"
+  },
+  {
+    "name": "Prof. Giovanni Artale",
+    "department": "advisors",
+    "advisor": "true",
+    "role": "Electronics Advisor",
+    "image": "prof-giovanni-artale"
   }
 ]
