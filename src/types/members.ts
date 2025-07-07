@@ -1,5 +1,6 @@
 export type Department =
   | "board"
+  | "advisors"
   | "chassis"
   | "aerodynamics"
   | "powertrain"

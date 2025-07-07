@@ -16,21 +16,22 @@
   },
   {
     "name": "Prof. Tommaso Ingrassia",
-    "department": "board",
-    "advisor": "true",
-    "role": "Mechanical Engineering Coordinator"
+    "department": "advisors",
+    "role": "Mechanical Engineering Coordinator",
+    "image": "prof-tommaso-ingrassia"
   },
   {
     "name": "Prof. Antonino Cirello",
-    "department": "board",
-    "advisor": "true",
-    "role": "Faculty Advisor"
+    "department": "advisors",
+    "role": "Faculty Advisor",
+    "image": "prof-antonino-cirello"
   },
   {
     "name": "Prof. Nicola Montinaro",
     "department": "chassis",
     "advisor": "true",
-    "role": "Chassis Advisor"
+    "role": "Chassis Advisor",
+    "image": "prof-nicola-montinaro"
   },
   {
     "name": "Salvatore Alessi",
@@ -260,7 +261,8 @@
     "name": "Prof. Nicola Campagna",
     "department": "powertrain",
     "advisor": "true",
-    "role": "Powertrain Advisor"
+    "role": "Powertrain Advisor",
+    "image": "prof-nicola-campagna"
   },
   {
     "name": "Giorgio Scarpaci",
@@ -371,7 +373,8 @@
     "name": "Prof. Giovanni Artale",
     "department": "electronics",
     "advisor": "true",
-    "role": "Electronics Advisor"
+    "role": "Electronics Advisor",
+    "image": "prof-giovanni-artale"
   },
   {
     "name": "Giuseppe Blunda",
