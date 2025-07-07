@@ -7,9 +7,10 @@ import type { Department, Member } from "@/types/members";
 
 interface Props {
   member: Member;
+  class?: string
 }
 
-const { member } = Astro.props as Props;
+const { member, class: classNames } = Astro.props as Props;
 
 const roleStyles: Record<Department, string> = {
   board:
@@ -27,7 +28,7 @@ const roleStyles: Record<Department, string> = {
 const roleStyle = roleStyles[member.department];
 ---
 
-<div>
+<div class={cn(classNames)}>
   <div class="flex items-center gap-8">
     <MemberCard member={member} />
     <div class="flex flex-col gap-3">
