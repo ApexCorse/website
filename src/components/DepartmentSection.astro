@@ -70,7 +70,18 @@ const adjustedMembers = members.toSorted((a, b) => {
 		<div
 			class="grid flex-2 grid-cols-1 items-start justify-end gap-12 md:grid-cols-2"
 		>
-			{adjustedMembers.map((member) => <MemberTile member={member} class={member.advisor ? "lg:hidden" : ""} />)}
+			{
+				adjustedMembers.map((member) => (
+					<MemberTile
+						member={member}
+						class={
+							department !== "board" && member.advisor
+								? "lg:hidden"
+								: ""
+						}
+					/>
+				))
+			}
 		</div>
 	</div>
 </div>
