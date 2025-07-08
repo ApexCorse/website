@@ -1,17 +1,17 @@
 ---
-import TextDisplay from "../components/TextDisplay.astro";
-import Layout from "../layouts/Layout.astro";
+import TextDisplay from "../../components/TextDisplay.astro";
+import Layout from "../../layouts/Layout.astro";
 
 import Footer from "@/components/Footer.astro";
-import flag from "../assets/flag.png";
+import flag from "@/assets/flag.png";
 
-import Instagram from "../assets/social/instagram.svg";
-import Linkedin from "../assets/social/linkedin.svg";
-import TikTok from "../assets/social/tiktok.svg";
+import Instagram from "@/assets/social/instagram.svg";
+import Linkedin from "@/assets/social/linkedin.svg";
+import TikTok from "@/assets/social/tiktok.svg";
 ---
 
-<Layout title="Contatti • Apex Corse">
-  <TextDisplay text="Contatti" image={flag.src} />
+<Layout title="Contacts • Apex Corse">
+  <TextDisplay text="Contacts" image={flag.src} />
   <div class="px-4">
     <div
       class="flex flex-col items-center justify-center gap-8 py-16 text-center text-white sm:gap-12"
@@ -24,7 +24,7 @@ import TikTok from "../assets/social/tiktok.svg";
             link: "mailto:business@apexcorse.it",
           },
           {
-            title: "Indirizzo",
+            title: "Address",
             content: "Viale delle Scienze, Edificio 8, Palermo PA",
             link: "https://maps.app.goo.gl/riTCm6XeYkZBPcC38",
           },

@@ -28,7 +28,7 @@ const { class: className } = Astro.props;
   <p
     class="font-primary text-center text-sm text-gray-300 uppercase sm:text-base"
   >
-    Our Partners
+    {Astro.currentLocale === "en" ? "Our Partners" : "I nostri Partner"}
   </p>
   <div class="flex w-full flex-col items-center justify-center gap-4 sm:gap-8">
     <Omhero />

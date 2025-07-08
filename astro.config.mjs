@@ -12,5 +12,9 @@ export default defineConfig({
   },
   experimental: {
     svg: true,
+  },
+  i18n: {
+    locales: ["it", "en"],
+    defaultLocale: "it"
   }
 });
