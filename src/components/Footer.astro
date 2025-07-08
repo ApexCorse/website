@@ -1,5 +1,9 @@
 ---
 import Sponsors from "./Sponsors.astro";
+
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const currentLocale = Astro.currentLocale || "it";
 ---
 
 <footer class="flex flex-col gap-12 px-4 py-8 sm:px-8">
@@ -11,13 +15,28 @@ import Sponsors from "./Sponsors.astro";
     >
       {
         [
-          { text: "Back To Home", href: "/" },
-          { text: "Our Car", href: "/#our-car" },
-          { text: "Team", href: "/team" },
-          { text: "Updates", href: "/updates" },
-          { text: "Join Us", href: "/team#join-us" },
-          { text: "Unipa", href: "/#unipa" },
-          { text: "Contacts", href: "/contacts" },
+          {
+            text: currentLocale === "en" ? "Back To Home" : "Torna alla Home",
+            href: getRelativeLocaleUrl(currentLocale),
+          },
+          {
+            text: currentLocale === "en" ? "Our Car" : "La nostra auto",
+            href: getRelativeLocaleUrl(currentLocale, "our-car"),
+          },
+          { text: "Team", href: getRelativeLocaleUrl(currentLocale, "team") },
+          {
+            text: "Updates",
+            href: getRelativeLocaleUrl(currentLocale, "updates"),
+          },
+          {
+            text: currentLocale === "en" ? "Join Us" : "Unisciti a noi",
+            href: getRelativeLocaleUrl(currentLocale, "team#join-us"),
+          },
+          { text: "Unipa", href: "https://unipa.it" },
+          {
+            text: currentLocale === "en" ? "Contacts" : "Contatti",
+            href: getRelativeLocaleUrl(currentLocale, "contacts"),
+          },
         ].map((item) => (
           <a class="text-center hover:underline" href={item.href}>
             {item.text}

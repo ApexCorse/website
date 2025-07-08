@@ -2,13 +2,19 @@
 import LogoColored from "../assets/small-colored-logo.svg";
 import Logo from "../assets/small-white-logo.svg";
 import Drawer from "./react/Drawer";
+
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getPathnameWithoutLocale } from "@/lib/utils/url";
+
+const currentLocale = Astro.currentLocale || "it";
+const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
 ---
 
 <div
   class="fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-8 py-4 text-white transition-colors transition-normal duration-300 md:px-16"
   id="header"
 >
-  <a href="/" class="group">
+  <a href={getRelativeLocaleUrl(currentLocale)} class="group">
     <Logo class="colored h-auto w-8 group-hover:hidden md:w-14" />
     <LogoColored class="hidden h-auto w-8 group-hover:block md:w-14" />
   </a>
@@ -16,9 +22,18 @@ import Drawer from "./react/Drawer";
     <div class="flex items-center gap-8">
       {
         [
-          { label: "Home", href: "/" },
-          { label: "Team", href: "/team/" },
-          { label: "Contacts", href: "/contacts/" },
+          {
+            label: "Home",
+            href: getRelativeLocaleUrl(currentLocale),
+          },
+          {
+            label: "Team",
+            href: getRelativeLocaleUrl(currentLocale, "team"),
+          },
+          {
+            label: currentLocale === "en" ? "Contacts" : "Contatti",
+            href: getRelativeLocaleUrl(currentLocale, "contacts"),
+          },
         ].map((item) => (
           <a
             href={item.href}
@@ -32,8 +47,14 @@ import Drawer from "./react/Drawer";
     <div class="flex items-center gap-4">
       {
         [
-          { label: "En", href: "#" },
-          { label: "It", href: "#" },
+          {
+            label: "En",
+            href: getRelativeLocaleUrl("en", pathnameWithoutLocale),
+          },
+          {
+            label: "It",
+            href: getRelativeLocaleUrl("it", pathnameWithoutLocale),
+          },
         ].map((item) => (
           <a
             href={item.href}
@@ -45,7 +66,11 @@ import Drawer from "./react/Drawer";
       }
     </div>
   </div>
-  <Drawer client:load />
+  <Drawer
+    client:load
+    currentLocale={currentLocale}
+    pathnameWithoutLocale={pathnameWithoutLocale}
+  />
 </div>
 <script>
   const header = document.getElementById("header")!;

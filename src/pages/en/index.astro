@@ -1,0 +1,50 @@
+---
+import MainAnimation from "@/components/home/MainAnimation.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import cars from "@/assets/cars.png";
+import team from "@/assets/rettore.png";
+import unipa from "@/assets/unipa.png";
+import Footer from "@/components/Footer.astro";
+
+import HomeContent from "@/components/home/HomeContent";
+
+const metadata = {
+  title: "Apex Corse",
+  description:
+    "Apex Corse is the Formula Student team of the University of Palermo",
+};
+---
+
+<Layout title={metadata.title} description={metadata.description}>
+  <div id="main-content" class="">
+    <MainAnimation />
+    <div
+      class="flex flex-col items-center gap-8 px-4 py-8 text-white sm:gap-12"
+    >
+      <HomeContent
+        title="Our Story"
+        description="Apex Corse is the Formula Student team of the University of Palermo, founded in 2023 thanks to the initiative of a group of students and the support of faculty members from the Department of Engineering. Our goal is to become a key player in the Sicilian university motorsport scene. Today, the team consists of more than 70 students from programs in Engineering, Economics, Design, and Communication, all united by a shared passion for motorsports."
+        image={team}
+        imageAlt="Team with the Rector of University of Palermo"
+        client:load
+      />
+      <HomeContent
+        title="What's Formula Student?"
+        description="Formula Student is an international university competition that gives students a concrete opportunity to apply their knowledge and gain real-world experience in the motorsport field. Participants take on the challenge of designing, building, validating, and promoting a single-seater prototype, while also developing a comprehensive business plan and a detailed cost analysis just like in a real Formula 1 team."
+        image={cars}
+        imageAlt="Formula-SAE cars"
+        direction="right"
+        client:load
+      />
+      <HomeContent
+        title="Our University"
+        description="Founded in 1806, the University of Palermo is one of the leading academic institutions in Sicily and ranks fourth among large Italian public universities in the 2024/2025 Censis ranking. The university is home to the Historical Museum of Engines and Mechanisms, the first in Italy to receive the Mechanical Engineering Heritage Collection award from the American Society of Mechanical Engineers. Each year, the Museum also hosts several prestigious automotive events, including the Targa Florio Classic and the Ferrari Tribute."
+        image={unipa}
+        imageAlt="Unipa Logo"
+        client:load
+      />
+      <Footer />
+    </div>
+  </div>
+</Layout>
