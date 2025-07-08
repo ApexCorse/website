@@ -3,25 +3,25 @@ import type { Department, Member } from "@/types/members";
 import MemberTile from "./MemberTile.astro";
 
 interface Props {
-	department: Department;
-	title: string;
-	members: Member[];
-	description?: string;
+  department: Department;
+  title: string;
+  members: Member[];
+  description?: string;
 }
 
 const { title, department, members, description } = Astro.props as Props;
 
 const departmentStyles: Record<Department, { text: string; bg: string }> = {
-	board: { text: "text-white", bg: "bg-white" },
-	advisors: { text: "text-white", bg: "bg-white" },
-	chassis: { text: "text-purple", bg: "bg-purple" },
-	aerodynamics: { text: "text-cyan", bg: "bg-cyan" },
-	powertrain: { text: "text-red", bg: "bg-red" },
-	electronics: { text: "text-pink", bg: "bg-pink" },
-	it: { text: "text-orange", bg: "bg-orange" },
-	graphics: { text: "text-green", bg: "bg-green" },
-	business: { text: "text-blue", bg: "bg-blue" },
-	cost: { text: "text-blue", bg: "bg-blue" },
+  board: { text: "text-white", bg: "bg-white" },
+  advisors: { text: "text-white", bg: "bg-white" },
+  chassis: { text: "text-purple", bg: "bg-purple" },
+  aerodynamics: { text: "text-cyan", bg: "bg-cyan" },
+  powertrain: { text: "text-red", bg: "bg-red" },
+  electronics: { text: "text-pink", bg: "bg-pink" },
+  it: { text: "text-orange", bg: "bg-orange" },
+  graphics: { text: "text-green", bg: "bg-green" },
+  business: { text: "text-blue", bg: "bg-blue" },
+  cost: { text: "text-blue", bg: "bg-blue" },
 };
 
 const styles = departmentStyles[department];
@@ -29,54 +29,50 @@ const leader = members.find((member) => member.leader);
 ---
 
 <div class="px-8 py-8 sm:min-h-screen">
-	<div class="mb-8 flex items-center gap-4">
-		<h2
-			class={`uppercase ${styles.text} font-primary text-3xl sm:text-5xl`}
-		>
-			{title}
-		</h2>
-		{
-			department === "board" ? (
-				<div class="grow">
-					<div class="bg-purple h-2" />
-					<div class="bg-cyan h-2" />
-					<div class="bg-red h-2" />
-				</div>
-			) : (
-				<div class={`h-6 grow ${styles.bg}`} />
-			)
-		}
-	</div>
-	<div class="relative flex grow flex-col gap-16 lg:flex-row">
-		<div class="top-8 flex-1 self-start lg:sticky">
-			{
-				description && (
-					<p class="text-base text-white sm:text-xl">{description}</p>
-				)
-			}
-			{
-				department !== "board" && leader && (
-					<div class="mt-8 hidden items-center gap-4 lg:flex">
-						<MemberTile member={leader} />
-					</div>
-				)
-			}
-		</div>
-		<div
-			class="grid flex-2 grid-cols-1 items-start justify-end gap-12 md:grid-cols-2"
-		>
-			{
-				members.map((member) => (
-					<MemberTile
-						member={member}
-						class={
-							member.department !== "board" && member.leader
-								? "lg:hidden"
-								: ""
-						}
-					/>
-				))
-			}
-		</div>
-	</div>
+  <div class="mb-8 flex items-center gap-4">
+    <h2 class={`uppercase ${styles.text} font-primary text-3xl sm:text-5xl`}>
+      {title}
+    </h2>
+    {
+      department === "board" ? (
+        <div class="grow">
+          <div class="bg-purple h-2" />
+          <div class="bg-cyan h-2" />
+          <div class="bg-red h-2" />
+        </div>
+      ) : (
+        <div class={`h-6 grow ${styles.bg}`} />
+      )
+    }
+  </div>
+  <div class="relative flex grow flex-col gap-16 lg:flex-row">
+    <div class="top-8 flex-1 self-start lg:sticky">
+      {
+        description && (
+          <p class="text-base text-white sm:text-xl">{description}</p>
+        )
+      }
+      {
+        department !== "board" && leader && (
+          <div class="mt-8 hidden items-center gap-4 lg:flex">
+            <MemberTile member={leader} />
+          </div>
+        )
+      }
+    </div>
+    <div
+      class="grid flex-2 grid-cols-1 items-start justify-end gap-12 md:grid-cols-2"
+    >
+      {
+        members.map((member) => (
+          <MemberTile
+            member={member}
+            class={
+              member.department !== "board" && member.leader ? "lg:hidden" : ""
+            }
+          />
+        ))
+      }
+    </div>
+  </div>
 </div>

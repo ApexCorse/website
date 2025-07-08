@@ -12,91 +12,91 @@ const members = await getMembers();
 
 const boardMembers = members.filter((member) => member.department === "board");
 const chassisMembers = members.filter(
-	(member) => member.department === "chassis"
+  (member) => member.department === "chassis",
 );
 const aerodynamicsMembers = members.filter(
-	(member) => member.department === "aerodynamics"
+  (member) => member.department === "aerodynamics",
 );
 const itMembers = members.filter((member) => member.department === "it");
 const powertrainMembers = members.filter(
-	(member) => member.department === "powertrain"
+  (member) => member.department === "powertrain",
 );
 const graphicsMembers = members.filter(
-	(member) => member.department === "graphics"
+  (member) => member.department === "graphics",
 );
 const electronicsMembers = members.filter(
-	(member) => member.department === "electronics"
+  (member) => member.department === "electronics",
 );
 const businessAndCostMembers = members.filter(
-	(member) => member.department === "business" || member.department === "cost"
+  (member) => member.department === "business" || member.department === "cost",
 );
 const advisorsMembers = members.filter(
-	(member) => member.department === "advisors"
+  (member) => member.department === "advisors",
 );
 
 const metadata = {
-	title: "Team • Apex Corse",
-	description: "Meet the team behind Apex Corse",
+  title: "Team • Apex Corse",
+  description: "Meet the team behind Apex Corse",
 };
 ---
 
 <Layout title={metadata.title} description={metadata.description}>
-	<TextDisplay text="The Team" image={team.src} />
-	<DepartmentSection
-		department="board"
-		title="Board"
-		members={boardMembers}
-		description="Made up of young students full of determination and passion for innovation, the APEX Corse Board coordinates the activities of the various operational divisions and leads the team towards achieving its goals. It consists of the Team Leader, Director of Operations, and all Division Managers. "
-	/>
+  <TextDisplay text="The Team" image={team.src} />
+  <DepartmentSection
+    department="board"
+    title="Board"
+    members={boardMembers}
+    description="Made up of young students full of determination and passion for innovation, the APEX Corse Board coordinates the activities of the various operational divisions and leads the team towards achieving its goals. It consists of the Team Leader, Director of Operations, and all Division Managers. "
+  />
 
-	<DepartmentSection
-		department="chassis"
-		title="Chassis"
-		members={chassisMembers}
-		description="For the design and construction of the single-seater's body, the Chassis Department plays a key role. Its main tasks include selecting the most suitable materials, analyzing the chassis structure, and optimizing its design to achieve a highly performant solution."
-	/>
-	<DepartmentSection
-		department="aerodynamics"
-		title="Aerodynamics"
-		members={aerodynamicsMembers}
-		description="In synergy with the Chassis Department, the Aerodynamics Department is responsible for designing and building the car's aerodynamic kit, integrating each component into the single-seater's design and optimizing airflow management."
-	/>
-	<DepartmentSection
-		department="it"
-		title="IT"
-		members={itMembers}
-		description="The IT Department’s work is essential for developing software for data acquisition and analysis; it also manages internal IT systems with the aim of supporting and enhancing the work of the other operational divisions."
-	/>
-	<DepartmentSection
-		department="powertrain"
-		title="Powertrain"
-		members={powertrainMembers}
-		description="The task of creating the heart of the APEX Corse single-seater is entrusted to the Powertrain Department, which is responsible for designing, building, and optimizing the key components of the propulsion system."
-	/>
-	<DepartmentSection
-		department="electronics"
-		title="Electronics"
-		members={electronicsMembers}
-		description="The task of the Electronics Department is to design and build all the electronic systems of the vehicle, from the electrical system to data acquisition, also integrating control and safety devices."
-	/>
-	<DepartmentSection
-		department="graphics"
-		title="Graphics"
-		members={graphicsMembers}
-		description="From managing and planning APEX Corse’s social media channels to producing visual content, the Graphics & Media team brings the project to life, elevating the squad’s identity and reinforcing its image."
-	/>
-	<DepartmentSection
-		department="business"
-		title="Business & Cost"
-		members={businessAndCostMembers}
-		description="The promotion of the team and the management of agreements and partnerships are entrusted to the Business & Cost Department, which ensures the necessary resources for the design and construction of the single-seater."
-	/>
+  <DepartmentSection
+    department="chassis"
+    title="Chassis"
+    members={chassisMembers}
+    description="For the design and construction of the single-seater's body, the Chassis Department plays a key role. Its main tasks include selecting the most suitable materials, analyzing the chassis structure, and optimizing its design to achieve a highly performant solution."
+  />
+  <DepartmentSection
+    department="aerodynamics"
+    title="Aerodynamics"
+    members={aerodynamicsMembers}
+    description="In synergy with the Chassis Department, the Aerodynamics Department is responsible for designing and building the car's aerodynamic kit, integrating each component into the single-seater's design and optimizing airflow management."
+  />
+  <DepartmentSection
+    department="it"
+    title="IT"
+    members={itMembers}
+    description="The IT Department’s work is essential for developing software for data acquisition and analysis; it also manages internal IT systems with the aim of supporting and enhancing the work of the other operational divisions."
+  />
+  <DepartmentSection
+    department="powertrain"
+    title="Powertrain"
+    members={powertrainMembers}
+    description="The task of creating the heart of the APEX Corse single-seater is entrusted to the Powertrain Department, which is responsible for designing, building, and optimizing the key components of the propulsion system."
+  />
+  <DepartmentSection
+    department="electronics"
+    title="Electronics"
+    members={electronicsMembers}
+    description="The task of the Electronics Department is to design and build all the electronic systems of the vehicle, from the electrical system to data acquisition, also integrating control and safety devices."
+  />
+  <DepartmentSection
+    department="graphics"
+    title="Graphics"
+    members={graphicsMembers}
+    description="From managing and planning APEX Corse’s social media channels to producing visual content, the Graphics & Media team brings the project to life, elevating the squad’s identity and reinforcing its image."
+  />
+  <DepartmentSection
+    department="business"
+    title="Business & Cost"
+    members={businessAndCostMembers}
+    description="The promotion of the team and the management of agreements and partnerships are entrusted to the Business & Cost Department, which ensures the necessary resources for the design and construction of the single-seater."
+  />
 
-	<DepartmentSection
-		department="advisors"
-		title="Advisors"
-		members={advisorsMembers}
-		description="The Advisors are seasoned professionals and academics who offer invaluable guidance and expertise to the team. While not official members, their support and insights play a crucial role in the team’s growth and success."
-	/>
-	<Footer />
+  <DepartmentSection
+    department="advisors"
+    title="Advisors"
+    members={advisorsMembers}
+    description="The Advisors are seasoned professionals and academics who offer invaluable guidance and expertise to the team. While not official members, their support and insights play a crucial role in the team’s growth and success."
+  />
+  <Footer />
 </Layout>
