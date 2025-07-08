@@ -67,8 +67,6 @@ import { ChevronDown } from "lucide-react";
       return y + window.scrollY;
     };
 
-    console.log(adjustForScroll(apexProps.top));
-
     // Calculate vertical positions relative to the Apex logo
     const carLeftTop = adjustForScroll(apexProps.top) - carLeftProps.height;
     const carRightTop = adjustForScroll(apexProps.bottom);
