@@ -81,10 +81,12 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
   });
 
   window.addEventListener("scroll", () => {
-    const scrolled = window.scrollY > 100;
-    const scrollDelta = window.scrollY - lastScrollY;
-    lastScrollY = window.scrollY;
+    const currentScrollY = window.scrollY;
+    const scrolled = currentScrollY > 100;
+    const scrollDelta = currentScrollY - lastScrollY;
+    lastScrollY = currentScrollY;
 
+    // Gestione colori
     if (scrolled) {
       header.classList.add("bg-white/90");
       header.classList.add("text-black");
@@ -95,12 +97,17 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
       header.classList.add("text-white");
     }
 
-    if (scrollDelta > 0) {
-      header.style.transform = `translateY(-100%)`;
-      header.style.transition = "transform 0.2s ease-in-out";
-    } else {
+    // Gestione visibilità - mostra sempre l'header se siamo in cima
+    if (currentScrollY <= 10) {
       header.style.transform = "translateY(0%)";
-      header.style.transition = "transform 0.2s ease-in-out";
+    } else if (scrollDelta > 5) {
+      // Nascondi quando scorri verso il basso (con soglia per evitare flickering)
+      header.style.transform = "translateY(-100%)";
+    } else if (scrollDelta < -5) {
+      // Mostra quando scorri verso l'alto (con soglia)
+      header.style.transform = "translateY(0%)";
     }
+    
+    header.style.transition = "transform 0.2s ease-in-out";
   });
 </script>
