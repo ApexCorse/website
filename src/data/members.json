@@ -19,6 +19,15 @@
     "role": "Director of Operations"
   },
   {
+    "name": "Alessia Cambria",
+    "department": "board",
+    "linkedin": "https://www.linkedin.com/in/alessia-cambria-701574325/",
+    "email": "alessia.cambria@community.unipa.it",
+    "image": "alessia-cambria",
+    "course": "BSc Mechanical Engineering",
+    "role": "Managing Director"
+  },
+  {
     "name": "Salvatore Alessi",
     "department": "board",
     "linkedin": "http://www.linkedin.com/in/-salvatore-alessi",
@@ -379,6 +388,24 @@
     "role": "Photographer"
   },
   {
+    "name": "Roberto Scalia",
+    "department": "graphics",
+    "email": "roberto.scalia02@community.unipa.it",
+    "course":"MA Marketing & Corporate Communication"
+  },
+  {
+    "name": "Roberta Siragusa",
+    "department": "graphics",
+    "email": "robertateresa.siragusa@community.unipa.it",
+    "course": "BA Communication"
+  },
+  {
+    "name": "Davide Liotta",
+    "department": "graphics",
+    "email": "davidefrancesco.liotta@community.unipa.it",
+    "course": "BA Communication"
+  },
+  {
     "name": "Giuseppe Blunda",
     "department": "electronics",
     "leader": true,
@@ -417,14 +444,9 @@
     "department": "business",
     "leader": true,
     "email": "dario.tulumello@community.unipa.it",
+    "linkedin": "https://www.linkedin.com/in/dario-tulumello-4046a0284/",
     "role": "Division Manager",
     "course": "BSc Economy & Finance"
-  },
-  {
-    "name": "Domenico Rizzuto",
-    "department": "business",
-    "email": "domenico.rizzuto@community.unipa.it",
-    "course": "BSc Economy & Enterprise"
   },
   {
     "name": "Giulia Celesia",
@@ -450,6 +472,24 @@
     "name": "Francesca Cafarelli",
     "department": "business",
     "course": "BA Politics and International Relationships"
+  },
+  {
+    "name": "Marialaura Cerasa",
+    "department": "business",
+    "course": "BSc Management Engineering",
+    "email": "marialaurarosa.cerasa@community.unipa.it"
+  },
+  {
+    "name": "Antonino Seidita",
+    "department": "business",
+    "course": "BSc Economy & Finance",
+    "email": "antonino.seidita@community.unipa.it"
+  },
+  {
+    "name": "Domenico Rizzuto",
+    "department": "business",
+    "email": "domenico.rizzuto@community.unipa.it",
+    "course": "BSc Economy & Enterprise"
   },
   {
     "name": "Nicola Fricano",
