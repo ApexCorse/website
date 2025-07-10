@@ -13,19 +13,19 @@
   --color-white: #ffffff;
   --color-white-bg: #656565;
   --color-red: #e32225;
-  --color-red-bg: #330301;
+  --color-red-bg: #780602;
   --color-cyan: #03ced3;
-  --color-cyan-bg: #002c2f;
+  --color-cyan-bg: #005f66;
   --color-purple: #693fbc;
-  --color-purple-bg: #130222;
+  --color-purple-bg: #3f0971;
   --color-orange: #f18e17;
-  --color-orange-bg: #3a2200;
-  --color-green: #009541;
-  --color-green-bg: #012604;
+  --color-orange-bg: #7a4700;
+  --color-green: #00CC58;
+  --color-green-bg: #04770B;
   --color-blue: #0e70b7;
-  --color-blue-bg: #01132b;
-  --color-pink: #9d1561;
-  --color-pink-bg: #2f0012;
+  --color-blue-bg: #033577;
+  --color-pink: #e74ba3;
+  --color-pink-bg: #660027;
 
   --animate-fade-in: fade-in 1s ease-in-out forwards;
   --animate-fade-in-and-out: fade-in-and-out 3s ease-in-out forwards;
