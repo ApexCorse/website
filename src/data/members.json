@@ -54,13 +54,6 @@
     "course": "BSc Mechanical Engineering"
   },
   {
-    "name": "Matilde Arista",
-    "department": "chassis",
-    "linkedin": "https://www.linkedin.com/in/matilde-arista-775126308",
-    "email": "matilde.arista@community.unipa.it",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
     "name": "Lorenzo Corsetti",
     "department": "chassis",
     "email": "lorenzo.corsetti@community.unipa.it",
@@ -82,29 +75,10 @@
     "course": "BSc Mechanical Engineering"
   },
   {
-    "name": "Giorgio Indorante",
-    "department": "chassis",
-    "email": "giorgio.indorante@community.unipa.it",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
-    "name": "Giovanni Saverino",
-    "department": "chassis",
-    "linkedin": "https://www.linkedin.com/in/giovanni-saverino-649243269/",
-    "email": "giovanni.saverino@community.unipa.it",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
     "name": "Giovanni Rizzo",
     "department": "chassis",
     "email": "giovanni.rizzo10@community.unipa.it",
     "image": "giovanni-rizzo",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
-    "name": "Giuseppe Pavone",
-    "department": "chassis",
-    "email": "giuseppe.pavone02@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
@@ -136,6 +110,12 @@
     "course": "BSc Mechanical Engineering"
   },
   {
+    "name": "Giorgio Indorante",
+    "department": "chassis",
+    "email": "giorgio.indorante@community.unipa.it",
+    "course": "BSc Mechanical Engineering"
+  },
+  {
     "name": "Silvia Spartà",
     "department": "aerodynamics",
     "leader": true,
@@ -161,6 +141,13 @@
     "course": "BSc Mechanical Engineering"
   },
   {
+    "name": "Claudia Genovese",
+    "department": "aerodynamics",
+    "email": "claudia.genovese02@community.unipa.it",
+    "image": "claudia-genovese",
+    "course": "BSc Mechanical Engineering"
+  },
+  {
     "name": "Dario Vallelunga",
     "department": "aerodynamics",
     "linkedin": "https://www.linkedin.com/in/dario-vallelunga-525b84308/",
@@ -177,20 +164,6 @@
     "course": "BSc Mechanical Engineering"
   },
   {
-    "name": "Ludovica Spanò",
-    "department": "aerodynamics",
-    "email": "ludovica.spano@community.unipa.it",
-    "image": "ludovica-spano",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
-    "name": "Nicola Giammanco",
-    "department": "aerodynamics",
-    "linkedin": "https://www.linkedin.com/in/nicola-giammanco-9873b1269",
-    "email": "nicola.giammanco@community.unipa.it",
-    "course": "MSc Mechanical Engineering"
-  },
-  {
     "name": "Andrea Ricciardi",
     "department": "aerodynamics",
     "linkedin": "https://www.linkedin.com/in/andrea-ricciardi-881866221/",
@@ -199,23 +172,11 @@
     "course": "BA Industrial Design"
   },
   {
-    "name": "Luca Piranio",
+    "name": "Ludovica Spanò",
     "department": "aerodynamics",
-    "linkedin": "https://www.linkedin.com/in/luca-pio-piranio-9a64a8297",
-    "email": "lucapio.piranio@commuity.unipa.it",
+    "email": "ludovica.spano@community.unipa.it",
+    "image": "ludovica-spano",
     "course": "BSc Mechanical Engineering"
-  },
-  {
-    "name": "Claudia Genovese",
-    "department": "aerodynamics",
-    "email": "claudia.genovese02@community.unipa.it",
-    "image": "claudia-genovese",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
-    "name": "Salvo Maria Musumeci",
-    "department": "aerodynamics",
-    "email": "salvomaria.musumeci@community.unipa.it"
   },
   {
     "name": "Salvatore Toia",
@@ -238,6 +199,25 @@
     "email": "alessandro.palumbo01@community.unipa.it",
     "image": "alessandro-palumbo",
     "course": "MSc Aerospace Engineering"
+  },
+  {
+    "name": "Luca Piraino",
+    "department": "aerodynamics",
+    "linkedin": "https://www.linkedin.com/in/luca-pio-piranio-9a64a8297",
+    "email": "lucapio.piranio@commuity.unipa.it",
+    "course": "BSc Mechanical Engineering"
+  },
+  {
+    "name": "Salvo Maria Musumeci",
+    "department": "aerodynamics",
+    "email": "salvomaria.musumeci@community.unipa.it"
+  },
+  {
+    "name": "Nicola Giammanco",
+    "department": "aerodynamics",
+    "linkedin": "https://www.linkedin.com/in/nicola-giammanco-9873b1269",
+    "email": "nicola.giammanco@community.unipa.it",
+    "course": "MSc Mechanical Engineering"
   },
   {
     "name": "Gabriele Amorello",
@@ -291,25 +271,6 @@
     "course": "MSc Electric Engineering"
   },
   {
-    "name": "Alberto Di Mariano",
-    "department": "powertrain",
-    "email": "albertogiuseppe.dimariano@community.unipa.it",
-    "course": "BSc E-mobility Engineering"
-  },
-  {
-    "name": "Leonardo Paterna",
-    "department": "powertrain",
-    "email": "leonardomaxim.paterna@community.unipa.it",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
-    "name": "Salvatore di Maggio",
-    "department": "powertrain",
-    "linkedin": "http://linkedin.com/in/salvatore-d-541301119",
-    "email": "salvatore.dimaggio08@community.unipa.it",
-    "course": "MSc Mechanical Engineering"
-  },
-  {
     "name": "Alessandro Vaccarino",
     "department": "powertrain",
     "image": "alessandro-vaccarino",
@@ -344,7 +305,12 @@
     "image": "salvatore-cutaia",
     "course": "BSc Mechanical Engineering"
   },
-
+  {
+    "name": "Leonardo Paterna",
+    "department": "powertrain",
+    "email": "leonardomaxim.paterna@community.unipa.it",
+    "course": "BSc Mechanical Engineering"
+  },
   {
     "name": "Stefano Campisi",
     "department": "graphics",
@@ -391,7 +357,7 @@
     "name": "Roberto Scalia",
     "department": "graphics",
     "email": "roberto.scalia02@community.unipa.it",
-    "course":"MA Marketing & Corporate Communication"
+    "course": "MA Marketing & Corporate Communication"
   },
   {
     "name": "Roberta Siragusa",
