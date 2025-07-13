@@ -86,6 +86,12 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
     const scrollDelta = currentScrollY - lastScrollY;
     lastScrollY = currentScrollY;
 
+    if (currentScrollY < 10) {
+      header.classList.remove("fixed");
+    } else {
+      header.classList.add("fixed");
+    }
+
     // Gestione colori
     if (scrolled) {
       header.classList.add("bg-white/90");
@@ -107,7 +113,7 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
       // Mostra quando scorri verso l'alto (con soglia)
       header.style.transform = "translateY(0%)";
     }
-    
+
     header.style.transition = "transform 0.2s ease-in-out";
   });
 </script>
