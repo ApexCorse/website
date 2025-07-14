@@ -11,91 +11,99 @@ const members = await getMembers();
 
 const boardMembers = members.filter((member) => member.department === "board");
 const chassisMembers = members.filter(
-  (member) => member.department === "chassis",
+	(member) => member.department === "chassis"
 );
 const aerodynamicsMembers = members.filter(
-  (member) => member.department === "aerodynamics",
+	(member) => member.department === "aerodynamics"
 );
 const itMembers = members.filter((member) => member.department === "it");
 const powertrainMembers = members.filter(
-  (member) => member.department === "powertrain",
+	(member) => member.department === "powertrain"
 );
 const graphicsMembers = members.filter(
-  (member) => member.department === "graphics",
+	(member) => member.department === "graphics"
 );
 const electronicsMembers = members.filter(
-  (member) => member.department === "electronics",
+	(member) => member.department === "electronics"
 );
 const businessAndCostMembers = members.filter(
-  (member) => member.department === "business" || member.department === "cost",
+	(member) => member.department === "business" || member.department === "cost"
+);
+const logisticsMembers = members.filter(
+	(member) => member.department === "logistics"
 );
 const advisorsMembers = members.filter(
-  (member) => member.department === "advisors",
+	(member) => member.department === "advisors"
 );
 
 const metadata = {
-  title: "Team • Apex Corse",
-  description: "Scopri il team dietro Apex Corse",
+	title: "Team • Apex Corse",
+	description: "Scopri il team dietro Apex Corse",
 };
 ---
 
 <Layout title={metadata.title} description={metadata.description}>
-  <TextDisplay text="Il Team" image={team.src} />
-  <DepartmentSection
-    department="board"
-    title="Board"
-    members={boardMembers}
-    description="Composto da giovani studenti pieni di determinazione e passione per l’innovazione, il Board di APEX Corse coordina le attività delle varie divisioni operative e guida la squadra verso il conseguimento degli obiettivi. È composto dal Team Leader, dal Director of Operations e da tutti i Division Manager."
-  />
+	<TextDisplay text="Il Team" image={team.src} />
+	<DepartmentSection
+		department="board"
+		title="Board"
+		members={boardMembers}
+		description="Composto da giovani studenti pieni di determinazione e passione per l’innovazione, il Board di APEX Corse coordina le attività delle varie divisioni operative e guida la squadra verso il conseguimento degli obiettivi. È composto dal Team Leader, dal Director of Operations e da tutti i Division Manager."
+	/>
 
-  <DepartmentSection
-    department="chassis"
-    title="Chassis"
-    members={chassisMembers}
-    description="Per la progettazione e la costruzione del corpo della monoposto, entra in gioco il Reparto Chassis, i quali compiti principali sono quelli di selezionare i materiali più adatti, analizzare la struttura del telaio e ottimizzarne il design al fine di ottenere la soluzione più performante."
-  />
-  <DepartmentSection
-    department="aerodynamics"
-    title="Aerodynamics"
-    members={aerodynamicsMembers}
-    description="In sinergia con il Reparto Chassis, il Reparto Aerodinamica si occupa della progettazione e realizzazione del kit aerodinamico della vettura, integrando ogni componente nel design della monoposto e ottimizzando la gestione dei flussi d’aria."
-  />
-  <DepartmentSection
-    department="it"
-    title="IT"
-    members={itMembers}
-    description="Per sviluppare i software per l'acquisizione e l'analisi dei dati, è essenziale il lavoro del Reparto IT, che si occupa  anche dei sistemi informatici interni, con l'obiettivo di supportare e potenziare il lavoro delle altre divisioni operative."
-  />
-  <DepartmentSection
-    department="powertrain"
-    title="Powertrain"
-    members={powertrainMembers}
-    description="Il compito di realizzare il cuore della monoposto di APEX Corse spetta al Reparto Powertrain, che si occupa di progettare, costruire e ottimizzare i componenti chiave del sistema di propulsione."
-  />
-  <DepartmentSection
-    department="electronics"
-    title="Electronics"
-    members={electronicsMembers}
-    description="Incarico del Reparto Elettronica è quello di progettare e realizzare tutti i sistemi elettronici della vettura, dal sistema elettrico all’acquisizione dati, integrando anche i dispositivi di controllo e sicurezza."
-  />
-  <DepartmentSection
-    department="graphics"
-    title="Graphics"
-    members={graphicsMembers}
-    description="Dalla cura e la pianificazione dei canali social di APEX Corse alla realizzazione di contenuti visivi, i ragazzi di Graphics&Media raccontano il progetto, valorizzando l’identità della squadra e rafforzando la sua immagine."
-  />
-  <DepartmentSection
-    department="business"
-    title="Business & Cost"
-    members={businessAndCostMembers}
-    description="La promozione della squadra e la gestione degli accordi e delle partnership sono affidate al Reparto Business&Cost, che garantisce le risorse necessarie per la progettazione e la realizzazione della monoposto."
-  />
-
-  <DepartmentSection
-    department="advisors"
-    title="Advisors"
-    members={advisorsMembers}
-    description="Gli Advisor sono professionisti esperti e accademici che offrono una guida e una competenza preziose al team. Pur non essendo membri ufficiali, il loro supporto e i loro consigli giocano un ruolo cruciale nella crescita e nel successo della squadra."
-  />
-  <Footer />
+	<DepartmentSection
+		department="chassis"
+		title="Chassis"
+		members={chassisMembers}
+		description="Per la progettazione e la costruzione del corpo della monoposto, entra in gioco il Reparto Chassis, i quali compiti principali sono quelli di selezionare i materiali più adatti, analizzare la struttura del telaio e ottimizzarne il design al fine di ottenere la soluzione più performante."
+	/>
+	<DepartmentSection
+		department="aerodynamics"
+		title="Aerodynamics"
+		members={aerodynamicsMembers}
+		description="In sinergia con il Reparto Chassis, il Reparto Aerodinamica si occupa della progettazione e realizzazione del kit aerodinamico della vettura, integrando ogni componente nel design della monoposto e ottimizzando la gestione dei flussi d’aria."
+	/>
+	<DepartmentSection
+		department="it"
+		title="IT"
+		members={itMembers}
+		description="Per sviluppare i software per l'acquisizione e l'analisi dei dati, è essenziale il lavoro del Reparto IT, che si occupa  anche dei sistemi informatici interni, con l'obiettivo di supportare e potenziare il lavoro delle altre divisioni operative."
+	/>
+	<DepartmentSection
+		department="powertrain"
+		title="Powertrain"
+		members={powertrainMembers}
+		description="Il compito di realizzare il cuore della monoposto di APEX Corse spetta al Reparto Powertrain, che si occupa di progettare, costruire e ottimizzare i componenti chiave del sistema di propulsione."
+	/>
+	<DepartmentSection
+		department="electronics"
+		title="Electronics"
+		members={electronicsMembers}
+		description="Incarico del Reparto Elettronica è quello di progettare e realizzare tutti i sistemi elettronici della vettura, dal sistema elettrico all’acquisizione dati, integrando anche i dispositivi di controllo e sicurezza."
+	/>
+	<DepartmentSection
+		department="graphics"
+		title="Graphics"
+		members={graphicsMembers}
+		description="Dalla cura e la pianificazione dei canali social di APEX Corse alla realizzazione di contenuti visivi, i ragazzi di Graphics&Media raccontano il progetto, valorizzando l’identità della squadra e rafforzando la sua immagine."
+	/>
+	<DepartmentSection
+		department="business"
+		title="Business & Cost"
+		members={businessAndCostMembers}
+		description="La promozione della squadra e la gestione degli accordi e delle partnership sono affidate al Reparto Business&Cost, che garantisce le risorse necessarie per la progettazione e la realizzazione della monoposto."
+	/>
+	<DepartmentSection
+		department="logistics"
+		title="Logistics"
+		members={logisticsMembers}
+		description="Il Reparto Logistica si occupa di organizzare e gestire gli aspetti operativi del team, assicurando che risorse, materiali e tempistiche siano coordinati in modo efficiente per il successo del progetto."
+	/>
+	<DepartmentSection
+		department="advisors"
+		title="Advisors"
+		members={advisorsMembers}
+		description="Gli Advisor sono professionisti esperti e accademici che offrono una guida e una competenza preziose al team. Pur non essendo membri ufficiali, il loro supporto e i loro consigli giocano un ruolo cruciale nella crescita e nel successo della squadra."
+	/>
+	<Footer />
 </Layout>

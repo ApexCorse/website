@@ -8,7 +8,8 @@ export type Department =
   | "it"
   | "graphics"
   | "business"
-  | "cost";
+  | "cost"
+  | "logistics";
 
 export interface Member {
   name: string;

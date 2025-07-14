@@ -26,6 +26,8 @@
   --color-blue-bg: #01132b;
   --color-pink: #9d1561;
   --color-pink-bg: #2f0012;
+  --color-yellow: #f5d000;
+  --color-yellow-bg: #a38b00;
 
   --animate-fade-in: fade-in 1s ease-in-out forwards;
   --animate-fade-in-and-out: fade-in-and-out 3s ease-in-out forwards;
