@@ -10,15 +10,6 @@
     "role": "Team Leader"
   },
   {
-    "name": "Gabriele La Milia",
-    "department": "board",
-    "linkedin": "https://www.linkedin.com/in/gabrielelm/",
-    "email": "gabriele.lamilia01@community.unipa.it",
-    "image": "gabriele-la-milia",
-    "course": "MSc Data Science & Statistics",
-    "role": "Director of Operations"
-  },
-  {
     "name": "Alessia Cambria",
     "department": "board",
     "linkedin": "https://www.linkedin.com/in/alessia-cambria-701574325/",
@@ -347,23 +338,25 @@
     "role": "Copywriter"
   },
   {
-    "name": "Vincenzo Bongiorno",
-    "department": "graphics",
-    "email": "vincenzocarlo.bongiorno@community.unipa.it",
-    "course": "MSc Electronic Engineering",
-    "role": "Photographer"
-  },
-  {
     "name": "Roberto Scalia",
     "department": "graphics",
     "email": "roberto.scalia02@community.unipa.it",
-    "course": "MA Marketing & Corporate Communication"
+    "course": "MA Marketing & Corporate Communication",
+    "image": "roberto-scalia"
   },
   {
     "name": "Roberta Siragusa",
     "department": "graphics",
     "email": "robertateresa.siragusa@community.unipa.it",
-    "course": "BA Communication"
+    "course": "BA Communication",
+    "image": "roberta-siragusa"
+  },
+  {
+    "name": "Vincenzo Bongiorno",
+    "department": "graphics",
+    "email": "vincenzocarlo.bongiorno@community.unipa.it",
+    "course": "MSc Electronic Engineering",
+    "role": "Photographer"
   },
   {
     "name": "Davide Liotta",
@@ -404,15 +397,22 @@
     "department": "electronics",
     "course": "MSc Computer Engineering"
   },
-
   {
     "name": "Dario Tulumello",
     "department": "business",
     "leader": true,
     "email": "dario.tulumello@community.unipa.it",
     "linkedin": "https://www.linkedin.com/in/dario-tulumello-4046a0284/",
+    "image": "dario-tulumello",
     "role": "Division Manager",
     "course": "BSc Economy & Finance"
+  },
+  {
+    "name": "Francesco Scianna",
+    "department": "business",
+    "linkedin": "https://www.linkedin.com/in/francescoscianna/",
+    "email": "francesco.scianna@community.unipa.it",
+    "image": "francesco-scianna"
   },
   {
     "name": "Giulia Celesia",
@@ -421,6 +421,20 @@
     "linkedin": "https://www.linkedin.com/in/giulia-celesia-700896240/",
     "image": "giulia-celesia",
     "course": "BSc Economy & Finance"
+  },
+  {
+    "name": "Marialaura Cerasa",
+    "department": "business",
+    "course": "BSc Management Engineering",
+    "email": "marialaurarosa.cerasa@community.unipa.it",
+    "image": "marialaura-cerasa"
+  },
+  {
+    "name": "Antonino Seidita",
+    "department": "business",
+    "course": "BSc Economy & Finance",
+    "email": "antonino.seidita@community.unipa.it",
+    "image": "antonino-seidita"
   },
   {
     "name": "Giuseppe Castiglia",
@@ -440,18 +454,6 @@
     "course": "BA Politics and International Relationships"
   },
   {
-    "name": "Marialaura Cerasa",
-    "department": "business",
-    "course": "BSc Management Engineering",
-    "email": "marialaurarosa.cerasa@community.unipa.it"
-  },
-  {
-    "name": "Antonino Seidita",
-    "department": "business",
-    "course": "BSc Economy & Finance",
-    "email": "antonino.seidita@community.unipa.it"
-  },
-  {
     "name": "Domenico Rizzuto",
     "department": "business",
     "email": "domenico.rizzuto@community.unipa.it",
@@ -467,6 +469,16 @@
     "department": "cost",
     "image": "alex-micciche",
     "course": "MSc Management Engineering"
+  },
+  {
+    "name": "Gabriele La Milia",
+    "department": "logistics",
+    "leader": true,
+    "linkedin": "https://www.linkedin.com/in/gabrielelm/",
+    "email": "gabriele.lamilia01@community.unipa.it",
+    "image": "gabriele-la-milia",
+    "course": "MSc Data Science & Statistics",
+    "role": "Division Manager"
   },
   {
     "name": "Prof. Tommaso Ingrassia",
