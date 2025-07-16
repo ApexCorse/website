@@ -1,6 +1,8 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 @plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-primary: "Orbitron", sans-serif;
@@ -20,8 +22,8 @@
   --color-purple-bg: #3f0971;
   --color-orange: #f18e17;
   --color-orange-bg: #7a4700;
-  --color-green: #00CC58;
-  --color-green-bg: #04770B;
+  --color-green: #00cc58;
+  --color-green-bg: #04770b;
   --color-blue: #0e70b7;
   --color-blue-bg: #033577;
   --color-pink: #e74ba3;
