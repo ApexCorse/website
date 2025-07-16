@@ -31,6 +31,10 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
             href: getRelativeLocaleUrl(currentLocale, "team"),
           },
           {
+            label: currentLocale === "en" ? "Updates" : "Novità",
+            href: getRelativeLocaleUrl(currentLocale, "updates"),
+          },
+          {
             label: currentLocale === "en" ? "Contacts" : "Contatti",
             href: getRelativeLocaleUrl(currentLocale, "contacts"),
           },
@@ -85,12 +89,6 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
     const scrolled = currentScrollY > 100;
     const scrollDelta = currentScrollY - lastScrollY;
     lastScrollY = currentScrollY;
-
-    if (currentScrollY < 10) {
-      header.classList.remove("fixed");
-    } else {
-      header.classList.add("fixed");
-    }
 
     // Gestione colori
     if (scrolled) {
