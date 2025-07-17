@@ -18,19 +18,30 @@ if (update.data.image) {
 ---
 
 <div class="flex flex-col items-center gap-8 md:flex-row">
-	<div class="flex-1">
+	<a href={`/updates/${update.id}`} class="flex-1">
 		<Image
 			src={image!}
 			alt={update.data.title}
 			class="aspect-video rounded-3xl object-contain"
 		/>
-	</div>
+	</a>
 	<div class="flex flex-1 flex-col gap-4 py-4 md:gap-6">
-		<h1
-			class="font-primary text-2xl font-medium text-white uppercase md:text-4xl"
-		>
-			{update.data.title}
-		</h1>
-		<p class="line-clamp-3 text-gray-300">{update.data.preview}</p>
+		<a href={`/updates/${update.id}`}>
+			<h1
+				class="font-primary text-2xl font-medium text-white uppercase md:text-4xl"
+			>
+				{update.data.title}
+			</h1>
+		</a>
+		<p class="line-clamp-3 text-gray-300">
+			{update.data.author} • {
+				update.data.date.toLocaleDateString(
+					Astro.currentLocale || "it",
+					{
+						dateStyle: "long",
+					}
+				)
+			}
+		</p>
 	</div>
 </div>

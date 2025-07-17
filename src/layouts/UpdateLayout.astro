@@ -3,7 +3,17 @@ import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import { cn } from "@/lib/utils/cn";
 import "@/styles/globals.css";
+import { Image } from "astro:assets";
 import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+let image: Promise<{ default: ImageMetadata }> | undefined;
+
+if (frontmatter.image) {
+  image = import(`../assets/updates/${frontmatter.image}.png`) as Promise<{
+    default: ImageMetadata;
+  }>;
+}
 ---
 
 <Layout>
@@ -11,9 +21,19 @@ import Layout from "./Layout.astro";
   <div class="my-32 flex w-full justify-center px-4 md:px-12">
     <div
       class={cn(
-        "prose prose-dark prose-headings:font-medium prose-headings:font-primary prose-h1:uppercase max-w-3xl prose-p:md:text-lg/8 prose-li:md:text-lg",
+        "prose prose-dark prose-headings:font-medium prose-headings:font-primary prose-h1:uppercase max-w-3xl prose-p:md:text-lg/8 prose-li:md:text-lg prose-img:rounded-3xl",
       )}
     >
+      <h1>{frontmatter.title}</h1>
+      <p>
+        {frontmatter.author} • {
+          new Date(frontmatter.date).toLocaleDateString(
+            Astro.currentLocale || "it",
+            { dateStyle: "long" },
+          )
+        }
+      </p>
+      {image && <Image src={image} alt={frontmatter.title} />}
       <slot />
     </div>
   </div>
