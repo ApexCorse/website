@@ -13,98 +13,99 @@ import Qnap from "../assets/sponsors/qnap.svg";
 import Tesla from "../assets/sponsors/tesla.svg";
 
 interface Props {
-  class?: string;
+	class?: string;
 }
 
 const { class: className } = Astro.props;
 ---
 
 <div
-  class={cn(
-    "flex flex-col items-center justify-center gap-8 font-primary",
-    className,
-  )}
+	class={cn(
+		"flex flex-col items-center justify-center gap-8 font-primary",
+		className
+	)}
 >
-  <p
-    class="font-primary text-center text-sm text-gray-300 uppercase sm:text-base"
-  >
-    {Astro.currentLocale === "en" ? "Our Partners" : "I nostri Partner"}
-  </p>
-  <div class="flex w-full flex-col items-center justify-center gap-4 sm:gap-8">
-    <Omhero />
-    <div class="flex w-full max-w-2xl items-end justify-between gap-8">
-      {
-        [
-          {
-            Component: Tesla,
-            href: "https://www.tesla.com",
-          },
+	<p
+		class="font-primary text-center text-sm text-gray-300 uppercase sm:text-base"
+	>
+		{Astro.currentLocale === "en" ? "Our Partners" : "I nostri Partner"}
+	</p>
+	<div
+		class="flex w-full flex-col items-center justify-center gap-4 sm:gap-8"
+	>
+		<Omhero />
+		<div class="flex w-full max-w-2xl items-end justify-between gap-8">
+			{
+				[
+					{
+						Component: Pirelli,
+						href: "https://pirelli.com",
+					},
           {
             Component: Nigrelli,
             href: "https://grupponigrelli.it",
           },
-        ].map(({ Component, href }, index) => (
-          <a
-            href={href}
-            target="_blank"
-            class={cn(
-              "max-w-64 flex-1 text-gray-300 hover:opacity-80",
-              index == 0 && "mb-4",
-            )}
-          >
-            <Component class="h-full w-full" />
-          </a>
-        ))
-      }
-    </div>
-    <div
-      class="flex w-full max-w-4xl items-center justify-between gap-4 md:gap-8"
-    >
-      {
-        [
-          {
-            Component: Hexagon,
-            href: "https://www.hexagon.com",
-          },
-          {
-            Component: Loctite,
-            href: "https://www.loctite.com",
-          },
+					{
+						Component: Tesla,
+						href: "https://www.tesla.com",
+					},
+				].map(({ Component, href }) => (
+					<a
+						href={href}
+						target="_blank"
+						class={cn(
+							"max-w-64 flex-1 text-gray-300 hover:opacity-80",
+						)}
+					>
+						<Component class="h-full w-full" />
+					</a>
+				))
+			}
+		</div>
+		<div
+			class="flex w-full max-w-4xl items-center justify-between gap-4 md:gap-8"
+		>
+			{
+				[
+					{
+						Component: Hexagon,
+						href: "https://www.hexagon.com",
+					},
+					{
+						Component: Loctite,
+						href: "https://www.loctite.com",
+					},
 
-          {
-            Component: Qnap,
-            href: "https://www.qnap.com",
-          },
-          {
-            Component: Hypertec,
-            href: "https://hypertec.it",
-          },
-          {
-            Component: Fenice,
-            href: "https://fenicepalermo.it",
-          },
-          {
-            Component: Crg,
-            href: "https://kartcrg.com",
-          },
-          {
-            Component: Ansys,
-            href: "https://www.ansys.com",
-          },
-          {
-            Component: Pirelli,
-            href: "https://pirelli.com",
-          },
-        ].map(({ Component, href }) => (
-          <a
-            href={href}
-            target="_blank"
-            class="w-full max-w-20 text-gray-500 hover:opacity-80"
-          >
-            <Component class="h-full w-full" />
-          </a>
-        ))
-      }
-    </div>
-  </div>
+					{
+						Component: Qnap,
+						href: "https://www.qnap.com",
+					},
+					{
+						Component: Hypertec,
+						href: "https://hypertec.it",
+					},
+					{
+						Component: Crg,
+						href: "https://kartcrg.com",
+					},
+					{
+						Component: Ansys,
+						href: "https://www.ansys.com",
+					},
+					{
+						Component: Fenice,
+						href: "https://fenicepalermo.it",
+					},
+				].map(({ Component, href }) => (
+					<a
+						href={href}
+						target="_blank"
+						class="w-full max-w-20 text-gray-500 hover:opacity-80"
+					>
+						<Component class="h-full w-full" />
+					</a>
+				))
+			}
+		</div>
+	</div>
 </div>
