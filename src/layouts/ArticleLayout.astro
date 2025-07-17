@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
 let image: Promise<{ default: ImageMetadata }> | undefined;
 
 if (frontmatter.image) {
-  image = import(`../assets/updates/${frontmatter.image}.png`) as Promise<{
+  image = import(`../assets/blog/${frontmatter.image}.png`) as Promise<{
     default: ImageMetadata;
   }>;
 }

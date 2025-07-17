@@ -20,9 +20,7 @@ export default function Drawer({
           <div className="font-primary flex flex-col items-end gap-8 text-end text-white">
             <a href={currentLocale === "en" ? "/en/" : "/"}>Home</a>
             <a href={currentLocale === "en" ? "/en/team" : "/team"}>Team</a>
-            <a href={currentLocale === "en" ? "/en/updates" : "/updates"}>
-              {currentLocale === "en" ? "Updates" : "Novità"}
-            </a>
+            <a href={currentLocale === "en" ? "/en/blog" : "/blog"}>Blog</a>
             <a href={currentLocale === "en" ? "/en/contacts" : "/contacts"}>
               {currentLocale === "en" ? "Contacts" : "Contatti"}
             </a>

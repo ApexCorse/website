@@ -4,16 +4,16 @@ import TextDisplay from "@/components/TextDisplay.astro";
 import Layout from "@/layouts/Layout.astro";
 
 import track from "@/assets/track.png";
-import UpdateCard from "@/components/updates/UpdateCard.astro";
+import ArticleCard from "@/components/blog/ArticleCard.astro";
 import { getCollection } from "astro:content";
 
-const updates = await getCollection("updatesEn");
+const blog = await getCollection("blog");
 ---
 
-<Layout title="Updates • Apex Corse">
-	<TextDisplay text="Updates" image={track.src} />
+<Layout title="Blog • Apex Corse">
+	<TextDisplay text="Blog" image={track.src} />
 	<div class="px-4 md:px-8 flex flex-col gap-16 my-16 md:my-32">
-		{updates.map((update) => <UpdateCard update={update} />)}
+		{blog.map((article) => <ArticleCard article={article} />)}
 	</div>
 	<Footer />
 </Layout>
