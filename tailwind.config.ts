@@ -38,6 +38,14 @@ export default {
             // "--tw-prose-invert-pre-bg": "rgb(0 0 0 / 50%)",
             // "--tw-prose-invert-th-borders": "var(--color-pink-600)",
             // "--tw-prose-invert-td-borders": "var(--color-pink-700)",
+            p: {
+              "&::before": {
+                content: "none !important",
+              },
+              "&::after": {
+                content: "none !important",
+              },
+            },
           },
         },
       }),
