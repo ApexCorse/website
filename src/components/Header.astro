@@ -31,8 +31,8 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
             href: getRelativeLocaleUrl(currentLocale, "team"),
           },
           {
-            label: currentLocale === "en" ? "Updates" : "Novità",
-            href: getRelativeLocaleUrl(currentLocale, "updates"),
+            label: "Blog",
+            href: getRelativeLocaleUrl(currentLocale, "blog"),
           },
           {
             label: currentLocale === "en" ? "Contacts" : "Contatti",
