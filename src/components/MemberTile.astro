@@ -1,9 +1,9 @@
 ---
 import { cn } from "@/lib/utils/cn";
+import type { Department, Member } from "@/types/members";
 import Linkedin from "../assets/linkedin.svg";
 import Mail from "../assets/mail.svg";
 import MemberCard from "./MemberCard.astro";
-import type { Department, Member } from "@/types/members";
 
 interface Props {
   member: Member;
@@ -24,7 +24,7 @@ const roleStyles: Record<Department, string> = {
   graphics: "text-green",
   business: "text-blue",
   cost: "text-blue",
-  logistics: "text-yellow"
+  logistics: "text-yellow",
 };
 
 const roleStyle = roleStyles[member.department];
@@ -36,7 +36,7 @@ const roleStyle = roleStyles[member.department];
     <div class="flex flex-col gap-3">
       <div class="flex flex-col gap-1">
         {
-          member.role && (
+          member.role && (member.leader || member.department === "board") && (
             <p class={cn("font-primary text-sm uppercase", roleStyle)}>
               {member.role}
             </p>
