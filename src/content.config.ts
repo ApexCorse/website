@@ -9,7 +9,6 @@ const updates = defineCollection({
     author: z.string(),
     image: z.string(),
     date: z.date(),
-    preview: z.string(),
   }),
 });
 
@@ -20,7 +19,6 @@ const updatesEn = defineCollection({
     author: z.string(),
     image: z.string(),
     date: z.date(),
-    preview: z.string(),
   }),
 });
 
