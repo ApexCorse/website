@@ -1,0 +1,19 @@
+---
+import Footer from "@/components/Footer.astro";
+import TextDisplay from "@/components/TextDisplay.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import track from "@/assets/track.png";
+import ArticleCard from "@/components/blog/ArticleCard.astro";
+import { getCollection } from "astro:content";
+
+const blog = await getCollection("blog");
+---
+
+<Layout title="Blog • Apex Corse">
+	<TextDisplay text="Blog" image={track.src} />
+	<div class="px-4 md:px-8 flex flex-col gap-16 my-16 md:my-32">
+		{blog.map((article) => <ArticleCard article={article} />)}
+	</div>
+	<Footer />
+</Layout>
