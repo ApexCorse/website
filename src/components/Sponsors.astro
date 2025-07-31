@@ -34,7 +34,7 @@ const { class: className } = Astro.props;
 		class="flex w-full flex-col items-center justify-center gap-4 sm:gap-8"
 	>
 		<Omhero />
-		<div class="flex w-full max-w-2xl items-end justify-between gap-8">
+		<div class="flex w-full max-w-3xl items-end justify-between gap-8">
 			{
 				[
 					{
@@ -57,7 +57,7 @@ const { class: className } = Astro.props;
 							"max-w-64 flex-1 text-gray-300 hover:opacity-80",
 						)}
 					>
-						<Component class="h-full w-full" />
+						<Component class="h-full w-full max-w-64" />
 					</a>
 				))
 			}
@@ -102,7 +102,7 @@ const { class: className } = Astro.props;
 						target="_blank"
 						class="w-full max-w-20 text-gray-500 hover:opacity-80"
 					>
-						<Component class="h-full w-full" />
+						<Component class="h-full w-full max-h-12" />
 					</a>
 				))
 			}
