@@ -6,8 +6,8 @@
 
 @theme {
   --font-primary: "Orbitron", sans-serif;
-  --font-secondary: "Poppins", sans-serif;
-  --font-body: "Poppins", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
 
   --color-background: #1a1a1a;
   --color-primary: #693fbc;
@@ -67,7 +67,7 @@
 
 @layer base {
   body {
-    @apply bg-background;
+    @apply bg-background font-body;
   }
 }
 
@@ -75,46 +75,4 @@
   .grid-right {
     direction: rtl;
   }
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("/fonts/orbitron/Orbitron-Regular.ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("/fonts/orbitron/Orbitron-Medium.ttf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("/fonts/orbitron/Orbitron-Semibold.ttf");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("/fonts/orbitron/Orbitron-Bold.ttf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Poppins-Regular.ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Poppins-Medium.ttf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins/Poppins-SemiBold.ttf");
-  font-weight: 600;
 }
