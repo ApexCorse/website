@@ -167,7 +167,7 @@
     "department": "aerodynamics",
     "email": "ludovica.spano@community.unipa.it",
     "image": "ludovica-spano",
-    "course": "BSc Mechanical Engineering"
+    "course": "MSc Aerospace Engineering"
   },
   {
     "name": "Salvatore Toia",
@@ -244,12 +244,6 @@
     "email": "francesco.abitabile@community.unipa.it",
     "image": "francesco-abitabile",
     "course": "BSc Computer Engineering"
-  },
-  {
-    "name": "Dario Rizzo",
-    "department": "it",
-    "email": "dariogiuseppemaria.rizzo@community.unipa.it",
-    "course": "MSc Data & Algorithms"
   },
   {
     "name": "Giorgio Scarpaci",
@@ -371,6 +365,7 @@
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/giuseppe-blunda-2911062bb/",
     "email": "giuseppe.blunda02@community.unipa.it",
+    "image": "giuseppe-blunda",
     "course": "MSc Electronic Engineering",
     "role": "Division Manager"
   },
