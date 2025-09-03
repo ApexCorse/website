@@ -1,0 +1,34 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import SponsorJoinForm from "@/components/sponsors/SponsorJoinForm";
+import Layout from "@/layouts/Layout.astro";
+import { INDUSTRIES_EN } from "@/constants/sponsors";
+---
+
+<Layout>
+	<Header />
+	<div
+		class="flex min-h-screen w-full flex-col items-center justify-center gap-8 p-4"
+	>
+		<h1 class="font-primary text-4xl text-white uppercase">
+			Join as a sponsor
+		</h1>
+		<SponsorJoinForm
+			industries={INDUSTRIES_EN}
+			fieldLabels={{
+				name: "Company Name",
+				industry: "Industry",
+				email: "Email",
+				address: "Address",
+				city: "City",
+				state: "State",
+				zipCode: "Zip Code",
+				country: "Country",
+				reason: "Why do you want to sponsor?",
+			}}
+			client:load
+		/>
+	</div>
+	<Footer />
+</Layout>

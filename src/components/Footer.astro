@@ -34,7 +34,11 @@ const currentLocale = Astro.currentLocale || "it";
 					// {
 					//   text: currentLocale === "en" ? "Join Us" : "Unisciti a noi",
 					//   href: getRelativeLocaleUrl(currentLocale, "team#join-us"),
-					// },
+					// },          
+          {
+            text: currentLocale === "en" ? "Sponsor us" : "Sponsorizzaci",
+            href: getRelativeLocaleUrl(currentLocale, "sponsor-join"),
+          },
 					{ text: "Unipa", href: "https://unipa.it" },
 					{
 						text: currentLocale === "en" ? "Contacts" : "Contatti",
