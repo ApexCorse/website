@@ -1,8 +1,8 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/vite';
+import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
 
 import mdx from "@astrojs/mdx";
 
@@ -10,16 +10,16 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [react(), mdx()],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
   experimental: {
-    svg: true,
+    // svg: true,
   },
   i18n: {
     locales: ["it", "en"],
-    defaultLocale: "it"
+    defaultLocale: "it",
   },
   server: {
-    host: true
-  }
+    host: true,
+  },
 });
