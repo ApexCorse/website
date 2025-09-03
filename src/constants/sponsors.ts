@@ -1,0 +1,31 @@
+export const INDUSTRIES_EN = [
+  "Automotive",
+  "Manufacturing/Industrial",
+  "Aerospace",
+  "Agriculture",
+  "Power & Energy",
+  "Electronics & Software",
+  "Materials Science",
+  "Logistics & Transportation",
+  "Tooling & Equipment",
+  "Consulting & Engineering",
+  "Financial Services",
+  "Sporting Goods/Motorsports",
+  "Other",
+];
+
+export const INDUSTRIES_IT = [
+  "Automobilistico",
+  "Manifatturiero/Industriale",
+  "Aerospaziale",
+  "Agricoltura",
+  "Energia & Potenza",
+  "Elettronica & Software",
+  "Scienza dei Materiali",
+  "Logistica & Trasporti",
+  "Strumenti & Attrezzature",
+  "Consulenza & Ingegneria",
+  "Servizi Finanziari",
+  "Sport & Motorsport",
+  "Altro",
+];
