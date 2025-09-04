@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 export const sponsorJoinSchema = z.object({
@@ -18,13 +19,13 @@ export const sponsorJoinSchema = z.object({
 
 type Schema = z.infer<typeof sponsorJoinSchema>;
 
-export function useSponsorForm() {
+export function useSponsorForm(defaultIndustry: string, locale: string = "it") {
   const form = useForm<Schema>({
     resolver: zodResolver(sponsorJoinSchema),
     defaultValues: {
-      industry: "Automotive",
+      industry: defaultIndustry,
       officeLocation: {
-        country: "Italy",
+        country: locale === "it" ? "Italia" : undefined,
       },
     },
   });
@@ -34,6 +35,20 @@ export function useSponsorForm() {
       method: "POST",
       body: JSON.stringify(data),
     });
+
+    if (response.ok) {
+      toast.success(
+        locale === "it"
+          ? "La tua richiesta è stata inviata!"
+          : "Your request has been sent!",
+      );
+    } else {
+      toast.error(
+        locale === "it"
+          ? "Impossibile inviare la tua richiesta. Riprova più tardi."
+          : "Failed to send your request. Retry later.",
+      );
+    }
   }
 
   return {
