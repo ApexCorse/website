@@ -6,20 +6,28 @@ import tailwindcss from "@tailwindcss/vite";
 
 import mdx from "@astrojs/mdx";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx()],
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   experimental: {
     // svg: true,
   },
+
   i18n: {
     locales: ["it", "en"],
     defaultLocale: "it",
   },
+
   server: {
     host: true,
   },
+
+  adapter: vercel(),
 });
