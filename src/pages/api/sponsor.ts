@@ -8,7 +8,6 @@ import { ZodError } from "zod";
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
-    console.log(data);
     const {
       email,
       name,
@@ -17,8 +16,10 @@ export const POST: APIRoute = async ({ request }) => {
       industry,
     } = sponsorJoinSchema.parse(data);
 
+    const fullAddress = `${address}, ${city} ${state}, ${zipCode}, ${country}`;
+
     await manager.append(import.meta.env.GOOGLE_SHEET_ID, "A1:E1", [
-      [email, name, country, city, state, address, zipCode, reason, industry],
+      [name, email, fullAddress, reason, industry],
     ]);
 
     return new Response(JSON.stringify({ email, name }), {

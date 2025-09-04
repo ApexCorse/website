@@ -34,6 +34,7 @@
   --color-pink: #e74ba3;
   --color-pink-bg: #660027;
   --color-popover: var(--color-background);
+  --color-popover-foreground: var(--color-white);
 
   --color-destructive: var(--color-red);
 
