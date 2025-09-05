@@ -2,20 +2,20 @@
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import SponsorJoinForm from "@/components/sponsors/SponsorJoinForm";
-import Layout from "@/layouts/Layout.astro";
 import { INDUSTRIES_IT } from "@/constants/sponsors";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
   <Header />
   <div
-    class="flex min-h-screen w-full flex-col items-center justify-center gap-4 md:gap-8 px-4 py-24 md:py-0"
+    class="flex min-h-screen w-full flex-col items-center justify-center gap-4 px-4 py-24 md:gap-8 md:py-0"
   >
     <h1 class="font-primary text-4xl text-white uppercase">Unisciti a noi</h1>
     <SponsorJoinForm
       industries={INDUSTRIES_IT}
       fieldLabels={{
-        name: "Nome società",
+        name: "Società",
         industry: "Industria",
         email: "Email",
         address: "Indirizzo",
@@ -23,7 +23,7 @@ import { INDUSTRIES_IT } from "@/constants/sponsors";
         state: "Stato",
         zipCode: "CAP",
         country: "Provincia",
-        reason: "Perché vuoi sponsorizzare?",
+        reason: "Come puoi collaborare con noi?",
       }}
       locale="it"
       client:load
