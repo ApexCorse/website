@@ -173,7 +173,7 @@ export default function SponsorJoinForm({
             type="submit"
             className="w-full cursor-pointer bg-white text-black hover:text-white"
           >
-            Submit
+            {locale == "en" ? "Submit" : "Invia"}
           </Button>
         </form>
       </Form>

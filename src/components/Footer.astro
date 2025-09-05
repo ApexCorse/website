@@ -36,7 +36,7 @@ const currentLocale = Astro.currentLocale || "it";
           //   href: getRelativeLocaleUrl(currentLocale, "team#join-us"),
           // },
           {
-            text: currentLocale === "en" ? "Sponsor us" : "Sponsorizzaci",
+            text: currentLocale === "en" ? "Work with us" : "Collabora",
             href: getRelativeLocaleUrl(currentLocale, "sponsor-join"),
           },
           { text: "Unipa", href: "https://unipa.it" },
@@ -51,7 +51,7 @@ const currentLocale = Astro.currentLocale || "it";
         ))
       }
     </div>
-    <p class="font-primary text-center text-sm uppercase sm:text-base">
+    <p class="font-primary text-center text-xs uppercase sm:text-sm text-gray-400">
       Apex Corse
     </p>
   </div>
