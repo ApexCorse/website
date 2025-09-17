@@ -283,12 +283,6 @@
     "course": "BSc Mechanical Engineering"
   },
   {
-    "name": "Leonardo Paterna",
-    "department": "powertrain",
-    "email": "leonardomaxim.paterna@community.unipa.it",
-    "course": "BSc Mechanical Engineering"
-  },
-  {
     "name": "Letizia Ganci",
     "department": "graphics",
     "leader": true,
@@ -369,11 +363,6 @@
     "name": "Geremia Bossa",
     "department": "electronics",
     "course": "MSc Electronic Engineering"
-  },
-  {
-    "name": "Marcello Pardo",
-    "department": "electronics",
-    "course": "MSc Computer Engineering"
   },
   {
     "name": "Dario Tulumello",
