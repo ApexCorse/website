@@ -5,15 +5,13 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
 import mdx from "@astrojs/mdx";
-
 import vercel from "@astrojs/vercel";
-
-
-import mdx from '@astrojs/mdx';
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), mdx()],
+  site: "https://apexcorse.it",
+  integrations: [react(), mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
