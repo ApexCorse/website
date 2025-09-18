@@ -8,10 +8,10 @@ import mdx from "@astrojs/mdx";
 
 import vercel from "@astrojs/vercel";
 
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx()],
-
   vite: {
     plugins: [tailwindcss()],
   },
