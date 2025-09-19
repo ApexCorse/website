@@ -5,8 +5,8 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
 import mdx from "@astrojs/mdx";
-import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,19 +15,25 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-
   experimental: {
     // svg: true,
   },
-
   i18n: {
     locales: ["it", "en"],
     defaultLocale: "it",
   },
-
   server: {
     host: true,
   },
-
+  redirects: {
+    "/contatti": {
+      status: 308,
+      destination: "/contacts",
+    },
+    "/il-team": {
+      status: 308,
+      destination: "/team-join",
+    },
+  },
   adapter: vercel(),
 });
