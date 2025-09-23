@@ -8,77 +8,96 @@ import { getPathnameWithoutLocale } from "@/lib/utils/url";
 
 const currentLocale = Astro.currentLocale || "it";
 const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
+
+const applicationsOpen = import.meta.env.APPLICATIONS_OPEN as boolean;
 ---
 
 <div
-  class="fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-8 py-4 text-white transition-all transition-normal duration-300 md:px-16"
-  id="header"
+	class="fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-8 py-4 text-white transition-all transition-normal duration-300 md:px-16"
+	id="header"
 >
-  <a href={getRelativeLocaleUrl(currentLocale)} class="group">
-    <Logo class="colored h-auto w-8 group-hover:hidden md:w-14" />
-    <LogoColored class="hidden h-auto w-8 group-hover:block md:w-14" />
-  </a>
-  <div class="hidden items-center gap-16 font-normal md:flex">
-    <div class="flex items-center gap-8">
-      {
-        [
-          {
-            label: "Home",
-            href: getRelativeLocaleUrl(currentLocale),
-          },
-          {
-            label: "Team",
-            href: getRelativeLocaleUrl(currentLocale, "team"),
-          },
-          {
-            label: "Blog",
-            href: getRelativeLocaleUrl(currentLocale, "blog"),
-          },
-          {
-            label: currentLocale === "en" ? "Contacts" : "Contatti",
-            href: getRelativeLocaleUrl(currentLocale, "contacts"),
-          },
-        ].map((item) => (
-          <a
-            href={item.href}
-            class="font-primary colored decoration-2 underline-offset-8 hover:underline"
-          >
-            {item.label}
-          </a>
-        ))
-      }
-    </div>
-    <div class="flex items-center gap-4">
-      {
-        [
-          {
-            label: "En",
-            href: getRelativeLocaleUrl("en", pathnameWithoutLocale),
-          },
-          {
-            label: "It",
-            href: getRelativeLocaleUrl("it", pathnameWithoutLocale),
-          },
-        ].map((item) => (
-          <a
-            href={item.href}
-            class="font-primary colored uppercase decoration-2 underline-offset-8 hover:underline"
-          >
-            {item.label}
-          </a>
-        ))
-      }
-    </div>
-  </div>
-  <Drawer
-    client:load
-    currentLocale={currentLocale}
-    pathnameWithoutLocale={pathnameWithoutLocale}
-  />
+	<a href={getRelativeLocaleUrl(currentLocale)} class="group">
+		<Logo class="colored h-auto w-8 group-hover:hidden md:w-14" />
+		<LogoColored class="hidden h-auto w-8 group-hover:block md:w-14" />
+	</a>
+	<div class="hidden items-center gap-16 font-normal md:flex">
+		<div class="flex items-center gap-8">
+			{
+				[
+					{
+						label: "Home",
+						href: getRelativeLocaleUrl(currentLocale),
+					},
+					{
+						label: "Team",
+						href: getRelativeLocaleUrl(currentLocale, "team"),
+					},
+					{
+						label: "Blog",
+						href: getRelativeLocaleUrl(currentLocale, "blog"),
+					},
+					{
+						label: currentLocale === "en" ? "Contacts" : "Contatti",
+						href: getRelativeLocaleUrl(currentLocale, "contacts"),
+					},
+				].map((item) => (
+					<a
+						href={item.href}
+						class="font-primary colored decoration-2 underline-offset-8 hover:underline"
+					>
+						{item.label}
+					</a>
+				))
+			}
+			{
+				applicationsOpen && (
+					<a
+						href={
+							currentLocale === "it"
+								? "/team-join"
+								: "/en/team-join"
+						}
+						id="apply"
+						class="font-primary cursor-pointer rounded-lg bg-white px-4 py-2 text-base text-black hover:bg-gray-300"
+					>
+						{currentLocale === "it"
+							? "Candidati ora!"
+							: "Apply now!"}
+					</a>
+				)
+			}
+		</div>
+		<div class="flex items-center gap-4">
+			{
+				[
+					{
+						label: "En",
+						href: getRelativeLocaleUrl("en", pathnameWithoutLocale),
+					},
+					{
+						label: "It",
+						href: getRelativeLocaleUrl("it", pathnameWithoutLocale),
+					},
+				].map((item) => (
+					<a
+						href={item.href}
+						class="font-primary colored uppercase decoration-2 underline-offset-8 hover:underline"
+					>
+						{item.label}
+					</a>
+				))
+			}
+		</div>
+	</div>
+	<Drawer
+		client:load
+		currentLocale={currentLocale}
+		pathnameWithoutLocale={pathnameWithoutLocale}
+	/>
 </div>
 <script>
 	const header = document.getElementById("header")!;
-	const candidate = document.getElementById("candidate")!;
+	const apply = document.getElementById("apply")!;
 
 	function setHeaderHeightVar() {
 		const headerHeight = header.offsetHeight;
@@ -108,19 +127,19 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
 			header.classList.add("text-black");
 			header.classList.remove("text-white");
 
-			candidate.classList.add("bg-black");
-			candidate.classList.remove("bg-white");
-			candidate.classList.add("text-white");
-			candidate.classList.remove("text-black");
+			apply.classList.add("bg-black");
+			apply.classList.remove("bg-white");
+			apply.classList.add("text-white");
+			apply.classList.remove("text-black");
 		} else {
 			header.classList.remove("bg-white/90");
 			header.classList.remove("text-black");
 			header.classList.add("text-white");
 
-			candidate.classList.add("bg-white");
-			candidate.classList.remove("bg-black");
-			candidate.classList.add("text-black");
-			candidate.classList.remove("text-white");
+			apply.classList.add("bg-white");
+			apply.classList.remove("bg-black");
+			apply.classList.add("text-black");
+			apply.classList.remove("text-white");
 		}
 	});
 </script>

@@ -1,0 +1,61 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import TeamJoinForm from "@/components/team/TeamJoinForm";
+import {
+	CAME_ACROSS_BY_EN,
+	COURSE_TYPES_EN,
+	DEPARTMENT_CHOICE,
+	YEARS_EN,
+} from "@/constants/team";
+import Layout from "@/layouts/Layout.astro";
+
+const applicationsOpen = import.meta.env.APPLICATIONS_OPEN as boolean;
+---
+
+<Layout>
+	<Header />
+	<div
+		class="flex min-h-screen w-full flex-col items-center justify-center gap-4 px-4 py-24 md:gap-8 md:py-0"
+	>
+		{
+			applicationsOpen ? (
+				<div>
+					<h1 class="font-primary text-4xl text-white uppercase">
+						Apply now
+					</h1>
+					<TeamJoinForm
+						fieldLabels={{
+							firstName: "First Name",
+							lastName: "Last Name",
+							email: "Institutional Email",
+							phoneNumber: "Phone Number",
+							courseType: "Course Type",
+							course: "Course",
+							year: "Year",
+							cameAcrossBy: "How did you hear about us?",
+							department: "Preferred Department",
+							cv: "Resume / CV",
+						}}
+						courseTypesList={COURSE_TYPES_EN}
+						yearsList={YEARS_EN}
+						cameAcrossByList={CAME_ACROSS_BY_EN}
+						departmentsList={DEPARTMENT_CHOICE}
+						locale="en"
+						client:load
+					/>
+					<Footer />
+				</div>
+			) : (
+				<div class="flex flex-col items-center gap-4">
+					<p class="text-xl text-white">
+						No open applications at this time...
+					</p>
+					<a href="/en" class="text-gray-300 underline">
+						Back to home
+					</a>
+				</div>
+			)
+		}
+	</div>
+</Layout>
