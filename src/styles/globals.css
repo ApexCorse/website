@@ -41,6 +41,8 @@
   --animate-fade-in: fade-in 1s ease-in-out forwards;
   --animate-fade-in-and-out: fade-in-and-out 3s ease-in-out forwards;
 
+  --spacing-header: calc(var(--header-h) + 16px);
+
   @keyframes fade-in {
     from {
       opacity: 0;
