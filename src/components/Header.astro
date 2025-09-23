@@ -77,26 +77,50 @@ const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
   />
 </div>
 <script>
-  const header = document.getElementById("header")!;
-  let lastScrollY: number;
+	const header = document.getElementById("header")!;
+	const candidate = document.getElementById("candidate")!;
 
-  window.addEventListener("load", () => {
-    lastScrollY = window.scrollY;
-  });
+	function setHeaderHeightVar() {
+		const headerHeight = header.offsetHeight;
 
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-    const scrolled = currentScrollY > 100;
-    lastScrollY = currentScrollY;
+		// Imposta il valore della variabile CSS '--header-h' sul documento radice.
+		document.documentElement.style.setProperty(
+			"--header-h",
+			`${headerHeight}px`
+		);
+	}
 
-    if (scrolled) {
-      header.classList.add("bg-white/90");
-      header.classList.add("text-black");
-      header.classList.remove("text-white");
-    } else {
-      header.classList.remove("bg-white/90");
-      header.classList.remove("text-black");
-      header.classList.add("text-white");
-    }
-  });
+	// Esegui la funzione all'avvio per impostare l'altezza iniziale
+	setHeaderHeightVar();
+
+	// Aggiorna l'altezza quando la pagina è completamente caricata (immagini, ecc.)
+	window.addEventListener("load", setHeaderHeightVar);
+
+	// Aggiorna l'altezza ogni volta che la finestra viene ridimensionata
+	window.addEventListener("resize", setHeaderHeightVar);
+
+	window.addEventListener("scroll", () => {
+		const currentScrollY = window.scrollY;
+		const scrolled = currentScrollY > 100;
+
+		if (scrolled) {
+			header.classList.add("bg-white/90");
+			header.classList.add("text-black");
+			header.classList.remove("text-white");
+
+			candidate.classList.add("bg-black");
+			candidate.classList.remove("bg-white");
+			candidate.classList.add("text-white");
+			candidate.classList.remove("text-black");
+		} else {
+			header.classList.remove("bg-white/90");
+			header.classList.remove("text-black");
+			header.classList.add("text-white");
+
+			candidate.classList.add("bg-white");
+			candidate.classList.remove("bg-black");
+			candidate.classList.add("text-black");
+			candidate.classList.remove("text-white");
+		}
+	});
 </script>
