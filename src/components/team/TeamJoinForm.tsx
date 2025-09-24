@@ -214,6 +214,27 @@ export default function TeamJoinForm({
                   <FormMessage />
                 </FormItem>
               )}
+            />{" "}
+            <FormField
+              control={form.control}
+              name="cv"
+              render={({ field }) => (
+                <FormItem className="text-white">
+                  <FormLabel>{fieldLabels.cv}</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="file"
+                      accept="application.pdf"
+                      onChange={(e) => {
+                        if (e) {
+                          field.onChange(e.target.files && e.target.files[0])
+                        }
+                      }}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
           </div>
           <Button
