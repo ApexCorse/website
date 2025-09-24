@@ -9,7 +9,7 @@ import { getPathnameWithoutLocale } from "@/lib/utils/url";
 const currentLocale = Astro.currentLocale || "it";
 const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
 
-const applicationsOpen = import.meta.env.APPLICATIONS_OPEN as boolean;
+const applicationsOpen = import.meta.env.APPLICATIONS_OPEN === "true";
 ---
 
 <div
@@ -109,13 +109,10 @@ const applicationsOpen = import.meta.env.APPLICATIONS_OPEN as boolean;
 		);
 	}
 
-	// Esegui la funzione all'avvio per impostare l'altezza iniziale
 	setHeaderHeightVar();
 
-	// Aggiorna l'altezza quando la pagina è completamente caricata (immagini, ecc.)
 	window.addEventListener("load", setHeaderHeightVar);
 
-	// Aggiorna l'altezza ogni volta che la finestra viene ridimensionata
 	window.addEventListener("resize", setHeaderHeightVar);
 
 	window.addEventListener("scroll", () => {
