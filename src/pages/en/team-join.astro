@@ -10,7 +10,7 @@ import {
 } from "@/constants/team";
 import Layout from "@/layouts/Layout.astro";
 
-const applicationsOpen = import.meta.env.APPLICATIONS_OPEN as boolean;
+const applicationsOpen = import.meta.env.APPLICATIONS_OPEN === "true";
 ---
 
 <Layout>
