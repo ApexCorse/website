@@ -34,6 +34,22 @@ export default defineConfig({
       status: 308,
       destination: "/team-join",
     },
+    "/partner": {
+      status: 308,
+      destination: "/",
+    },
+    "/veicolo": {
+      status: 308,
+      destination: "/",
+    },
+    "/old-chi-siamo": {
+      status: 308,
+      destination: "/",
+    },
+    "/unisciti-al-team": {
+      status: 308,
+      destination: "/team-join",
+    },
   },
   adapter: vercel(),
 });
