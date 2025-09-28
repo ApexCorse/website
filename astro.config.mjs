@@ -27,27 +27,27 @@ export default defineConfig({
   },
   redirects: {
     "/contatti": {
-      status: 308,
+      status: 301,
       destination: "/contacts",
     },
     "/il-team": {
-      status: 308,
+      status: 301,
       destination: "/team-join",
     },
     "/partner": {
-      status: 308,
+      status: 301,
       destination: "/",
     },
     "/veicolo": {
-      status: 308,
+      status: 301,
       destination: "/",
     },
     "/old-chi-siamo": {
-      status: 308,
+      status: 301,
       destination: "/",
     },
     "/unisciti-al-team": {
-      status: 308,
+      status: 301,
       destination: "/team-join",
     },
   },
