@@ -10,6 +10,7 @@ const currentLocale = Astro.currentLocale || "it";
 const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
 
 const applicationsOpen = import.meta.env.APPLICATIONS_OPEN === "true";
+const applicationsUrl = import.meta.env.APPLICATIONS_URL;
 ---
 
 <div
@@ -52,11 +53,7 @@ const applicationsOpen = import.meta.env.APPLICATIONS_OPEN === "true";
 			{
 				applicationsOpen && (
 					<a
-						href={
-							currentLocale === "it"
-								? "/team-join"
-								: "/en/team-join"
-						}
+						href={applicationsUrl}
 						id="apply"
 						class="font-primary cursor-pointer rounded-lg bg-white px-4 py-2 text-base text-black hover:bg-gray-300"
 					>
@@ -93,6 +90,7 @@ const applicationsOpen = import.meta.env.APPLICATIONS_OPEN === "true";
 		client:load
 		currentLocale={currentLocale}
 		pathnameWithoutLocale={pathnameWithoutLocale}
+		applicationsUrl={applicationsOpen && applicationsUrl}
 	/>
 </div>
 <script>
