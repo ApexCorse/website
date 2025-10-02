@@ -1,19 +1,10 @@
 import g, { google } from "googleapis";
-
-type Credentials = {
-  key: string;
-  projectId: string;
-  privateKeyId: string;
-  privateKey: string;
-  clientEmail: string;
-  clientId: string;
-};
+import type { Credentials } from "./credentials";
 
 class SheetsManager {
   private auth: g.Auth.JWT;
 
   private constructor({
-    key,
     projectId,
     privateKeyId,
     privateKey,
@@ -50,8 +41,7 @@ class SheetsManager {
   }
 }
 
-export const manager = await SheetsManager.create({
-  key: import.meta.env.GOOGLE_SHEETS_KEY!,
+export const sheetsManager = await SheetsManager.create({
   projectId: import.meta.env.GOOGLE_PROJECT_ID!,
   privateKeyId: import.meta.env.GOOGLE_PRIVATE_KEY_ID!,
   privateKey: import.meta.env.GOOGLE_PRIVATE_KEY!,
