@@ -9,8 +9,8 @@ import { getPathnameWithoutLocale } from "@/lib/utils/url";
 const currentLocale = Astro.currentLocale || "it";
 const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
 
-const applicationsOpen = import.meta.env.APPLICATIONS_OPEN === "true";
-const applicationsUrl = import.meta.env.APPLICATIONS_URL;
+const applicationsOpen = import.meta.env.PUBLIC_APPLICATIONS_OPEN === "true";
+const applicationsUrl = import.meta.env.PUBLIC_APPLICATIONS_URL;
 ---
 
 <div
