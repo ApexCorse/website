@@ -75,7 +75,7 @@ website/
 ### Prerequisites
 
 - Node.js 18.x or higher
-- npm or pnpm package manager
+- pnpm package manager
 
 ### Installation
 
@@ -87,23 +87,23 @@ website/
 
 2. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. Start the development server:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
    The site will be available at `http://localhost:4321`
 
 ## Available Scripts
 
-- `npm run dev` - Start the development server with hot reload
-- `npm run build` - Build the production site
-- `npm run preview` - Preview the production build locally
-- `npm run format` - Format code using Prettier
-- `npm run astro` - Run Astro CLI commands
+- `pnpm run dev` - Start the development server with hot reload
+- `pnpm run build` - Build the production site
+- `pnpm run preview` - Preview the production build locally
+- `pnpm run format` - Format code using Prettier
+- `pnpm run astro` - Run Astro CLI commands
 
 ## Key Features
 
@@ -182,8 +182,8 @@ Required environment variables (create `.env` file):
 When contributing to this project:
 
 1. Follow the existing code structure and conventions
-2. Test changes locally with `npm run build`
-3. Format code with `npm run format` before committing
+2. Test changes locally with `pnpm run build`
+3. Format code with `pnpm run format` before committing
 4. Ensure the site builds without errors
 5. Update documentation if adding new features
 
