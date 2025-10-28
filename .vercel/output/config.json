@@ -1,0 +1,74 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "^/contatti$",
+			"headers": {
+				"Location": "/contacts"
+			},
+			"status": 301
+		},
+		{
+			"src": "^/il-team$",
+			"headers": {
+				"Location": "/team-join"
+			},
+			"status": 301
+		},
+		{
+			"src": "^/old-chi-siamo$",
+			"headers": {
+				"Location": "/"
+			},
+			"status": 301
+		},
+		{
+			"src": "^/partner$",
+			"headers": {
+				"Location": "/"
+			},
+			"status": 301
+		},
+		{
+			"src": "^/unisciti-al-team$",
+			"headers": {
+				"Location": "https://docs.google.com/forms/d/e/1FAIpQLSepp0KronLXSEb6UzRzhIzf6Gjx3wXAVRHzS5XpCIIWa8KtSw/viewform"
+			},
+			"status": 301
+		},
+		{
+			"src": "^/veicolo$",
+			"headers": {
+				"Location": "/"
+			},
+			"status": 301
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"src": "^/_server-islands/([^/]+?)/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/_image/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/api/sponsor/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/.*$",
+			"dest": "/404.html",
+			"status": 404
+		}
+	]
+}
