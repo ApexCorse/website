@@ -1,11 +1,11 @@
 ---
-import DepartmentSection from "@/components/DepartmentSection.astro";
+import DepartmentSection from "@/components/team/DepartmentSection.astro";
 import { getMembers } from "@/lib/utils/members";
-import TextDisplay from "../components/TextDisplay.astro";
+import TextDisplay from "@/components/shared/TextDisplay.astro";
 import Layout from "../layouts/Layout.astro";
 
-import Footer from "@/components/Footer.astro";
-import team from "../assets/team.png";
+import Footer from "@/components/layout/Footer.astro";
+import team from "../assets/images/team.png";
 
 const members = await getMembers();
 

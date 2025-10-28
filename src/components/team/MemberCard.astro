@@ -1,8 +1,8 @@
 ---
 import { cn } from "@/lib/utils/cn";
-import Linkedin from "../assets/linkedin.svg";
-import Mail from "../assets/mail.svg";
-import Person from "../assets/person.svg";
+import Linkedin from "../../assets/icons/linkedin.svg";
+import Mail from "../../assets/icons/mail.svg";
+import Person from "../../assets/icons/person.svg";
 import type { Department, Member } from "@/types/members";
 
 import { Image } from "astro:assets";
@@ -86,7 +86,7 @@ const borderColor = styles[member.department]?.borderColor;
 let image: Promise<{ default: ImageMetadata }> | undefined;
 
 if (member.image) {
-  image = import(`../assets/members/${member.image}.png`) as Promise<{
+  image = import(`../../assets/members/${member.image}.png`) as Promise<{
     default: ImageMetadata;
   }>;
 }
