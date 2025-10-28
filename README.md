@@ -115,9 +115,11 @@ The site supports two languages:
 
 ### Content Collections
 
-Blog posts are managed through Astro's content collections:
+The site is configured to support blog posts through Astro's content collections (MDX format):
 - Italian blog: `src/pages/blog/**/*.mdx`
 - English blog: `src/pages/en/blog/**/*.mdx`
+
+Blog content can be added by creating `.mdx` files in these directories with the required frontmatter (title, author, image, date).
 
 ### API Routes
 
