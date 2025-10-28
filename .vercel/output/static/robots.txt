@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://apexcorse.it/sitemap-index.xml
