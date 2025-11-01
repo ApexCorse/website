@@ -36,7 +36,7 @@ export default defineConfig({
     },
     "/partner": {
       status: 301,
-      destination: "/",
+      destination: "/sponsors",
     },
     "/veicolo": {
       status: 301,
