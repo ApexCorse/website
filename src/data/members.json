@@ -375,11 +375,10 @@
     "course": "BSc Economy & Finance"
   },
   {
-    "name": "Francesco Scianna",
+    "name": "Giuseppe Castiglia",
     "department": "business",
-    "linkedin": "https://www.linkedin.com/in/francescoscianna/",
-    "email": "francesco.scianna@community.unipa.it",
-    "image": "francesco-scianna"
+    "email": "giuseppe.castiglia@community.unipa.it",
+    "course": "BSc Economy & Enterprise"
   },
   {
     "name": "Giulia Celesia",
@@ -397,19 +396,6 @@
     "image": "marialaura-cerasa"
   },
   {
-    "name": "Antonino Seidita",
-    "department": "business",
-    "course": "BSc Economy & Finance",
-    "email": "antonino.seidita@community.unipa.it",
-    "image": "antonino-seidita"
-  },
-  {
-    "name": "Giuseppe Castiglia",
-    "department": "business",
-    "email": "giuseppe.castiglia@community.unipa.it",
-    "course": "BSc Economy & Enterprise"
-  },
-  {
     "name": "Claudio Fricano",
     "department": "business",
     "email": "claudiocarlo.fricano@community.unipa.it",
@@ -419,23 +405,6 @@
     "name": "Francesca Cafarelli",
     "department": "business",
     "course": "BA Politics and International Relationships"
-  },
-  {
-    "name": "Domenico Rizzuto",
-    "department": "business",
-    "email": "domenico.rizzuto@community.unipa.it",
-    "course": "BSc Economy & Enterprise"
-  },
-  {
-    "name": "Nicola Fricano",
-    "department": "cost",
-    "course": "MSc Management Engineering"
-  },
-  {
-    "name": "Alex Nadio Miccichè",
-    "department": "cost",
-    "image": "alex-micciche",
-    "course": "MSc Management Engineering"
   },
   {
     "name": "Gabriele La Milia",
