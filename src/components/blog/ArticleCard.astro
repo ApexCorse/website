@@ -18,7 +18,6 @@ if (article.data.image) {
 }
 
 const currentLocale = Astro.currentLocale || "it";
-console.log(getRelativeLocaleUrl(currentLocale, `blog/${article.id}`))
 ---
 
 <div class="flex flex-col items-center gap-8 md:flex-row">
@@ -37,6 +36,11 @@ console.log(getRelativeLocaleUrl(currentLocale, `blog/${article.id}`))
 				{article.data.title}
 			</h1>
 		</a>
+		{article.data.subtitle && (
+			<p class="text-base font-normal text-gray-400 md:text-lg">
+				{article.data.subtitle}
+			</p>
+		)}
 		<p class="line-clamp-3 text-gray-300">
 			{article.data.author} • {
 				article.data.date.toLocaleDateString(

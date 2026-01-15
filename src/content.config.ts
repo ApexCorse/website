@@ -9,7 +9,8 @@ const blog = defineCollection({
     author: z.string(),
     image: z.string(),
     date: z.date(),
-    description: z.string().optional()
+    description: z.string().optional(),
+		subtitle: z.string().optional()
   }),
 });
 
@@ -20,7 +21,8 @@ const blogEn = defineCollection({
     author: z.string(),
     image: z.string(),
     date: z.date(),
-    description: z.string().optional()
+    description: z.string().optional(),
+		subtitle: z.string().optional()
   }),
 });
 

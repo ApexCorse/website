@@ -28,6 +28,11 @@ if (frontmatter.image) {
       )}
     >
       <h1>{frontmatter.title}</h1>
+      {frontmatter.subtitle && (
+        <p class="not-prose -mt-4 text-lg text-gray-400 md:text-xl">
+          {frontmatter.subtitle}
+        </p>
+      )}
       <p>
         {frontmatter.author} • {
           new Date(frontmatter.date).toLocaleDateString(
