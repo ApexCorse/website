@@ -36,7 +36,7 @@ if (frontmatter.image) {
           )
         }
       </p>
-      {image && <Image src={image} alt={frontmatter.title} />}
+      {image && <Image src={image} alt={frontmatter.title} class="aspect-video object-cover" />}
       <slot />
     </div>
   </div>
