@@ -5,6 +5,7 @@ interface Props {
 
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const { article } = Astro.props;
 
@@ -15,10 +16,13 @@ if (article.data.image) {
 		default: ImageMetadata;
 	}>;
 }
+
+const currentLocale = Astro.currentLocale || "it";
+console.log(getRelativeLocaleUrl(currentLocale, `blog/${article.id}`))
 ---
 
 <div class="flex flex-col items-center gap-8 md:flex-row">
-	<a href={`/blog/${article.id}`} class="flex-1">
+	<a href={getRelativeLocaleUrl(currentLocale, `blog/${article.id}`)} class="flex-1">
 		<Image
 			src={image!}
 			alt={article.data.title}
@@ -26,7 +30,7 @@ if (article.data.image) {
 		/>
 	</a>
 	<div class="flex flex-1 flex-col gap-4 py-4 md:gap-6">
-		<a href={`/blog/${article.id}`}>
+		<a href={getRelativeLocaleUrl(currentLocale, `blog/${article.id}`)}>
 			<h1
 				class="font-primary text-2xl font-medium text-white uppercase md:text-4xl"
 			>
