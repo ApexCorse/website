@@ -13,6 +13,10 @@ import Pirelli from "@/assets/sponsors/pirelli.svg";
 import Qnap from "@/assets/sponsors/qnap.svg";
 import Tesla from "@/assets/sponsors/tesla.svg";
 import Batemo from "@/assets/sponsors/batemo.svg";
+import Rosenberger from "@/assets/sponsors/rosenberger.svg";
+import pitarresi from "@/assets/sponsors/pitarresi.png"
+
+import { Image } from "astro:assets"
 
 interface Props {
   class?: string;
@@ -108,13 +112,23 @@ const { class: className } = Astro.props;
             Component: Fenice,
             href: "https://fenicepalermo.it",
           },
-        ].map(({ Component, href }) => (
+          {
+            Component: Rosenberger,
+            href: "https://www.rosenberger.com/",
+          },
+          {
+            Component: Image,
+            href: "https://www.cialdapitarresi.com/",
+						alt: "Pitarresi",
+						src: pitarresi
+          },
+					].map(({ Component, href, alt, src }) => (
           <a
             href={href}
             target="_blank"
             class="w-full max-w-20 text-gray-500 hover:opacity-80"
           >
-            <Component class="h-full max-h-12 w-full" />
+					<Component class="h-full max-h-12 w-full" alt={alt} src={src} />
           </a>
         ))
       }
