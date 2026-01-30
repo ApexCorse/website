@@ -36,7 +36,7 @@ const { class: className } = Astro.props;
   >
     {Astro.currentLocale === "en" ? "Our Partners" : "I nostri Partner"}
   </p>
-  <div class="flex w-full flex-col items-center justify-center gap-4 sm:gap-8">
+  <div class="flex w-full flex-col items-center justify-center gap-8 sm:gap-8">
     <a
       href="https://www.omhero.tech/"
       target="_blank"
@@ -44,7 +44,7 @@ const { class: className } = Astro.props;
     >
       <Omhero />
     </a>
-    <div class="flex w-full max-w-3xl items-end justify-between gap-8">
+    <div class="flex flex-wrap w-full max-w-3xl items-end justify-center gap-8">
       {
         [
           {
@@ -67,7 +67,7 @@ const { class: className } = Astro.props;
           <a
             href={href}
             target="_blank"
-            class={cn("max-w-64 flex-1 text-gray-300 hover:opacity-80")}
+            class={cn("max-w-64 min-w-32 flex-1 text-gray-300 hover:opacity-80")}
           >
             <Component class="h-full w-full max-w-64" />
           </a>
@@ -75,7 +75,7 @@ const { class: className } = Astro.props;
       }
     </div>
     <div
-      class="flex w-full max-w-4xl items-center justify-between gap-4 md:gap-8"
+      class="flex-wrap w-12 flex w-full max-w-4xl items-center justify-center gap-4 md:gap-8"
     >
       {
         [
