@@ -14,7 +14,7 @@ export default function Drawer({
 }) {
   return (
     <Sheet>
-      <SheetTrigger asChild className="cursor-pointer md:hidden">
+      <SheetTrigger asChild className="cursor-pointer lg:hidden">
         <MenuIcon />
       </SheetTrigger>
       <SheetContent>
@@ -23,6 +23,9 @@ export default function Drawer({
             <a href={currentLocale === "en" ? "/en/" : "/"}>Home</a>
             <a href={currentLocale === "en" ? "/en/team" : "/team"}>Team</a>
             <a href={currentLocale === "en" ? "/en/blog" : "/blog"}>Blog</a>
+            <a href={currentLocale === "en" ? "/en/sponsors" : "/sponsors"}>
+              {currentLocale === "en" ? "Sponsors" : "Sponsor"}
+            </a>
             <a href={currentLocale === "en" ? "/en/contacts" : "/contacts"}>
               {currentLocale === "en" ? "Contacts" : "Contatti"}
             </a>
