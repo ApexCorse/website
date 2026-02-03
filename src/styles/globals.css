@@ -76,6 +76,10 @@
     @apply bg-background font-body;
   }
 
+	svg {
+		@apply w-full h-full
+	}
+
   html body[data-scroll-locked] {
     overflow: visible !important;
     margin-right: 0 !important;
