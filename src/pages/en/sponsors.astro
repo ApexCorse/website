@@ -1,0 +1,151 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TextDisplay from "@/components/shared/TextDisplay.astro";
+import Footer from "@/components/shared/Footer.astro";
+
+import { cn } from "@/lib/utils/cn";
+import Ansys from "@/assets/sponsors/ansys.svg";
+import ESSS from "@/assets/sponsors/esss.svg";
+import Crg from "@/assets/sponsors/crg.svg";
+import Fenice from "@/assets/sponsors/fenice.svg";
+import Hexagon from "@/assets/sponsors/hexagon.svg";
+import Hypertec from "@/assets/sponsors/hypertec.svg";
+import Loctite from "@/assets/sponsors/loctite.svg";
+import Nigrelli from "@/assets/sponsors/nigrelli.svg";
+import Omhero from "@/assets/sponsors/omhero.svg";
+import Pirelli from "@/assets/sponsors/pirelli.svg";
+import Qnap from "@/assets/sponsors/qnap.svg";
+import Tesla from "@/assets/sponsors/tesla.svg";
+import Batemo from "@/assets/sponsors/batemo.svg";
+import Rosenberger from "@/assets/sponsors/rosenberger.svg";
+import pitarresi from "@/assets/sponsors/pitarresi.png";
+
+import { Image } from "astro:assets";
+
+const metadata = {
+  title: "Sponsors • Apex Corse",
+  description: "Meet the sponsors supporting Apex Corse",
+};
+---
+
+<Layout title={metadata.title} description={metadata.description}>
+  <TextDisplay text="Sponsors" />
+
+  <div class="flex flex-col items-center gap-16 px-4 py-16 sm:gap-24 sm:py-24">
+    <!-- Main Sponsor -->
+    <section class="flex flex-col items-center gap-8">
+      <h2 class="font-primary text-center text-xl uppercase text-gray-300 sm:text-2xl">
+        Main Sponsor
+      </h2>
+      <a
+        href="https://www.omhero.tech/"
+        target="_blank"
+        class="max-w-md text-gray-300 transition-opacity hover:opacity-80"
+      >
+        <Omhero />
+      </a>
+    </section>
+
+    <!-- Gold -->
+    <section class="flex flex-col items-center gap-8">
+      <h2 class="font-primary text-center text-xl uppercase text-gray-300 sm:text-2xl">
+        Gold
+      </h2>
+      <div class="flex flex-wrap w-full max-w-3xl items-end justify-center gap-8">
+        {
+          [
+            {
+              Component: Pirelli,
+              href: "https://pirelli.com",
+            },
+            {
+              Component: Nigrelli,
+              href: "https://grupponigrelli.it",
+            },
+            {
+              Component: Batemo,
+              href: "https://www.batemo.com",
+            },
+            {
+              Component: Tesla,
+              href: "https://www.tesla.com",
+            },
+          ].map(({ Component, href }) => (
+            <a
+              href={href}
+              target="_blank"
+              class={cn("max-w-64 min-w-32 flex-1 text-gray-300 transition-opacity hover:opacity-80")}
+            >
+              <Component class="h-full w-full max-w-64" />
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Silver -->
+    <section class="flex flex-col items-center gap-8">
+      <h2 class="font-primary text-center text-xl uppercase text-gray-300 sm:text-2xl">
+        Silver
+      </h2>
+      <div class="flex flex-wrap w-full max-w-4xl items-center justify-center gap-6 md:gap-8">
+        {
+          [
+            {
+              Component: Hexagon,
+              href: "https://www.hexagon.com",
+            },
+            {
+              Component: Loctite,
+              href: "https://www.loctite.com",
+            },
+            {
+              Component: Qnap,
+              href: "https://www.qnap.com",
+            },
+            {
+              Component: Hypertec,
+              href: "https://hypertec.it",
+            },
+            {
+              Component: Crg,
+              href: "https://kartcrg.com",
+            },
+            {
+              Component: ESSS,
+              href: "https://www.esss.com/it",
+            },
+            {
+              Component: Ansys,
+              href: "https://www.ansys.com/",
+            },
+            {
+              Component: Fenice,
+              href: "https://fenicepalermo.it",
+            },
+            {
+              Component: Rosenberger,
+              href: "https://www.rosenberger.com/",
+            },
+            {
+              Component: Image,
+              href: "https://www.cialdapitarresi.com/",
+              alt: "Pitarresi",
+              src: pitarresi,
+            },
+          ].map(({ Component, href, alt, src }) => (
+            <a
+              href={href}
+              target="_blank"
+              class="w-full max-w-20 text-gray-500 transition-opacity hover:opacity-80"
+            >
+              <Component class="h-full max-h-12 w-full" alt={alt} src={src} />
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+
+  <Footer />
+</Layout>

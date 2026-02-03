@@ -21,7 +21,7 @@ const applicationsUrl = import.meta.env.PUBLIC_APPLICATIONS_URL;
 		<Logo class="colored h-auto w-8 group-hover:hidden md:w-14" />
 		<LogoColored class="hidden h-auto w-8 group-hover:block md:w-14" />
 	</a>
-	<div class="hidden items-center gap-16 font-normal md:flex">
+	<div class="hidden items-center gap-16 font-normal lg:flex">
 		<div class="flex items-center gap-8">
 			{
 				[
@@ -36,6 +36,10 @@ const applicationsUrl = import.meta.env.PUBLIC_APPLICATIONS_URL;
 					{
 						label: "Blog",
 						href: getRelativeLocaleUrl(currentLocale, "blog"),
+					},
+					{
+						label: currentLocale === "en" ? "Sponsors" : "Sponsor",
+						href: getRelativeLocaleUrl(currentLocale, "sponsors"),
 					},
 					{
 						label: currentLocale === "en" ? "Contacts" : "Contatti",
