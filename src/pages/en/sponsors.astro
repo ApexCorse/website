@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import TextDisplay from "@/components/shared/TextDisplay.astro";
 import Footer from "@/components/shared/Footer.astro";
 
+import blunda from "@/assets/images/blunda.png"
+
 import ESSS from "@/assets/sponsors/esss.svg";
 import Crg from "@/assets/sponsors/crg.svg";
 import Fenice from "@/assets/sponsors/fenice.svg";
@@ -27,7 +29,7 @@ const metadata = {
 ---
 
 <Layout title={metadata.title} description={metadata.description}>
-  <TextDisplay text="Sponsors" />
+	<TextDisplay text="Sponsors" image={blunda.src} />
 
 	<div class="mx-auto flex max-w-[1280px] flex-col gap-16 px-4 py-16 sm:gap-24 sm:py-24">
     <!-- Main Sponsor -->
