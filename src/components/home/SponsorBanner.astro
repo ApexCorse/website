@@ -1,0 +1,110 @@
+---
+import Omhero from "@/assets/sponsors/omhero.svg";
+import Esss from "@/assets/sponsors/esss.svg";
+import Batemo from "@/assets/sponsors/batemo.svg";
+import Hexagon from "@/assets/sponsors/hexagon.svg";
+import Nigrelli from "@/assets/sponsors/nigrelli.svg";
+import Pirelli from "@/assets/sponsors/pirelli.svg";
+import Tesla from "@/assets/sponsors/tesla.svg";
+import Loctite from "@/assets/sponsors/loctite.svg";
+import Crg from "@/assets/sponsors/crg.svg";
+import Fenice from "@/assets/sponsors/fenice.svg";
+import Hypertec from "@/assets/sponsors/hypertec.svg";
+import Qnap from "@/assets/sponsors/qnap.svg";
+import Rosenberger from "@/assets/sponsors/rosenberger.svg";
+import Pitarresi from "@/assets/sponsors/pitarresi.png";
+
+import { Image } from "astro:assets";
+
+const sponsors = [
+  // Main
+  { Component: Omhero, href: "https://www.omhero.tech/" },
+  // Diamond
+  { Component: Esss, href: "https://www.esss.com/it" },
+  { Component: Batemo, href: "https://www.batemo.com" },
+  { Component: Hexagon, href: "https://www.hexagon.com" },
+  // Platinum
+  { Component: Nigrelli, href: "https://grupponigrelli.it" },
+  // Gold
+  { Component: Pirelli, href: "https://pirelli.com" },
+  { Component: Tesla, href: "https://www.tesla.com" },
+  // Silver
+  { Component: Loctite, href: "https://www.loctite.com" },
+  // Bronze (SVGs)
+  { Component: Crg, href: "https://kartcrg.com" },
+  { Component: Fenice, href: "https://fenicepalermo.it" },
+  { Component: Hypertec, href: "https://hypertec.it" },
+  { Component: Qnap, href: "https://www.qnap.com" },
+  { Component: Rosenberger, href: "https://www.rosenberger.com/" },
+];
+---
+
+<section class="w-full overflow-hidden py-8 mask-x-from-50% mask-x-to-100%">
+  <div class="sponsor-scroll flex w-max animate-scroll">
+    {/* First set of sponsors */}
+    {
+      sponsors.map(({ Component, href }) => (
+        <a
+          href={href}
+          target="_blank"
+          class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
+        >
+          <Component class="max-h-16 w-full max-w-32" />
+        </a>
+      ))
+    }
+    <a
+      href="https://www.cialdapitarresi.com/"
+      target="_blank"
+      class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
+    >
+      <Image
+        src={Pitarresi}
+        alt="Pitarresi"
+        class="max-h-16 w-full max-w-32 object-contain"
+      />
+    </a>
+    {/* Duplicate for seamless loop */}
+    {
+      sponsors.map(({ Component, href }) => (
+        <a
+          href={href}
+          target="_blank"
+          class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
+        >
+          <Component class="max-h-16 w-full max-w-32" />
+        </a>
+      ))
+    }
+    <a
+      href="https://www.cialdapitarresi.com/"
+      target="_blank"
+      class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
+    >
+      <Image
+        src={Pitarresi}
+        alt="Pitarresi"
+        class="max-h-16 w-full max-w-32 object-contain"
+      />
+    </a>
+  </div>
+</section>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  .sponsor-scroll:hover {
+    animation-play-state: paused;
+  }
+</style>

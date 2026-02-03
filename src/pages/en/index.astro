@@ -8,6 +8,7 @@ import unipa from "@/assets/images/unipa.png";
 import Footer from "@/components/shared/Footer.astro";
 
 import HomeContent from "@/components/home/HomeContent";
+import SponsorBanner from "@/components/home/SponsorBanner.astro";
 
 const metadata = {
   title: "Apex Corse",
@@ -44,6 +45,12 @@ const metadata = {
         imageAlt="Unipa Logo"
         client:load
       />
+
+      <h2 class="font-primary text-center text-lg md:text-xl font-bold text-gray-500 uppercase tracking-widest">
+        Our Sponsors
+      </h2>
+      <SponsorBanner />
+
       <Footer />
     </div>
   </div>
