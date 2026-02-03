@@ -17,7 +17,15 @@ import Pitarresi from "@/assets/sponsors/pitarresi.png";
 import { Image } from "astro:assets";
 
 const sponsors = [
-  // Main
+  // Silver
+  { Component: Loctite, href: "https://www.loctite.com" },
+  // Bronze (SVGs)
+  { Component: Crg, href: "https://kartcrg.com" },
+  { Component: Fenice, href: "https://fenicepalermo.it" },
+  { Component: Hypertec, href: "https://hypertec.it" },
+  { Component: Qnap, href: "https://www.qnap.com" },
+  { Component: Rosenberger, href: "https://www.rosenberger.com/" },
+  // Main (centered)
   { Component: Omhero, href: "https://www.omhero.tech/" },
   // Diamond
   { Component: Esss, href: "https://www.esss.com/it" },
@@ -28,20 +36,12 @@ const sponsors = [
   // Gold
   { Component: Pirelli, href: "https://pirelli.com" },
   { Component: Tesla, href: "https://www.tesla.com" },
-  // Silver
-  { Component: Loctite, href: "https://www.loctite.com" },
-  // Bronze (SVGs)
-  { Component: Crg, href: "https://kartcrg.com" },
-  { Component: Fenice, href: "https://fenicepalermo.it" },
-  { Component: Hypertec, href: "https://hypertec.it" },
-  { Component: Qnap, href: "https://www.qnap.com" },
-  { Component: Rosenberger, href: "https://www.rosenberger.com/" },
 ];
 ---
 
 <section class="w-full overflow-hidden py-8 mask-x-from-50% mask-x-to-100%">
   <div class="sponsor-scroll flex w-max animate-scroll">
-    {/* First set of sponsors */}
+    {/* First set of sponsors - Omhero positioned in the middle */}
     {
       sponsors.map(({ Component, href }) => (
         <a
@@ -53,6 +53,7 @@ const sponsors = [
         </a>
       ))
     }
+    {/* Pitarresi - positioned after shifted sponsors */}
     <a
       href="https://www.cialdapitarresi.com/"
       target="_blank"
