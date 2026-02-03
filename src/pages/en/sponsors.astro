@@ -3,8 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import TextDisplay from "@/components/shared/TextDisplay.astro";
 import Footer from "@/components/shared/Footer.astro";
 
-import { cn } from "@/lib/utils/cn";
-import Ansys from "@/assets/sponsors/ansys.svg";
 import ESSS from "@/assets/sponsors/esss.svg";
 import Crg from "@/assets/sponsors/crg.svg";
 import Fenice from "@/assets/sponsors/fenice.svg";
@@ -24,47 +22,103 @@ import { Image } from "astro:assets";
 
 const metadata = {
   title: "Sponsors • Apex Corse",
-  description: "Meet the sponsors supporting Apex Corse",
+  description: "Find out the sponsors supporting Apex Corse",
 };
 ---
 
 <Layout title={metadata.title} description={metadata.description}>
   <TextDisplay text="Sponsors" />
 
-  <div class="flex flex-col items-center gap-16 px-4 py-16 sm:gap-24 sm:py-24">
+	<div class="mx-auto flex max-w-[1280px] flex-col gap-16 px-4 py-16 sm:gap-24 sm:py-24">
     <!-- Main Sponsor -->
-    <section class="flex flex-col items-center gap-8">
-      <h2 class="font-primary text-center text-xl uppercase text-gray-300 sm:text-2xl">
-        Main Sponsor
-      </h2>
-      <a
-        href="https://www.omhero.tech/"
-        target="_blank"
-        class="max-w-md text-gray-300 transition-opacity hover:opacity-80"
-      >
-        <Omhero />
-      </a>
+    <section class="flex flex-col gap-8">
+      <div class="flex items-center gap-4">
+        <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Main Sponsor</span>
+        <div class="flex-1 border-t border-gray-500"></div>
+      </div>
+      <div class="flex justify-center">
+        <a
+          href="https://www.omhero.tech/"
+          target="_blank"
+          class="max-w-lg text-gray-300 transition-opacity hover:opacity-80"
+        >
+          <Omhero />
+        </a>
+      </div>
+    </section>
+
+    <!-- Diamond -->
+    <section class="flex flex-col gap-8">
+      <div class="flex items-center gap-4">
+        <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Diamond</span>
+        <div class="flex-1 border-t border-gray-500"></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
+        {
+          [
+            {
+              Component: ESSS,
+              href: "https://www.esss.com/it",
+            },
+            {
+              Component: Batemo,
+              href: "https://www.batemo.com",
+            },
+            {
+              Component: Hexagon,
+              href: "https://www.hexagon.com",
+            },
+          ].map(({ Component, href }) => (
+            <a
+              href={href}
+              target="_blank"
+              class="flex min-w-56 items-center justify-center text-gray-300 transition-opacity hover:opacity-80"
+            >
+              <Component class="max-w-56" />
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Platinum -->
+    <section class="flex flex-col gap-8">
+      <div class="flex items-center gap-4">
+        <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Platinum</span>
+        <div class="flex-1 border-t border-gray-500"></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
+        {
+          [
+            {
+              Component: Nigrelli,
+              href: "https://grupponigrelli.it",
+            },
+          ].map(({ Component, href }) => (
+            <a
+              href={href}
+              target="_blank"
+              class="flex min-w-48 items-center justify-center text-gray-300 transition-opacity hover:opacity-80"
+            >
+              <Component class="max-w-48" />
+            </a>
+          ))
+        }
+      </div>
     </section>
 
     <!-- Gold -->
-    <section class="flex flex-col items-center gap-8">
-      <h2 class="font-primary text-center text-xl uppercase text-gray-300 sm:text-2xl">
-        Gold
-      </h2>
-      <div class="flex flex-wrap w-full max-w-3xl items-end justify-center gap-8">
+    <section class="flex flex-col gap-8">
+      <div class="flex items-center gap-4">
+        <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Gold</span>
+        <div class="flex-1 border-t border-gray-500"></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
         {
           [
             {
               Component: Pirelli,
               href: "https://pirelli.com",
-            },
-            {
-              Component: Nigrelli,
-              href: "https://grupponigrelli.it",
-            },
-            {
-              Component: Batemo,
-              href: "https://www.batemo.com",
             },
             {
               Component: Tesla,
@@ -74,9 +128,9 @@ const metadata = {
             <a
               href={href}
               target="_blank"
-              class={cn("max-w-64 min-w-32 flex-1 text-gray-300 transition-opacity hover:opacity-80")}
+              class="flex min-w-40 items-center justify-center text-gray-300 transition-opacity hover:opacity-80"
             >
-              <Component class="h-full w-full max-w-64" />
+              <Component class="max-w-40" />
             </a>
           ))
         }
@@ -84,62 +138,73 @@ const metadata = {
     </section>
 
     <!-- Silver -->
-    <section class="flex flex-col items-center gap-8">
-      <h2 class="font-primary text-center text-xl uppercase text-gray-300 sm:text-2xl">
-        Silver
-      </h2>
-      <div class="flex flex-wrap w-full max-w-4xl items-center justify-center gap-6 md:gap-8">
+    <section class="flex flex-col gap-8">
+      <div class="flex items-center gap-4">
+        <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Silver</span>
+        <div class="flex-1 border-t border-gray-500"></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
         {
           [
-            {
-              Component: Hexagon,
-              href: "https://www.hexagon.com",
-            },
             {
               Component: Loctite,
               href: "https://www.loctite.com",
             },
-            {
-              Component: Qnap,
-              href: "https://www.qnap.com",
-            },
-            {
-              Component: Hypertec,
-              href: "https://hypertec.it",
-            },
-            {
-              Component: Crg,
-              href: "https://kartcrg.com",
-            },
-            {
-              Component: ESSS,
-              href: "https://www.esss.com/it",
-            },
-            {
-              Component: Ansys,
-              href: "https://www.ansys.com/",
-            },
-            {
-              Component: Fenice,
-              href: "https://fenicepalermo.it",
-            },
-            {
-              Component: Rosenberger,
-              href: "https://www.rosenberger.com/",
-            },
+          ].map(({ Component, href }) => (
+            <a
+              href={href}
+              target="_blank"
+              class="flex min-w-32 items-center justify-center text-gray-400 transition-opacity hover:opacity-80"
+            >
+              <Component class="max-w-32" />
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Bronze -->
+    <section class="flex flex-col gap-8">
+      <div class="flex items-center gap-4">
+        <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Bronze</span>
+        <div class="flex-1 border-t border-gray-500"></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
+        {
+          [
             {
               Component: Image,
               href: "https://www.cialdapitarresi.com/",
               alt: "Pitarresi",
               src: pitarresi,
             },
+            {
+              Component: Hypertec,
+              href: "https://hypertec.it",
+            },
+            {
+              Component: Fenice,
+              href: "https://fenicepalermo.it",
+            },
+            {
+              Component: Qnap,
+              href: "https://www.qnap.com",
+            },
+            {
+              Component: Crg,
+              href: "https://kartcrg.com",
+            },
+            {
+              Component: Rosenberger,
+              href: "https://www.rosenberger.com/",
+            },
           ].map(({ Component, href, alt, src }) => (
             <a
               href={href}
               target="_blank"
-              class="w-full max-w-20 text-gray-500 transition-opacity hover:opacity-80"
+              class="flex min-w-24 items-center justify-center text-gray-400 transition-opacity hover:opacity-80"
             >
-              <Component class="h-full max-h-12 w-full" alt={alt} src={src} />
+              <Component class="max-w-24" alt={alt} src={src} />
             </a>
           ))
         }
