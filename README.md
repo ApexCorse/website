@@ -1,192 +1,74 @@
-# Apex Corse Website
+# Apex Corse Website repo
 
-Official website for Apex Corse, built with modern web technologies for optimal performance and maintainability.
-
-## Technology Stack
-
-- **Framework**: [Astro 5.3](https://astro.build/) - Modern static site builder with server-side rendering
-- **UI Library**: [React 19](https://react.dev/) - Component library for interactive elements
-- **Styling**: [Tailwind CSS 4.1](https://tailwindcss.com/) - Utility-first CSS framework
-- **Component Library**: [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built with Radix UI
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) - Production-ready motion library
-- **Forms**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) - Type-safe form validation
-- **Icons**: [Lucide React](https://lucide.dev/) - Beautiful & consistent icon toolkit
-- **Deployment**: [Vercel](https://vercel.com/) - Serverless deployment platform
-
-## Project Structure
-
-```
-website/
-├── public/              # Static assets served as-is
-│   ├── favicon.svg
-│   └── robots.txt
-├── src/
-│   ├── assets/          # Images, logos, and other media assets
-│   │   ├── icons/       # Icon assets
-│   │   ├── images/      # General images
-│   │   ├── logos/       # Brand and partner logos
-│   │   ├── members/     # Team member photos
-│   │   ├── social/      # Social media assets
-│   │   └── sponsors/    # Sponsor logos
-│   ├── components/      # Reusable UI components
-│   │   ├── blog/        # Blog-specific components
-│   │   ├── home/        # Homepage components
-│   │   ├── shared/      # Shared layout components (Header, Footer, etc.)
-│   │   ├── sponsors/    # Sponsor-related components
-│   │   ├── team/        # Team member display components
-│   │   └── ui/          # shadcn/ui base components
-│   ├── constants/       # Static configuration and data
-│   │   ├── sponsors.ts  # Sponsor information
-│   │   └── team.ts      # Team structure definitions
-│   ├── data/            # JSON data files
-│   │   └── members.json # Team member information
-│   ├── hooks/           # Custom React hooks
-│   │   └── useSponsorForm.ts
-│   ├── layouts/         # Astro layout components
-│   │   ├── ArticleLayout.astro
-│   │   ├── Layout.astro
-│   │   └── PostLayout.astro
-│   ├── lib/             # Utility functions
-│   │   └── utils/       # Helper utilities
-│   ├── logic/           # Business logic
-│   │   ├── credentials.ts  # Authentication handling
-│   │   └── sheets.ts       # Google Sheets integration
-│   ├── pages/           # File-based routing
-│   │   ├── api/         # API endpoints
-│   │   ├── blog/        # Blog pages (Italian)
-│   │   ├── en/          # English language pages
-│   │   ├── index.astro  # Homepage (Italian)
-│   │   ├── contacts.astro
-│   │   ├── team.astro
-│   │   └── sponsor-join.astro
-│   ├── styles/          # Global styles
-│   ├── types/           # TypeScript type definitions
-│   │   └── members.ts
-│   └── content.config.ts # Content collections configuration
-├── astro.config.mjs     # Astro configuration
-├── components.json      # shadcn/ui configuration
-├── package.json         # Project dependencies and scripts
-├── tailwind.config.ts   # Tailwind CSS configuration
-└── tsconfig.json        # TypeScript configuration
-```
+This repo contains the full codebase for Apex Corse's website.
 
 ## Getting Started
 
-### Prerequisites
+You must have [Node.js](https://nodejs.org) installed on your machine to be able to work with this project. Additionally, you must have installed a package manager for Node; I recommend to use [`pnpm`](https://pnpm.io), since it's what's already been used for this project.
 
-- Node.js 18.x or higher
-- pnpm package manager
+Then, to start a development server, run this command:
 
-### Installation
+```bash
+pnpm dev
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ApexCorse/website.git
-   cd website
-   ```
+To format the code using [Prettier](https://prettier.io):
 
-2. Install dependencies:
-   ```bash
-   pnpm install
-   ```
+```bash
+pnpm format
+```
 
-3. Start the development server:
-   ```bash
-   pnpm run dev
-   ```
+To test a build (MUST do before each a deploy):
 
-   The site will be available at `http://localhost:4321`
+```bash
+pnpm build
+```
 
-## Available Scripts
+You can view all the existing commands and add your own inside the [`package.json`](./package.json).
 
-- `pnpm run dev` - Start the development server with hot reload
-- `pnpm run build` - Build the production site
-- `pnpm run preview` - Preview the production build locally
-- `pnpm run format` - Format code using Prettier
-- `pnpm run astro` - Run Astro CLI commands
+## Structure
 
-## Key Features
+### Website structure
 
-### Internationalization (i18n)
+The website is structured as it follows:
 
-The site supports two languages:
-- **Italian** (default): Pages in `/src/pages/`
-- **English**: Pages in `/src/pages/en/`
+- _Home Page_, with brief description of the team, the competition and the University.
+- _Team Page_, showing the team composition and every member inside of it.
+- _Blog Page_.
+- _Sponsors Page_.
+- _Contacts Page_, with official email and links to social media pages.
 
-### Content Collections
+All the pages (blog posts included) have and **must have** support for both italian and english visitors.
 
-The site is configured to support blog posts through Astro's content collections (MDX format):
-- Italian blog: `src/pages/blog/**/*.mdx`
-- English blog: `src/pages/en/blog/**/*.mdx`
+### Tech stack
 
-Blog content can be added by creating `.mdx` files in these directories with the required frontmatter (title, author, image, date).
+Here follows a list of all the technologies and frameworks used in this project:
 
-### API Routes
+- [Astro](https://astro.build), for Static Site Generation (SSG) and templating.
+- [shadcn/ui](https://ui.shadcn.com/), for pre-styled components.
+- [TailwindCSS](https://tailwindcss.com), for styling.
+- [React](https://react.dev), for client-side components.
+- [framer-motion](https://motion.dev), for certain animations.
 
-Server-side API endpoints are located in `src/pages/api/`:
-- `/api/sponsor` - Handles sponsor form submissions via Google Sheets
+Other utility packages are not included here, you can check the [`package.json`](./package.json) for the full list of depencencies.
 
-### Redirects
+### Repo structure
 
-Legacy URL redirects are configured in `astro.config.mjs` to maintain SEO and prevent broken links.
+The code sits primarily inside the `src` folder, divided in sub-folders accordingly to the [Astro guidelines](https://docs.astro.build/basics/project-structure).
 
-## Development Guidelines
+| Directory | Content |
+| --------- | ------- |
+| `src/assets` | Images, logos and other types of assets |
+| `src/components` | Astro and React components used throughout the codebase |
+| `src/constants` | Global constants |
+| `src/data` | Static data (team members, etc.) |
+| `src/hooks` | React hooks |
+| `src/layouts` | Layout components |
+| `src/lib` | Utility code |
+| `src/logic` | Business logic |
+| `src/pages` | Astro pages, representing website pages |
+| `src/styles` | CSS files |
+| `src/types` | Global types |
 
-### Adding New Pages
-
-1. Create `.astro` files in `src/pages/` for Italian content
-2. Create corresponding files in `src/pages/en/` for English translations
-3. Use existing layouts from `src/layouts/` for consistency
-
-### Adding Components
-
-1. Place shared components in `src/components/shared/`
-2. Use feature-specific folders for scoped components
-3. Follow the existing component structure and naming conventions
-4. Import UI components from `@/components/ui` for consistency
-
-### Styling
-
-- Use Tailwind utility classes for styling
-- Global styles go in `src/styles/`
-- Component-specific styles can be scoped within `.astro` or React component files
-- Follow the design system defined in `tailwind.config.ts`
-
-### Type Safety
-
-- Define types in `src/types/` for reusability
-- Leverage TypeScript's strict mode (enabled in `tsconfig.json`)
-- Use Zod schemas for runtime validation
-
-## Deployment
-
-The site is deployed on Vercel using the `@astrojs/vercel` adapter:
-
-1. Push changes to the main branch
-2. Vercel automatically builds and deploys the site
-3. Preview deployments are created for pull requests
-
-### Build Output
-
-- Static files: `dist/client/`
-- Server functions: `dist/server/`
-- Vercel output: `.vercel/output/`
-
-## Environment Variables
-
-Required environment variables (create `.env` file):
-- Google Sheets API credentials for form submissions (see `src/logic/credentials.ts`)
-
-## Contributing
-
-When contributing to this project:
-
-1. Follow the existing code structure and conventions
-2. Test changes locally with `pnpm run build`
-3. Format code with `pnpm run format` before committing
-4. Ensure the site builds without errors
-5. Update documentation if adding new features
-
-## License
-
-This project is proprietary to Apex Corse.
+> [!NOTE]
+> For more details on how to mantain and improve the codebase, check the `docs` folder.
