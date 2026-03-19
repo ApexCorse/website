@@ -8,6 +8,7 @@ import ArticleCard from "@/components/blog/ArticleCard.astro";
 import { getCollection } from "astro:content";
 
 const blog = await getCollection("blog");
+blog.reverse();
 ---
 
 <Layout title="Blog • Apex Corse">
