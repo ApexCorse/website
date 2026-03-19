@@ -28,11 +28,13 @@ if (frontmatter.image) {
       )}
     >
       <h1>{frontmatter.title}</h1>
-      {frontmatter.subtitle && (
-        <p class="not-prose -mt-4 text-lg text-gray-400 md:text-xl">
-          {frontmatter.subtitle}
-        </p>
-      )}
+      {
+        frontmatter.subtitle && (
+          <p class="not-prose -mt-4 text-lg text-gray-400 md:text-xl">
+            {frontmatter.subtitle}
+          </p>
+        )
+      }
       <p>
         {frontmatter.author} • {
           new Date(frontmatter.date).toLocaleDateString(
@@ -41,7 +43,15 @@ if (frontmatter.image) {
           )
         }
       </p>
-      {image && <Image src={image} alt={frontmatter.title} class="aspect-video object-cover" />}
+      {
+        image && (
+          <Image
+            src={image}
+            alt={frontmatter.title}
+            class="aspect-video object-cover"
+          />
+        )
+      }
       <slot />
     </div>
   </div>

@@ -14,7 +14,7 @@ export default function Drawer({
 }) {
   return (
     <Sheet>
-      <SheetTrigger asChild className="cursor-pointer lg:hidden w-min">
+      <SheetTrigger asChild className="w-min cursor-pointer lg:hidden">
         <MenuIcon />
       </SheetTrigger>
       <SheetContent>
