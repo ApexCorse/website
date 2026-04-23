@@ -17,6 +17,7 @@ import Rosenberger from "@/assets/sponsors/rosenberger.svg";
 import Bender from "@/assets/sponsors/bender.svg";
 import Sensata from "@/assets/sponsors/sensata.svg";
 import pitarresi from "@/assets/sponsors/pitarresi.png";
+import michelangelo from "@/assets/sponsors/michelangelo.png";
 ---
 
 <div class="mx-auto flex max-w-[1280px] flex-col gap-16 px-4 py-16 sm:gap-24 sm:py-24">
@@ -114,13 +115,19 @@ import pitarresi from "@/assets/sponsors/pitarresi.png";
             Component: Tesla,
             href: "https://www.tesla.com",
           },
-        ].map(({ Component, href }) => (
+          {
+            Component: Image,
+            href: "https://www.formazionemichelangelo.it/",
+            alt: "Michelangelo",
+            src: michelangelo,
+          },
+					].map(({ Component, href, alt, src }) => (
           <a
             href={href}
             target="_blank"
             class="flex min-w-40 items-center justify-center text-gray-300 transition-opacity hover:opacity-80"
           >
-            <Component class="max-w-40" />
+            <Component class="max-w-40" alt={alt} src={src} />
           </a>
         ))
       }
@@ -150,7 +157,7 @@ import pitarresi from "@/assets/sponsors/pitarresi.png";
             target="_blank"
             class="flex min-w-32 items-center justify-center text-gray-400 transition-opacity hover:opacity-80"
           >
-            <Component class="max-w-32" />
+					<Component class="max-w-32"/>
           </a>
         ))
       }

@@ -12,9 +12,10 @@ import Fenice from "@/assets/sponsors/fenice.svg";
 import Hypertec from "@/assets/sponsors/hypertec.svg";
 import Qnap from "@/assets/sponsors/qnap.svg";
 import Rosenberger from "@/assets/sponsors/rosenberger.svg";
-import Pitarresi from "@/assets/sponsors/pitarresi.png";
 import Sensata from "@/assets/sponsors/sensata.svg";
 import Bender from "@/assets/sponsors/bender.svg";
+import pitarresi from "@/assets/sponsors/pitarresi.png";
+import michelangelo from "@/assets/sponsors/michelangelo.png";
 
 import { Image } from "astro:assets";
 
@@ -22,10 +23,16 @@ const sponsors = [
   // Silver
   { Component: Loctite, href: "https://www.loctite.com" },
   { Component: Rosenberger, href: "https://www.rosenberger.com/" },
-  // Bronze (SVGs)
+  // Bronze
   { Component: Crg, href: "https://kartcrg.com" },
   { Component: Fenice, href: "https://fenicepalermo.it" },
   { Component: Hypertec, href: "https://hypertec.it" },
+	{
+		Component: Image,
+		href: "https://www.cialdapitarresi.com/",
+		alt: "Pitarresi",
+		src: pitarresi,
+	},
   { Component: Qnap, href: "https://www.qnap.com" },
   { Component: Sensata, href: "https://sensata.com" },
   { Component: Bender, href: "https://bender-it.com" },
@@ -40,6 +47,12 @@ const sponsors = [
   // Gold
   { Component: Pirelli, href: "https://pirelli.com" },
   { Component: Tesla, href: "https://www.tesla.com" },
+	{
+		Component: Image,
+		href: "https://www.formazionemichelangelo.it/",
+		alt: "Michelangelo",
+		src: michelangelo,
+	},
 ];
 ---
 
@@ -47,51 +60,28 @@ const sponsors = [
   <div class="sponsor-scroll flex w-max animate-scroll">
     {/* First set of sponsors - Omhero positioned in the middle */}
     {
-      sponsors.map(({ Component, href }) => (
+		sponsors.map(({ Component, href, alt, src }) => (
         <a
           href={href}
           target="_blank"
           class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
         >
-          <Component class="max-h-16 w-full max-w-32" />
+					<Component class="max-h-16 w-full max-w-32" alt={alt} src={src} />
         </a>
       ))
     }
-    {/* Pitarresi - positioned after shifted sponsors */}
-    <a
-      href="https://www.cialdapitarresi.com/"
-      target="_blank"
-      class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
-    >
-      <Image
-        src={Pitarresi}
-        alt="Pitarresi"
-        class="max-h-16 w-full max-w-32 object-contain"
-      />
-    </a>
     {/* Duplicate for seamless loop */}
     {
-      sponsors.map(({ Component, href }) => (
+		sponsors.map(({ Component, href, alt, src }) => (
         <a
           href={href}
           target="_blank"
           class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
         >
-          <Component class="max-h-16 w-full max-w-32" />
+          <Component class="max-h-16 w-full max-w-32" alt={alt} src={src} />
         </a>
       ))
     }
-    <a
-      href="https://www.cialdapitarresi.com/"
-      target="_blank"
-      class="flex h-24 w-40 items-center justify-center px-4 text-gray-400 transition-opacity hover:opacity-80"
-    >
-      <Image
-        src={Pitarresi}
-        alt="Pitarresi"
-        class="max-h-16 w-full max-w-32 object-contain"
-      />
-    </a>
   </div>
 </section>
 
