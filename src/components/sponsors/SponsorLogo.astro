@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import type { Sponsor } from "@/types/sponsors";
+
+interface Props {
+  sponsor: Sponsor;
+  class?: string;
+}
+
+const { sponsor, class: className = "" } = Astro.props;
+const Logo = sponsor.kind === "svg" ? sponsor.component : null;
+---
+
+{Logo ? (
+  <Logo class={className} />
+) : (
+  <Image class={className} alt={sponsor.alt} src={sponsor.src} />
+)}

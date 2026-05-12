@@ -1,23 +1,46 @@
 ---
-import { Image } from "astro:assets";
+import { sponsors } from "@/data/sponsors";
+import SponsorLogo from "@/components/sponsors/SponsorLogo.astro";
 
-import ESSS from "@/assets/sponsors/esss.svg";
-import Crg from "@/assets/sponsors/crg.svg";
-import Fenice from "@/assets/sponsors/fenice.svg";
-import Hexagon from "@/assets/sponsors/hexagon.svg";
-import Hypertec from "@/assets/sponsors/hypertec.svg";
-import Loctite from "@/assets/sponsors/loctite.svg";
-import Nigrelli from "@/assets/sponsors/nigrelli.svg";
-import Omhero from "@/assets/sponsors/omhero.svg";
-import Pirelli from "@/assets/sponsors/pirelli.svg";
-import Qnap from "@/assets/sponsors/qnap.svg";
-import Tesla from "@/assets/sponsors/tesla.svg";
-import Batemo from "@/assets/sponsors/batemo.svg";
-import Rosenberger from "@/assets/sponsors/rosenberger.svg";
-import Bender from "@/assets/sponsors/bender.svg";
-import Sensata from "@/assets/sponsors/sensata.svg";
-import pitarresi from "@/assets/sponsors/pitarresi.png";
-import michelangelo from "@/assets/sponsors/michelangelo.png";
+const mainSponsors = sponsors.filter((s) => s.tier === "main");
+
+const tierSections = [
+  {
+    label: "Diamond",
+    tier: "diamond" as const,
+    minW: "min-w-56",
+    maxW: "max-w-56",
+    color: "text-gray-300",
+  },
+  {
+    label: "Platinum",
+    tier: "platinum" as const,
+    minW: "min-w-48",
+    maxW: "max-w-48",
+    color: "text-gray-300",
+  },
+  {
+    label: "Gold",
+    tier: "gold" as const,
+    minW: "min-w-40",
+    maxW: "max-w-40",
+    color: "text-gray-300",
+  },
+  {
+    label: "Silver",
+    tier: "silver" as const,
+    minW: "min-w-32",
+    maxW: "max-w-32",
+    color: "text-gray-400",
+  },
+  {
+    label: "Bronze",
+    tier: "bronze" as const,
+    minW: "min-w-24",
+    maxW: "max-w-24",
+    color: "text-gray-400",
+  },
+];
 ---
 
 <div class="mx-auto flex max-w-[1280px] flex-col gap-16 px-4 py-16 sm:gap-24 sm:py-24">
@@ -28,191 +51,45 @@ import michelangelo from "@/assets/sponsors/michelangelo.png";
       <div class="flex-1 border-t border-gray-500"></div>
     </div>
     <div class="flex justify-center">
-      <a
-        href="https://www.omhero.tech/"
-        target="_blank"
-        class="max-w-lg text-gray-300 transition-opacity hover:opacity-80"
-      >
-        <Omhero />
-      </a>
-    </div>
-  </section>
-
-  <!-- Diamond -->
-  <section class="flex flex-col gap-8">
-    <div class="flex items-center gap-4">
-      <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Diamond</span>
-      <div class="flex-1 border-t border-gray-500"></div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
       {
-        [
-          {
-            Component: ESSS,
-            href: "https://www.esss.com/it",
-          },
-          {
-            Component: Batemo,
-            href: "https://www.batemo.com",
-          },
-          {
-            Component: Hexagon,
-            href: "https://www.hexagon.com",
-          },
-        ].map(({ Component, href }) => (
+        mainSponsors.map((sponsor) => (
           <a
-            href={href}
+            href={sponsor.href}
             target="_blank"
-            class="flex min-w-56 items-center justify-center text-gray-300 transition-opacity hover:opacity-80"
+            class="max-w-lg text-gray-300 transition-opacity hover:opacity-80"
           >
-            <Component class="max-w-56" />
+            <SponsorLogo sponsor={sponsor} />
           </a>
         ))
       }
     </div>
   </section>
 
-  <!-- Platinum -->
-  <section class="flex flex-col gap-8">
-    <div class="flex items-center gap-4">
-      <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Platinum</span>
-      <div class="flex-1 border-t border-gray-500"></div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
-      {
-        [
-          {
-            Component: Nigrelli,
-            href: "https://grupponigrelli.it",
-          },
-        ].map(({ Component, href }) => (
-          <a
-            href={href}
-            target="_blank"
-            class="flex min-w-48 items-center justify-center text-gray-300 transition-opacity hover:opacity-80"
-          >
-            <Component class="max-w-48" />
-          </a>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- Gold -->
-  <section class="flex flex-col gap-8">
-    <div class="flex items-center gap-4">
-      <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Gold</span>
-      <div class="flex-1 border-t border-gray-500"></div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
-      {
-        [
-          {
-            Component: Pirelli,
-            href: "https://pirelli.com",
-          },
-          {
-            Component: Tesla,
-            href: "https://www.tesla.com",
-          },
-          {
-            Component: Image,
-            href: "https://www.formazionemichelangelo.it/",
-            alt: "Michelangelo",
-            src: michelangelo,
-          },
-					].map(({ Component, href, alt, src }) => (
-          <a
-            href={href}
-            target="_blank"
-            class="flex min-w-40 items-center justify-center text-gray-300 transition-opacity hover:opacity-80"
-          >
-            <Component class="max-w-40" alt={alt} src={src} />
-          </a>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- Silver -->
-  <section class="flex flex-col gap-8">
-    <div class="flex items-center gap-4">
-      <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Silver</span>
-      <div class="flex-1 border-t border-gray-500"></div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
-      {
-        [
-          {
-            Component: Loctite,
-            href: "https://www.loctite.com",
-          },
-          {
-            Component: Rosenberger,
-            href: "https://www.rosenberger.com/",
-          },
-        ].map(({ Component, href }) => (
-          <a
-            href={href}
-            target="_blank"
-            class="flex min-w-32 items-center justify-center text-gray-400 transition-opacity hover:opacity-80"
-          >
-					<Component class="max-w-32"/>
-          </a>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- Bronze -->
-  <section class="flex flex-col gap-8">
-    <div class="flex items-center gap-4">
-      <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">Bronze</span>
-      <div class="flex-1 border-t border-gray-500"></div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
-      {
-        [
-          {
-            Component: Image,
-            href: "https://www.cialdapitarresi.com/",
-            alt: "Pitarresi",
-            src: pitarresi,
-          },
-          {
-            Component: Hypertec,
-            href: "https://hypertec.it",
-          },
-          {
-            Component: Fenice,
-            href: "https://fenicepalermo.it",
-          },
-          {
-            Component: Qnap,
-            href: "https://www.qnap.com",
-          },
-          {
-            Component: Crg,
-            href: "https://kartcrg.com",
-          },
-          {
-            Component: Sensata,
-            href: "https://sensata.com",
-          },
-          {
-            Component: Bender,
-            href: "https://bender-it.com",
-          },
-        ].map(({ Component, href, alt, src }) => (
-          <a
-            href={href}
-            target="_blank"
-            class="flex min-w-24 items-center justify-center text-gray-400 transition-opacity hover:opacity-80"
-          >
-            <Component class="max-w-24" alt={alt} src={src} />
-          </a>
-        ))
-      }
-    </div>
-  </section>
+  <!-- Tiered Sponsors -->
+  {
+    tierSections.map(({ label, tier, minW, maxW, color }) => {
+      const tierSponsors = sponsors.filter((s) => s.tier === tier);
+      return (
+        <section class="flex flex-col gap-8">
+          <div class="flex items-center gap-4">
+            <span class="font-primary text-lg uppercase text-gray-500 sm:text-xl">{label}</span>
+            <div class="flex-1 border-t border-gray-500" />
+          </div>
+          <div class="flex flex-wrap justify-center gap-x-8 gap-y-12 sm:gap-x-12 sm:gap-y-16 md:gap-x-20 md:gap-y-24 lg:gap-x-28 lg:gap-y-32">
+            {
+              tierSponsors.map((sponsor) => (
+                <a
+                  href={sponsor.href}
+                  target="_blank"
+                  class={`flex ${minW} items-center justify-center ${color} transition-opacity hover:opacity-80`}
+                >
+                  <SponsorLogo sponsor={sponsor} class={maxW} />
+                </a>
+              ))
+            }
+          </div>
+        </section>
+      );
+    })
+  }
 </div>
