@@ -5,6 +5,7 @@ import Esss from "@/assets/sponsors/esss.svg";
 import Batemo from "@/assets/sponsors/batemo.svg";
 import Hexagon from "@/assets/sponsors/hexagon.svg";
 import Nigrelli from "@/assets/sponsors/nigrelli.svg";
+import Omer from "@/assets/sponsors/omer.svg";
 import Pirelli from "@/assets/sponsors/pirelli.svg";
 import Tesla from "@/assets/sponsors/tesla.svg";
 import Loctite from "@/assets/sponsors/loctite.svg";
@@ -56,6 +57,13 @@ export const sponsors: readonly Sponsor[] = [
     tier: "platinum",
     kind: "svg",
     component: Nigrelli,
+  },
+  {
+    name: "Omer",
+    href: "https://omerspa.com/it/",
+    tier: "platinum",
+    kind: "svg",
+    component: Omer,
   },
   // Gold
   {
