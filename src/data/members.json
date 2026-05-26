@@ -238,6 +238,18 @@
     "course": "BSc Computer Engineering"
   },
   {
+    "name": "Samuele Gallo",
+    "department": "it",
+    "email": "samuele.gallo@community.unipa.it",
+    "course": "BSc Computer Engineering"
+  },
+  {
+    "name": "Edoardo Pagano",
+    "department": "it",
+    "email": "edoardo.pagano@community.unipa.it",
+    "course": "BSc Computer Engineering"
+  },
+  {
     "name": "Giorgio Scarpaci",
     "department": "powertrain",
     "leader": true,
