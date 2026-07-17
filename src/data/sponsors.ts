@@ -18,7 +18,7 @@ import Crg from "@/assets/sponsors/crg.svg";
 import Sensata from "@/assets/sponsors/sensata.svg";
 import Bender from "@/assets/sponsors/bender.svg";
 import Michelangelo from "@/assets/sponsors/michelangelo.png";
-import Norelem from "@/assets/sponsors/norelem.png";
+import Norelem from "@/assets/sponsors/norelem.svg";
 
 export const sponsors: readonly Sponsor[] = [
   // Main
