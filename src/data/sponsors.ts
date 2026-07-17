@@ -18,6 +18,7 @@ import Crg from "@/assets/sponsors/crg.svg";
 import Sensata from "@/assets/sponsors/sensata.svg";
 import Bender from "@/assets/sponsors/bender.svg";
 import Michelangelo from "@/assets/sponsors/michelangelo.png";
+import Norelem from "@/assets/sponsors/norelem.png";
 
 export const sponsors: readonly Sponsor[] = [
   // Main
@@ -153,6 +154,13 @@ export const sponsors: readonly Sponsor[] = [
     tier: "bronze",
     kind: "svg",
     component: Bender,
+  },
+  {
+    name: "Norelem",
+    href: "https://www.norelem.it",
+    tier: "bronze",
+    kind: "svg",
+    component: Norelem,
   },
 ];
 
