@@ -39,6 +39,7 @@
   {
     "name": "Gabriele Andreassi",
     "department": "chassis",
+    "email": "gabriele.andreassi@community.unipa.it",
     "course": "MSc Cybernetic Engineering"
   },
   {
@@ -105,31 +106,37 @@
   {
     "name": "Morgan Mancuso",
     "department": "chassis",
+    "email": "morgan.mancuso@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Giovanni Amodeo",
     "department": "chassis",
+    "email": "giovanni.amodeo01@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Danilo Sfameni",
     "department": "chassis",
+    "email": "danilo.sfameni@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Francesco Gabriele Alfio",
     "department": "chassis",
+    "email": "francescogabriele.alfio@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Giuseppe Bono",
     "department": "chassis",
+    "email": "giuseppe.bono10@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Alberto Ciralli",
     "department": "chassis",
+    "email": "alberto.ciralli@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
@@ -172,36 +179,43 @@
   {
     "name": "Elena D'Ignoti",
     "department": "aerodynamics",
+    "email": "elena.dignoti@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Giulio Gandolfo",
     "department": "aerodynamics",
+    "email": "giulio.gandolfo@community.unipa.it",
     "course": "BSc Aerospace Engineering"
   },
   {
     "name": "Katia Lazzara",
     "department": "aerodynamics",
+    "email": "katia.lazzara01@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Antonio Farina",
     "department": "aerodynamics",
+    "email": "antonio.farina01@community.unipa.it",
     "course": "BSc Aerospace Engineering"
   },
   {
     "name": "Giorgio Seminara",
     "department": "aerodynamics",
+    "email": "giorgio.seminara01@community.unipa.it",
     "course": "BSc Aerospace Engineering"
   },
   {
     "name": "Mattia Titoli",
     "department": "aerodynamics",
+    "email": "mattia.titoli@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Serena Maria Cannizzaro",
     "department": "aerodynamics",
+    "email": "serenamaria.cannizzaro@community.unipa.it",
     "course": "MSc Aerospace Engineering"
   },
   {
@@ -264,14 +278,16 @@
   {
     "name": "Alessandro Vaccarino",
     "department": "powertrain",
-    "image": "alessandro-vaccarino",
     "linkedin": "https://www.linkedin.com/in/alessandrovaccarino/",
+    "email": "alessandro.vaccarino@community.unipa.it",
+    "image": "alessandro-vaccarino",
     "course": "MSc Mechanical Engineering"
   },
   {
     "name": "Salvatore Papa",
     "department": "powertrain",
     "linkedin": "https://www.linkedin.com/in/salvatore-papa-53a7551b1/",
+    "email": "salvatore.papa@community.unipa.it",
     "image": "salvatore-papa",
     "course": "BSc Mechanical Engineering"
   },
@@ -285,56 +301,67 @@
   {
     "name": "Caterina Scaglione",
     "department": "powertrain",
+    "email": "caterina.scaglione@community.unipa.it",
     "course": "BSc Electrical Engineering for E-Mobility"
   },
   {
     "name": "Riccardo Mongiovì",
     "department": "powertrain",
+    "email": "riccardo.mongiovi@community.unipa.it",
     "course": "BSc Electrical Engineering for E-Mobility"
   },
   {
     "name": "Alessandro Di Vita",
     "department": "powertrain",
+    "email": "alessandro.divita04@community.unipa.it",
     "course": "BSc Energy Engineering"
   },
   {
     "name": "Silvestre Calafato",
     "department": "powertrain",
+    "email": "silvestre.calafato@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Mattia La Milia",
     "department": "powertrain",
+    "email": "mattia.lamilia@community.unipa.it",
     "course": "MSc Mechanical Engineering"
   },
   {
     "name": "Daniele Passafiume",
     "department": "powertrain",
+    "email": "daniele.passafiume@community.unipa.it",
     "course": "BSc Energy and Renewable Sources Engineering"
   },
   {
     "name": "Mattia Paolo Cammarata",
     "department": "powertrain",
+    "email": "mattiapaolo.cammarata@community.unipa.it",
     "course": "BSc Energy and Renewable Sources Engineering"
   },
   {
     "name": "Giuseppe Musso",
     "department": "powertrain",
+    "email": "giuseppe.musso10@community.unipa.it",
     "course": "BSc Energy Engineering"
   },
   {
     "name": "Pietro Giannopolo",
     "department": "powertrain",
+    "email": "pietro.giannopolo@community.unipa.it",
     "course": "BSc Mechanical Engineering"
   },
   {
     "name": "Dario Restuccia",
     "department": "powertrain",
+    "email": "dario.restuccia@community.unipa.it",
     "course": "BSc Electrical Engineering for E-Mobility"
   },
   {
     "name": "Giuseppe Saltalamacchia",
     "department": "powertrain",
+    "email": "giuseppe.saltalamacchia@community.unipa.it",
     "course": "BSc Electrical Engineering for E-Mobility"
   },
   {
@@ -358,16 +385,19 @@
   {
     "name": "Angela Messina",
     "department": "graphics",
+    "email": "angela.messina06@community.unipa.it",
     "course": "BA Communication - Marketing & Advertising"
   },
   {
     "name": "Carmine Gentile",
     "department": "graphics",
+    "email": "carmine.gentile@community.unipa.it",
     "course": "BA Industrial Design"
   },
   {
     "name": "Francesca Di Leonardo",
     "department": "graphics",
+    "email": "francesca.dileonardo@community.unipa.it",
     "course": "BA Design"
   },
   {
@@ -403,12 +433,14 @@
   {
     "name": "Riccardo Busè",
     "department": "electronics",
+    "email": "riccardo.buse@community.unipa.it",
     "course": "MSc Electronic Engineering"
   },
   {
     "name": "Diego Giordano",
     "department": "business",
     "leader": true,
+    "email": "diego.giordano@community.unipa.it",
     "role": "Division Manager",
     "course": "BSc Economy & Finance"
   },
@@ -428,16 +460,32 @@
   {
     "name": "Roberta La Face",
     "department": "business",
+    "email": "roberta.laface@community.unipa.it",
     "course": "MA Law"
   },
   {
     "name": "Gregorio Nuara",
     "department": "business",
+    "email": "gregoriomatteomaria.nuara@community.unipa.it",
     "course": "BSc Economy & Enterprise"
   },
   {
+    "name": "Cristian D'Orio",
+    "department": "business",
+    "email": "cristian.dorio@community.unipa.it",
+    "course": "BSc Economy & Enterprise"
+  },
+  {
+    "name": "Federico Lo Nano",
+    "department": "business",
+    "email": "federico.lonano@community.unipa.it",
+    "course": "BSc Management Engineering"
+  },
+  {
     "name": "Andrea Intrivici",
-    "department": "business"
+    "department": "business",
+    "email": "andrea.intrivici@community.unipa.it",
+    "course": "BSc Management Engineering"
   },
   {
     "name": "Gabriele La Milia",
