@@ -1,6 +1,6 @@
 import type { ImageMetadata } from "astro";
 
-export type SponsorTier = "main" | "diamond" | "platinum" | "gold" | "silver" | "bronze";
+export type SponsorTier = "main" | "diamond" | "platinum" | "gold" | "silver" | "bronze" | "mobility partner";
 
 export type SponsorKind = "svg" | "png";
 

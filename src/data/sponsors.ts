@@ -19,6 +19,7 @@ import Sensata from "@/assets/sponsors/sensata.svg";
 import Bender from "@/assets/sponsors/bender.svg";
 import Michelangelo from "@/assets/sponsors/michelangelo.png";
 import Norelem from "@/assets/sponsors/norelem.svg";
+import Riolo from "@/assets/sponsors/riolo.svg";
 
 export const sponsors: readonly Sponsor[] = [
   // Main
@@ -162,13 +163,21 @@ export const sponsors: readonly Sponsor[] = [
     kind: "svg",
     component: Norelem,
   },
+  {
+    name: "Riolo",
+    href: "https://www.riolo.it/",
+    tier: "mobility partner",
+    kind: "svg",
+    component: Riolo,
+  },
 ];
 
 export const bannerSponsors: readonly Sponsor[] = [
-  ...sponsors.filter((s) => s.tier === "silver"),
-  ...sponsors.filter((s) => s.tier === "bronze"),
   ...sponsors.filter((s) => s.tier === "main"),
   ...sponsors.filter((s) => s.tier === "diamond"),
   ...sponsors.filter((s) => s.tier === "platinum"),
   ...sponsors.filter((s) => s.tier === "gold"),
+  ...sponsors.filter((s) => s.tier === "silver"),
+  ...sponsors.filter((s) => s.tier === "bronze"),
+  ...sponsors.filter((s) => s.tier === "mobility partner"),
 ];

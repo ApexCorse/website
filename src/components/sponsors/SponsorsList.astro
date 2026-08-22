@@ -40,6 +40,13 @@ const tierSections = [
     maxW: "max-w-24",
     color: "text-gray-400",
   },
+  {
+    label: "Mobility Partner",
+    tier: "mobility partner" as const,
+    minW: "min-w-18", // 18 is the minimum allowed value
+    maxW: "max-w-18", // going lower will cut the logo
+    color: "text-gray-400",
+  },
 ];
 ---
 
