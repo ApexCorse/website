@@ -20,6 +20,7 @@ import Bender from "@/assets/sponsors/bender.svg";
 import Michelangelo from "@/assets/sponsors/michelangelo.png";
 import Norelem from "@/assets/sponsors/norelem.svg";
 import Riolo from "@/assets/sponsors/riolo.svg";
+import LaNuovaCopisteria from "@/assets/sponsors/lanuovacopisteria.svg";
 
 export const sponsors: readonly Sponsor[] = [
   // Main
@@ -163,6 +164,14 @@ export const sponsors: readonly Sponsor[] = [
     kind: "svg",
     component: Norelem,
   },
+  {
+    name: "La Nuova Copisteria",
+    href: "https://lanuovacopisteria.it",
+    tier: "bronze",
+    kind: "svg",
+    component: LaNuovaCopisteria,
+  },
+  // Mobility Partner
   {
     name: "Riolo",
     href: "https://www.riolo.it/",
