@@ -19,7 +19,7 @@ export const DEPARTMENT_CHOICE = [
   "Powertrain",
   "Business & Cost",
   "Graphics & Media",
-  "IT",
+  "Software",
   "Logistics",
 ];
 

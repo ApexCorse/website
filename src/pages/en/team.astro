@@ -11,29 +11,32 @@ const members = await getMembers();
 
 const boardMembers = members.filter((member) => member.department === "board");
 const chassisMembers = members.filter(
-	(member) => member.department === "chassis"
+	(member) => member.department === "chassis",
 );
 const aerodynamicsMembers = members.filter(
-	(member) => member.department === "aerodynamics"
+	(member) => member.department === "aerodynamics",
 );
-const itMembers = members.filter((member) => member.department === "it");
+const softwareMembers = members.filter(
+	(member) => member.department === "software",
+);
 const powertrainMembers = members.filter(
-	(member) => member.department === "powertrain"
+	(member) => member.department === "powertrain",
 );
 const graphicsMembers = members.filter(
-	(member) => member.department === "graphics"
+	(member) => member.department === "graphics",
 );
 const electronicsMembers = members.filter(
-	(member) => member.department === "electronics"
+	(member) => member.department === "electronics",
 );
 const businessAndCostMembers = members.filter(
-	(member) => member.department === "business" || member.department === "cost"
+	(member) =>
+		member.department === "business" || member.department === "cost",
 );
 const advisorsMembers = members.filter(
-	(member) => member.department === "advisors"
+	(member) => member.department === "advisors",
 );
 const logisticsMembers = members.filter(
-	(member) => member.department === "logistics"
+	(member) => member.department === "logistics",
 );
 
 const metadata = {
@@ -64,10 +67,10 @@ const metadata = {
 		description="The Aerodynamics Department designs and develops the car’s aerodynamic package, working in close synergy with the Chassis Department. Each component is integrated into the overall design to optimize airflow efficiency."
 	/>
 	<DepartmentSection
-		department="it"
-		title="IT"
-		members={itMembers}
-		description="The IT Department develops software for data acquisition and analysis, manages internal IT systems, and provides technical support to the other operational divisions, contributing to the continuous improvement of the team’s performance."
+		department="software"
+		title="Software"
+		members={softwareMembers}
+		description="The Software Department develops solutions for data acquisition and analysis, manages internal IT systems, and provides technical support to the other operational divisions, contributing to the continuous improvement of the team’s performance."
 	/>
 	<DepartmentSection
 		department="powertrain"

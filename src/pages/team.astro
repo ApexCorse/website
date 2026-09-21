@@ -16,7 +16,9 @@ const chassisMembers = members.filter(
 const aerodynamicsMembers = members.filter(
   (member) => member.department === "aerodynamics",
 );
-const itMembers = members.filter((member) => member.department === "it");
+const softwareMembers = members.filter(
+  (member) => member.department === "software",
+);
 const powertrainMembers = members.filter(
   (member) => member.department === "powertrain",
 );
@@ -64,10 +66,10 @@ const metadata = {
     description="Il Reparto Aerodinamica progetta e realizza il pacchetto aerodinamico della vettura, lavorando in sinergia con il Reparto Chassis. Ogni componente viene integrato nel design complessivo della vettura, al fine di ottimizzare l’efficienza dei flussi."
   />
   <DepartmentSection
-    department="it"
-    title="IT"
-    members={itMembers}
-    description="Il Reparto IT sviluppa i software per l’acquisizione e l’analisi dei dati, gestisce i sistemi informatici interni e fornisce supporto tecnico alle altre divisioni operative, contribuendo al miglioramento continuo delle prestazioni del team."
+    department="software"
+    title="Software"
+    members={softwareMembers}
+    description="Il Reparto Software sviluppa soluzioni per l’acquisizione e l’analisi dei dati, gestisce i sistemi informatici interni e fornisce supporto tecnico alle altre divisioni operative, contribuendo al miglioramento continuo delle prestazioni del team."
   />
   <DepartmentSection
     department="powertrain"

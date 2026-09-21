@@ -5,7 +5,7 @@ export type Department =
   | "aerodynamics"
   | "powertrain"
   | "electronics"
-  | "it"
+  | "software"
   | "graphics"
   | "business"
   | "cost"

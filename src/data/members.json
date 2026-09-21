@@ -220,7 +220,7 @@
   },
   {
     "name": "Gabriele Amorello",
-    "department": "it",
+    "department": "software",
     "leader": true,
     "linkedin": "https://www.linkedin.com/in/gabriele-salvatore-amorello-808954180/",
     "email": "gabrielesalvatore.amorello@community.unipa.it",
@@ -230,7 +230,7 @@
   },
   {
     "name": "Gabriele Lo Cascio",
-    "department": "it",
+    "department": "software",
     "linkedin": "https://www.linkedin.com/in/gabriele-locascio/",
     "email": "gabriele.locascio03@community.unipa.it",
     "image": "gabriele-lo-cascio",
@@ -239,7 +239,7 @@
   },
   {
     "name": "Antonio Lentini",
-    "department": "it",
+    "department": "software",
     "linkedin": "https://www.linkedin.com/in/antonio-lentini-782419255/",
     "email": "antonio.lentini06@community.unipa.it",
     "image": "antonio-lentini",
@@ -248,20 +248,20 @@
   },
   {
     "name": "Francesco Abitabile",
-    "department": "it",
+    "department": "software",
     "email": "francesco.abitabile@community.unipa.it",
     "image": "francesco-abitabile",
     "course": "BSc Computer Engineering"
   },
   {
     "name": "Samuele Gallo",
-    "department": "it",
+    "department": "software",
     "email": "samuele.gallo@community.unipa.it",
     "course": "BSc Computer Engineering"
   },
   {
     "name": "Edoardo Pagano",
-    "department": "it",
+    "department": "software",
     "email": "edoardo.pagano@community.unipa.it",
     "course": "BSc Computer Engineering"
   },
