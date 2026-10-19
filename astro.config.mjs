@@ -48,7 +48,7 @@ export default defineConfig({
     },
     "/unisciti-al-team": {
       status: 301,
-      destination: "https://docs.google.com/forms/d/e/1FAIpQLSepp0KronLXSEb6UzRzhIzf6Gjx3wXAVRHzS5XpCIIWa8KtSw/viewform",
+      destination: "https://forms.gle/qSTkXYSaAuwBsvjo7",
     },
   },
   adapter: vercel(),

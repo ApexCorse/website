@@ -10,7 +10,7 @@ const currentLocale = Astro.currentLocale || "it";
 const pathnameWithoutLocale = getPathnameWithoutLocale(Astro.url.pathname);
 
 const applicationsOpen = import.meta.env.PUBLIC_APPLICATIONS_OPEN === "true";
-const applicationsUrl = import.meta.env.PUBLIC_APPLICATIONS_URL;
+const applicationsUrl = "https://forms.gle/qSTkXYSaAuwBsvjo7";
 ---
 
 <div
@@ -94,7 +94,7 @@ const applicationsUrl = import.meta.env.PUBLIC_APPLICATIONS_URL;
 		client:load
 		currentLocale={currentLocale}
 		pathnameWithoutLocale={pathnameWithoutLocale}
-		applicationsUrl={applicationsOpen && applicationsUrl}
+		applicationsUrl={applicationsOpen ? applicationsUrl : undefined}
 	/>
 </div>
 <script>
