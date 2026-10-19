@@ -14,8 +14,14 @@ export default function Drawer({
 }) {
   return (
     <Sheet>
-      <SheetTrigger asChild className="w-min cursor-pointer lg:hidden">
-        <MenuIcon />
+      <SheetTrigger asChild>
+        <button
+          type="button"
+          aria-label="Menu"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center text-current lg:hidden"
+        >
+          <MenuIcon className="h-7 w-7 text-current" />
+        </button>
       </SheetTrigger>
       <SheetContent>
         <div className="flex h-full flex-col justify-between px-4 py-16">
@@ -32,7 +38,7 @@ export default function Drawer({
             {applicationsUrl && (
               <a
                 href={applicationsUrl}
-                id="apply"
+                id="apply-drawer"
                 className="font-primary cursor-pointer rounded-lg bg-white px-4 py-2 text-base text-black hover:bg-gray-300"
               >
                 {currentLocale === "it" ? "Candidati ora!" : "Apply now!"}
