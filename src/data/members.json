@@ -1,22 +1,11 @@
 [
   {
-    "name": "Marco Albergoni",
+    "name": "Diego Giordano",
     "department": "board",
     "leader": true,
-    "linkedin": "https://www.linkedin.com/in/marco-albergoni-881a7a2b8/",
-    "email": "marco.albergoni@community.unipa.it",
-    "image": "marco-albergoni",
-    "course": "MSc Electrical Engineering",
-    "role": "Team Leader"
-  },
-  {
-    "name": "Alessia Cambria",
-    "department": "board",
-    "linkedin": "https://www.linkedin.com/in/alessia-cambria-701574325/",
-    "email": "alessia.cambria@community.unipa.it",
-    "image": "alessia-cambria",
-    "course": "BSc Mechanical Engineering",
-    "role": "Managing Director"
+    "email": "diego.giordano@community.unipa.it",
+    "role": "Team Leader",
+    "course": "BSc Economy & Finance"
   },
   {
     "name": "Salvatore Alessi",
@@ -25,7 +14,16 @@
     "email": "salvatore.alessi07@community.unipa.it",
     "image": "salvatore-alessi",
     "course": "MSc Mechanical Engineering",
-    "role": "Technical Director"
+    "role": "Chassis and Aerodynamics Technical Director"
+  },
+  {
+    "name": "Giuseppe Blunda",
+    "department": "board",
+    "linkedin": "https://www.linkedin.com/in/giuseppe-blunda-2911062bb/",
+    "email": "giuseppe.blunda02@community.unipa.it",
+    "image": "giuseppe-blunda",
+    "course": "MSc Electronic Engineering",
+    "role": "Electonics, Software and Powertrain Technical Director"
   },
   {
     "name": "Alessia Salamone",
