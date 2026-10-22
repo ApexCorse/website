@@ -407,20 +407,12 @@
     "role": "Copywriter"
   },
   {
-    "name": "Giuseppe Blunda",
-    "department": "electronics",
-    "leader": true,
-    "linkedin": "https://www.linkedin.com/in/giuseppe-blunda-2911062bb/",
-    "email": "giuseppe.blunda02@community.unipa.it",
-    "image": "giuseppe-blunda",
-    "course": "MSc Electronic Engineering",
-    "role": "Division Manager"
-  },
-  {
     "name": "Giulio Pinello",
     "department": "electronics",
+    "leader": true,
     "linkedin": "https://www.linkedin.com/in/giulio-pinello-3a637b277",
     "email": "giulio.pinello@community.unipa.it",
+    "role": "Division Manager",
     "course": "MSc Electronic Engineering"
   },
   {
@@ -435,12 +427,12 @@
     "course": "MSc Electronic Engineering"
   },
   {
-    "name": "Diego Giordano",
+    "name": "Roberta La Face",
     "department": "business",
     "leader": true,
-    "email": "diego.giordano@community.unipa.it",
+    "email": "roberta.laface@community.unipa.it",
     "role": "Division Manager",
-    "course": "BSc Economy & Finance"
+    "course": "MA Law"
   },
   {
     "name": "Giuseppe Castiglia",
@@ -454,12 +446,6 @@
     "course": "BSc Management Engineering",
     "email": "marialaurarosa.cerasa@community.unipa.it",
     "image": "marialaura-cerasa"
-  },
-  {
-    "name": "Roberta La Face",
-    "department": "business",
-    "email": "roberta.laface@community.unipa.it",
-    "course": "MA Law"
   },
   {
     "name": "Gregorio Nuara",
